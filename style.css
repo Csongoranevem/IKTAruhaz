@@ -1,0 +1,43 @@
+body{
+    margin:0;
+    display: flex;
+}
+.bal{
+    width: 70%;
+    margin-left: 15%;
+}
+.jobb{
+    width: 30%;
+    margin-right: 15%;
+}
+h2{
+    border-bottom: 1px solid gray;
+
+    font-size: 2vw;
+    font-weight: lighter;
+}
+ 
+h2::after{
+    content: '';
+    border-bottom: 4px solid orangered;
+    display: block;
+    margin-bottom: -4px;
+    max-width: 7%;
+    padding-top: 0.5%
+}
+.alatta{
+
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.select{
+    margin-right: 1%;
+    
+}
+.kartyak, .kartyak-img{
+}
+
+.price{
+    color: red;
+}
