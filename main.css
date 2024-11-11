@@ -1,0 +1,124 @@
+ /*Menü elemei*/
+
+body{
+    margin: 2px;
+    letter-spacing: 1px;
+    font-family: "Oswald", sans-serif;
+}
+
+
+.foMenu{
+    
+    height:50px;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top:auto;
+    margin-bottom:auto;
+    
+}
+
+.oldalnev, .motto{
+    margin: 0;
+    padding: 0;
+    text-align: start;
+
+}
+
+.oldalnev{
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.motto {
+    font-weight: 400;
+    color: rgb(73, 73, 73);
+}
+
+
+
+.webName{
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0 auto;
+    margin-bottom: 0 auto;
+    justify-content: center;
+    gap: 5px;
+}
+
+.menuLinks{
+    margin-left: 19px;
+    padding-left: 3px;
+    padding-right: 3px;
+    font-size: larger;
+    font-weight: 500;
+    font-variant:small-caps; 
+    color: black;
+    margin-top:  auto;
+    margin-bottom: auto;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 150ms ease-in;
+
+}
+
+.menuNyil{
+    display: inline;
+    transition: transform 0.5s ease;
+}
+
+/*Lécek*/
+
+.felsoLec{
+    margin-left: 15%;
+    margin-right: 15%;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    max-height: 70px;
+    justify-content: space-between;
+}
+
+
+.route{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    background-color: rgb(235, 73, 73);
+    height: 90px;
+    margin-top: 20px;
+}
+
+
+.route>p{
+    
+    margin-left: 15%;
+    font-size: larger;
+    font-weight: 500;
+    color: white;
+}
+
+/*Animációk*/
+
+.menuLinks:hover{
+    background-color: black;
+    color: white;
+
+}
+
+.menuNyil:hover{
+    transform: rotate(180deg);
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .felsoLec {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /*dropdown majd 100 subnál lesz*/
+  }
