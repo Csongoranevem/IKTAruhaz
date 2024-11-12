@@ -92,6 +92,35 @@ body{
     margin-top: 20px;
 }
 
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgb(0, 5, 46);
+    color: white;
+    font-weight: 100;}
+
+.footDivTeto{
+    font-size: large;
+    font-weight: 300;
+}
+
+
+.footDivBal, .footDivKoz, .footDivJobb{
+    width: 25%;
+}
+
+.footDivBal{
+    padding-left: 15%;
+}
+
+.footDivJobb{
+    padding-right: 15%;
+}
+
+.contactKepek{
+    height: 30px;
+}
 
 .route>p{
     
@@ -122,3 +151,10 @@ body{
 
     /*dropdown majd 100 subnál lesz*/
   }
+
+
+  /*Main oldal*/
+
+.main{
+    height: 600px;
+}
