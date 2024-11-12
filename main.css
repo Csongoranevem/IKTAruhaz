@@ -110,6 +110,7 @@ footer{
 
 .footDivBal, .footDivKoz, .footDivJobb{
     width: 25%;
+    text-align: justify;
 
 }
 
@@ -171,6 +172,8 @@ footer{
     
     }
 
+    /*Dropdown animacio itt lesz*/
+
   }
 
 @media only screen and (max-width: 650px) {
@@ -183,8 +186,10 @@ footer{
         align-items: center;
     }
     
-    .footDivKoz{
-        width: 25%;
+    .footDivKoz, .footDivBal, .footDivJobb{
+        width: 40%;
+        margin: 0;
+
     
     }
 }
