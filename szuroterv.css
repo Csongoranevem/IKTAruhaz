@@ -1,22 +1,6 @@
 
 .szuroDiv{
-    width: 100%;
-}
-
-h2{
-    border-bottom: 3px solid gray;
-    font-size: 2vw;
-    font-weight: lighter;
-    margin-bottom: 3%;
-}
-
-h2::after{
-    content: '';
-    border-bottom: 3px solid orangered;
-    display: block;
-    margin-bottom: -3px;
-    max-width: 16%;
-    padding-top: 0.5%
+    width: 150%;
 }
 
 #csuszkaId{
