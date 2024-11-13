@@ -95,10 +95,12 @@ body{
 footer{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: rgb(0, 5, 46);
     color: white;
-    font-weight: 100;}
+    font-weight: 100;
+
+}
 
 .footDivTeto{
     font-size: large;
@@ -108,18 +110,26 @@ footer{
 
 .footDivBal, .footDivKoz, .footDivJobb{
     width: 25%;
+    text-align: justify;
+
 }
 
 .footDivBal{
-    padding-left: 15%;
+    margin-left: 15%;
 }
 
 .footDivJobb{
-    padding-right: 15%;
+    margin-right: 5%;
+
 }
 
 .contactKepek{
-    height: 30px;
+    height: 1.5em;
+}
+
+.contact{
+    display: flex;
+    flex-direction: row;
 }
 
 .route>p{
@@ -147,14 +157,47 @@ footer{
     .felsoLec {
         flex-direction: column;
         align-items: center;
+        margin-bottom: 50px;
     }
 
-    /*dropdown majd 100 subnál lesz*/
+    .foMenu{
+        margin-top: 1em;
+    }
+
+    .footDivKoz{
+        width: 25%;
+        margin-left: 2em;
+        margin-right: 2em;
+
+    
+    }
+
+    /*Dropdown animacio itt lesz*/
+
   }
+
+@media only screen and (max-width: 650px) {
+    .foMenu{
+        display: none;
+    }
+
+    footer{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footDivKoz, .footDivBal, .footDivJobb{
+        width: 40%;
+        margin: 0;
+
+    
+    }
+}
+
 
 
   /*Main oldal*/
 
 .main{
-    height: 600px;
+/*    height: 600px;*/
 }
