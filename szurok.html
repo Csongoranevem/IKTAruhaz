@@ -105,9 +105,29 @@
                 <div class="csuszkaSzuroDiv">
                     <h2>Filter by price</h2>
                 </div>
-                <input type="range" min="0" max="100" step="1" value="50" name="" id="csuszkaId">
+                <div id="RangeSlider" class="range-slider">
+                    <div>
+                        <div class="range-slider-val-left"></div>
+                        <div class="range-slider-val-right"></div>
+                        <div class="range-slider-val-range"></div>
+                
+                        <span class="range-slider-handle range-slider-handle-left"></span>
+                        <span class="range-slider-handle range-slider-handle-right"></span>
+                
+                        <div class="range-slider-tooltip range-slider-tooltip-left">
+                            <span class="range-slider-tooltip-text"></span>
+                        </div>
+                
+                        <div class="range-slider-tooltip range-slider-tooltip-right">
+                            <span class="range-slider-tooltip-text"></span>
+                        </div>
+                    </div>
+                
+                    <input type="range" class="range-slider-input-left" tabindex="0" max="100" min="0" step="1">
+                    <input type="range" class="range-slider-input-right" tabindex="0" max="100" min="0" step="1">
+                </div>
                 <div class="arEsGombDiv">
-                    <button id="FilterGombDiv">FILTER</button>
+                    <button id="FilterGombDiv" onclick="FilterTeszt()">FILTER</button>
                     <div id="PriceDiv">
                         <p>Price:</p>
                         <p id="MinErtekId"> $0 </p>
@@ -149,4 +169,5 @@
         </div>
     </div>
 </body>
+<script src="szurok.js"></script>
 </html>
