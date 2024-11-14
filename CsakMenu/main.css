@@ -1,0 +1,246 @@
+ /*Menü elemei*/
+
+body{
+    margin: 2px;
+    letter-spacing: 1px;
+    font-family: "Oswald", sans-serif;
+}
+
+
+.foMenu{
+    
+    height:50px;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top:auto;
+    margin-bottom:auto;
+    
+}
+
+.oldalnev, .motto{
+    margin: 0;
+    padding: 0;
+    text-align: start;
+
+}
+
+.oldalnev{
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.motto {
+    font-weight: 400;
+    color: rgb(73, 73, 73);
+}
+
+
+
+.webName{
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0 auto;
+    margin-bottom: 0 auto;
+    justify-content: center;
+    gap: 5px;
+}
+
+.menuLinks{
+    margin-left: 2.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    font-size: larger;
+    font-weight: 500;
+    font-variant:small-caps; 
+    color: black;
+    margin-top:  auto;
+    margin-bottom: auto;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 150ms ease-in;
+
+}
+
+.menuNyil{
+    display: inline;
+}
+
+/*Lécek*/
+
+.felsoLec{
+    margin-left: 15%;
+    margin-right: 15%;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    max-height: 70px;
+    justify-content: space-between;
+}
+
+
+.route{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    background-color: rgb(235, 73, 73);
+    height: 90px;
+    margin-top: 20px;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(0, 5, 46);
+    color: white;
+    font-weight: 100;
+
+}
+
+.footDivTeto{
+    font-size: large;
+    font-weight: 300;
+}
+
+
+.footDivBal, .footDivKoz, .footDivJobb{
+    width: 25%;
+    text-align: justify;
+
+}
+
+.footDivBal{
+    margin-left: 15%;
+}
+
+.footDivJobb{
+    margin-right: 5%;
+
+}
+
+.contactKepek{
+    height: 1.5em;
+}
+
+.contact{
+    display: flex;
+    flex-direction: row;
+}
+
+.route>p{
+    
+    margin-left: 15%;
+    font-size: larger;
+    font-weight: 500;
+    color: white;
+}
+
+/*Animációk*/
+
+.menuLinks:hover{
+    background-color: black;
+    color: white;
+
+}
+
+
+/*Dropdown animációk*/
+
+.dropdown{
+    position: relative;
+    margin-top: 0.7em;
+    
+}
+
+.dropdownMain{
+    position: absolute;
+    min-width: 9em;
+    height: fit-content;
+    opacity: 0;
+    transition: opacity 0.2s ease visibility 0.2s ease;
+    visibility: hidden;
+    transition-delay: 0;
+    background-color: rgb(0, 5, 46);
+    border-radius: 0.5em;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdownMain{
+
+    display: flex;
+    flex-direction: column;
+    margin-left: 2.5em;
+    opacity: 100;
+    visibility: visible;
+    transition-delay: 0.5s;
+}
+
+.dropdownLinks{
+    border-radius: 0.5em;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.2s ease-out ;
+}
+
+
+
+.dropdownLinks:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+
+/*@media only screen and (max-width: 1250px) {
+    .felsoLec {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .foMenu{
+        margin-top: 1em;
+    }
+
+    .footDivKoz{
+        width: 25%;
+        margin-left: 2em;
+        margin-right: 2em;
+
+    
+    }
+
+
+  }
+
+@media only screen and (max-width: 700px) {
+    .foMenu{
+        display: none;
+    }
+
+    footer{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footDivKoz, .footDivBal, .footDivJobb{
+        width: 40%;
+        margin: 0;
+
+    
+    }
+
+
+
+}
+
+
+
+  /*Main oldal*/
+
+.main{
+/*    height: 600px;*/
+}
