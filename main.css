@@ -246,62 +246,70 @@ footer{
 
 
 .container {
-    display: flex;
-    margin: 20px 15%;
+  display: flex;
+  margin: 20px 15%;
 }
 .alatta{
-    display: flex;
-    justify-content: space-between;
-    color: gray;
+  display: flex;
+  justify-content: space-between;
+  color: gray;
 
 }
 
 .bal {
-    width: 70%;
+  width: 70%;
+  margin-right: 3.5%;
 }
 h2{
-    border-bottom: 1px solid gray;
-    font-size: 1.5vw;
-    color: gray;
+  border-bottom: 1px solid gray;
+  font-size: 1.5vw;
+  color: gray;
 }
 
 h2::after{
-    content: '';
-    border-bottom: 4px solid orangered;
-    display: block;
-    margin-bottom: -1px;
-    max-width: 5%;
-    padding-top: 0.5%
+  content: '';
+  border-bottom: 3px solid orangered;
+  display: block;
+  margin-bottom: -1px;
+  max-width: 7%;
+  padding-top: 0.5%
 }
 
 .kartyak {
-    display: flex;
-    gap: 20px;
-    margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
 }
 .row{  
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: auto;
-    grid-gap: 1rem;
+  display: grid;
+  grid-auto-rows: auto;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 .card {
-    width: 80%;
-    border-radius: 5px;
-    overflow: hidden;
-    padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 10px;
 }
 .card h1 {
-    font-size: 1.2em;
-    margin: 10px 0;
+  font-size: 1.2em;
+  font-weight:400;
+  margin: 10px 0;
 }
 
 .card .price {
-    color: red;
-    font-weight: bold;
+  color: red;
+  margin-top: -5%;
 }
 .select{
-    color: gray;
+  margin-top: 3.5%;
+  
+}
+#default-sorting{
+  color: gray;
+  border-style:groove;
+  padding: 3%;
 }
 
 
