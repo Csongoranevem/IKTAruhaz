@@ -314,11 +314,12 @@ h2::after{
 
 
 
-/*Szűrők jobboldal*/
+/*Szűrők jobboldal
 
 
 .szuroDiv{
-    width: 150%;
+    width: 100%;
+
 }
 
 h2{
@@ -352,7 +353,7 @@ h2::after{
     border-radius: 80px;
     background: orangered;
     cursor: pointer;
-    margin-top: -10px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    margin-top: -10px;
   }
 
   .arEsGombDiv{
@@ -626,7 +627,7 @@ h2::after{
     opacity: 1;
   }
   
-
+*/
 
   /*Reszponzivitás*/
 
