@@ -632,7 +632,7 @@ h2::after{
   /*Reszponzivitás*/
 
 
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (max-width: 1410px) {
     .felsoLec {
         flex-direction: column;
         align-items: center;
@@ -649,6 +649,10 @@ h2::after{
         margin-right: 2em;
 
     
+    }
+
+    .dropdown{
+      margin: auto;
     }
 
 
