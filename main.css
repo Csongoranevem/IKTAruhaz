@@ -308,7 +308,11 @@ h2::after{
   padding: 3%;
 }
 
-
+@media only screen and (min-width: 1440px){
+  .row{
+    gap: 10%;
+  }
+}
 
 /*Szűrők jobboldal
 
