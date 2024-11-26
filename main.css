@@ -103,6 +103,9 @@ body{
     flex-direction: row;
     max-height: 70px;
     justify-content: space-between;
+    position: sticky;
+    top: 0%;
+    background-color: white;
 }
 
 
@@ -293,7 +296,12 @@ h2::after{
   justify-content: space-around;
 }
 .card {
+<<<<<<< HEAD
+  background-color: rgb(243, 243, 243);
+=======
   border-radius: 5px;
+  background-color: rgb(248, 248, 248);
+>>>>>>> 21a6823fa29c356b4cee62bce91ead947bce6e08
 }
 .card h1 {
   font-size: 1.2em;
@@ -315,8 +323,24 @@ h2::after{
   border-style:groove;
   padding: 3%;
 }
+#athuzott{
+  color: gray;
+}
+.alja{
+  background-color: rgb(243, 243, 243);
+  padding: 3%;
+  margin-left: 5%;
+}
 
+@media only screen and (min-width: 1440px){
+  .row{
+    gap: 10%;
+  }
 
+  .oldalnev{
+    font-size: 30px;
+  }
+}
 
 /*Szűrők jobboldal
 
