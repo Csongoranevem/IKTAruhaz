@@ -286,7 +286,7 @@ h2::after{
   justify-content: space-around;
 }
 .card {
-  border-radius: 5px;
+  background-color: rgb(243, 243, 243);
 }
 .card h1 {
   font-size: 1.2em;
@@ -308,7 +308,14 @@ h2::after{
   border-style:groove;
   padding: 3%;
 }
-
+#athuzott{
+  color: gray;
+}
+.alja{
+  background-color: rgb(243, 243, 243);
+  padding: 3%;
+  margin-left: 5%;
+}
 
 
 /*Szűrők jobboldal
