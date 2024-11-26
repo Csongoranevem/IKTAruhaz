@@ -103,6 +103,9 @@ body{
     flex-direction: row;
     max-height: 70px;
     justify-content: space-between;
+    position: sticky;
+    top: 0%;
+    background-color: white;
 }
 
 
