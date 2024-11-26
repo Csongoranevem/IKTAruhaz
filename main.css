@@ -313,6 +313,10 @@ h2::after{
   .row{
     gap: 10%;
   }
+
+  .oldalnev{
+    font-size: 30px;
+  }
 }
 
 /*Szűrők jobboldal
