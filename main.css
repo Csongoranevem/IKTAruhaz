@@ -107,6 +107,7 @@ body{
 }
 
 .stickyteto{
+  z-index: 10;
   position: sticky;
   top: 0%;
   background-color: white;
@@ -184,7 +185,9 @@ footer{
 
 .contactKepek{
     height: 1.5em;
-    opacity: 0.7;}
+    opacity: 0.7;
+    vertical-align: middle;
+  }
 
 .footDivJobb > .contact{
   margin-left: 1.6em;
@@ -356,6 +359,10 @@ h2::after {
 
   .kartyak {
     flex: 1 1 calc(33.333% - 20px); 
+  }
+
+  #LeatherJ{
+    font-size: 100%;
   }
 }
 
