@@ -15,7 +15,8 @@ body{
 .main{
     display: flex;
     flex-direction: row;
-
+  margin-top: 1%;
+  margin-bottom: 1%;
 }
 
 .jobb{
@@ -265,86 +266,129 @@ footer{
 /*Kartyak*/
 
 
+
 .container {
   display: flex;
   margin: 20px 15%;
 }
-.alatta{
+
+
+.alatta {
   display: flex;
   justify-content: space-between;
   color: gray;
-
 }
 
-
-h2{
+h2 {
   border-bottom: 1px solid gray;
   font-size: 1.5vw;
   color: gray;
 }
 
-h2::after{
+h2::after {
   content: '';
   border-bottom: 3px solid orangered;
   display: block;
   margin-bottom: -1px;
   max-width: 7%;
-  padding-top: 0.5%
+  padding-top: 0.5%;
 }
 
 .kartyak {
-  display: flex;
-  gap: 20px;
+  gap: 5px;
+  width: 100%;
   margin-top: 20px;
 }
-.row{  
+
+.row {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
 .card {
-  background-color: rgb(243, 243, 243);
-  border-radius: 5px;
   background-color: rgb(248, 248, 248);
+  display: flex;
+  width: 110%;
+  flex-direction: column; 
+  overflow: hidden;
+  position: relative;
 }
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.alja {
+  background-color: rgb(243, 243, 243);
+  padding: 5px;
+  flex-grow: 1; 
+
+}
+
 .card h1 {
   font-size: 1.2em;
-  font-weight:400;
+  font-weight: 400;
   margin: 10px 0;
 }
 
 .card .price {
   color: rgb(235, 73, 73);
-  margin-top: -5%;
 }
 
-.select{
+.select {
   margin-top: 3.5%;
-  
-}
-#default-sorting{
-  color: gray;
-  border-style:groove;
-  padding: 3%;
-}
-#athuzott{
-  color: gray;
-}
-.alja{
-  background-color: rgb(243, 243, 243);
-  padding: 3%;
-  margin-left: 5%;
 }
 
-@media only screen and (min-width: 1440px){
-  .row{
-    gap: 10%;
+#default-sorting {
+  color: gray;
+  border-style: groove;
+  padding: 3%;
+}
+
+#athuzott {
+  color: gray;
+}
+
+/* asztal */
+@media only screen and (min-width: 1024px) {
+  .row {
+    gap: 30px; 
   }
 
-  .oldalnev{
-    font-size: 30px;
+  .kartyak {
+    flex: 1 1 calc(33.333% - 20px); 
+  }
+
+  #LeatherJ{
+    font-size: 100%;
   }
 }
+
+/* mobil nezet*/
+@media only screen and (max-width: 1023px) {
+  .row {
+    gap: 20px; 
+  }
+
+  .kartyak {
+    flex: 1 1 calc(50% - 20px); 
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .row {
+    gap: 15px; 
+  }
+
+  .kartyak {
+    flex: 1 1 100%; 
+  }
+}
+
+
 
 /*Szűrők jobboldal
 
