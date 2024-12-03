@@ -15,8 +15,8 @@ body{
 .main{
     display: flex;
     flex-direction: row;
-  margin-top: 1%;
-  margin-bottom: 1%;
+    margin-top: 1%;
+    margin-bottom: 5%;
 }
 
 .jobb{
@@ -386,6 +386,10 @@ h2::after {
   .kartyak {
     flex: 1 1 100%; 
   }
+}
+
+.price{
+  font-weight: bold;
 }
 
 
