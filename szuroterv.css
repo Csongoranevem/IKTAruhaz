@@ -26,6 +26,7 @@
     width: 100%;
     justify-content: space-between;
     height: 1.8vw;
+    margin-bottom: 8vh;
   }
 
   #FilterGombDiv{
@@ -49,25 +50,30 @@
 
   #szuzoKategoriakOl{
     padding-left: 5%;
-    list-style-type: square;
+    list-style-type: disc;
   }
 
   #szuzoKategoriakOl > li{
     color: rgb(138, 138, 138);
     margin-bottom: 4%;
     padding-bottom: 3%;
-    border-bottom: 1px dashed rgb(184, 184, 184);
+
     font-size: 1.2vw;
   }
 
   .SzuroAnchor{
     text-decoration: none;
     color: rgb(94, 94, 94);
+    
+  }
+
+  .szuroLiClass{
+    border-bottom: 1px dashed rgb(184, 184, 184);
   }
 
   #TopKategoriakUl{
     padding-left: 5%;
-    list-style-type: square;
+    list-style-type: disc;
   }
 
   #TopKategoriakUl > li{
@@ -78,7 +84,6 @@
   }
 
   #TopKategoriakUl > p{
-    border-bottom: 1px dashed rgb(184, 184, 184);
     padding-bottom: 3%;
     font-size: 1vw;
   }

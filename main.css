@@ -15,8 +15,8 @@ body{
 .main{
     display: flex;
     flex-direction: row;
-  margin-top: 1%;
-  margin-bottom: 1%;
+    margin-top: 1%;
+    margin-bottom: 5%;
 }
 
 .jobb{
@@ -316,7 +316,7 @@ h2::after {
   position: relative;
 }
 .card img {
-  width: 25vh;
+  width: 100%;
   height: 25vh;
   object-fit: cover; 
 }
@@ -355,7 +355,7 @@ h2::after {
 /* asztal */
 @media only screen and (min-width: 1024px) {
   .row {
-    gap: 30px; 
+    gap: 1.1vw; 
   }
 
   .kartyak {
@@ -388,6 +388,12 @@ h2::after {
     flex: 1 1 100%; 
   }
 }
+
+.price{
+  font-weight: bold;
+}
+
+
 
 /*Szűrők jobboldal
 
