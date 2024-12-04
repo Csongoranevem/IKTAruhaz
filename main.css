@@ -6,7 +6,7 @@ html{
 }
 
 body{
-    margin: 2px;
+    margin: 0;
     letter-spacing: 0.02em;
     /*font-family: "Oswald", sans-serif;*/
     font-family: "Poppins", sans-serif;
@@ -224,7 +224,7 @@ footer{
 
 .dropdownMain{
     position: absolute;
-    min-width: 9em;
+    min-width: 12em;
     height: fit-content;
     opacity: 0;
     transition: opacity 0.2s ease visibility 0.2s ease;
