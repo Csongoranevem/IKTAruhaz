@@ -147,7 +147,8 @@ footer{
   align-self: center;
   transition: 0.2s ease-out;
   padding-bottom: 0.4em;
-
+  position: sticky;
+  bottom: 1;
 }
 
 .visszaBTN:hover{
