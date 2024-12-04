@@ -130,7 +130,7 @@ footer{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-color: rgb(16, 14, 36);
+    background-color: rgb(11, 9, 36);
     color: white;
     font-weight: 100;
 
@@ -139,20 +139,20 @@ footer{
 .visszaBTN{
   width: 2em;
   height: 2em;
-  font-size: large;
-  background-color:rgb(0, 5, 46) ;
-  color: white;
-  border: 2px solid white ;
-  border-radius: 0.1em;
+  font-size: larger;
+  background-color: transparent;
+  color: rgb(116, 116, 116);
+  border: 2px solid rgb(194, 194, 194) ;
   align-self: center;
   transition: 0.2s ease-out;
-  padding-bottom: 0.4em;
-  position: sticky;
-  bottom: 1;
+  position: fixed;
+  bottom: 8vh;
+  right: 4vh;
 }
 
 .visszaBTN:hover{
-  background-color: rgb(2, 13, 97);
+  background-color: rgb(211, 211, 211);
+  color: black;
 }
 
 .footDivBal, .footDivKoz, .footDivJobb{
