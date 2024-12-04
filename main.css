@@ -318,11 +318,13 @@ h2::after {
   flex-direction: column; 
   overflow: hidden;
   position: relative;
+  
 }
 .card img {
   width: 100%;
   height: 25vh;
   object-fit: cover; 
+  transition: .3s cubic-bezier(.6,.4,0,1),transform .15s ease;
 }
 
 .alja {
@@ -371,6 +373,35 @@ h2::after {
   color: white;
 }
 
+.card > strong {
+  display: block;
+  font-size: 1.4rem;
+  letter-spacing: -.035em;
+}
+
+.card button {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--hover-text);
+  border-radius: 5px;
+  font-weight: bold;
+  top: 100%;
+  transition: all .3s cubic-bezier(.6,.4,0,1);
+}
+
+.card:hover button {
+  top: 0;
+  font-size: 1.2em;
+}
+
+.card:hover {
+  background: var(--hover-bg);
+}
 /* asztal */
 @media only screen and (min-width: 1024px) {
   .row {
