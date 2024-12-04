@@ -251,7 +251,10 @@ footer{
     text-decoration: none;
     color:black;
     transition: background-color 0.2s ease-out ;
-    border-bottom: 1px solid black;
+    padding-bottom: 0.8em;
+    margin-bottom: 0px;
+    border-bottom: 1px solid rgb(190, 190, 190);
+    font-weight: bold;
 
 }
 
@@ -292,7 +295,7 @@ h2::after {
   border-bottom: 3px solid orangered;
   display: block;
   margin-bottom: -1px;
-  max-width: 7%;
+  max-width: 3vw;
   padding-top: 0.5%;
 }
 
@@ -351,6 +354,21 @@ h2::after {
 
 #athuzott {
   color: gray;
+  margin-right: 5%;
+}
+
+.KartyaSaleDiv{
+  position:absolute;
+  background-color: rgb(235, 73, 73);
+  border-radius: 100px;
+  padding-left: 2%;
+  padding-right: 2%;
+  z-index: 1;
+}
+
+.KartyaSaleP{
+  font-weight: bold;
+  color: white;
 }
 
 /* asztal */
