@@ -8,8 +8,7 @@ html{
 body{
     margin: 0;
     letter-spacing: 0.02em;
-    /*font-family: "Oswald", sans-serif;*/
-    font-family: "Poppins", sans-serif;
+    font-family: 'Barlow', sans-serif;    
 }
 
 .main{
@@ -40,8 +39,7 @@ body{
     flex-direction: row;
     justify-content: center;
     margin-top:auto;
-    margin-bottom:auto;
-    
+    margin-bottom:auto;    
 }
 
 .oldalnev, .motto{
@@ -74,12 +72,13 @@ body{
 }
 
 .menuLinks{
-    margin-left: 2.5em;
+    margin-left: 2em;
     padding-left: 0.5em;
     padding-right: 0.5em;
-    font-size: larger;
-    font-weight: 700;
-    font-variant:small-caps; 
+    font-size: large;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-variant: small-caps;
     color: black;
     margin-top:  auto;
     margin-bottom: auto;
@@ -111,7 +110,8 @@ body{
   position: sticky;
   top: 0%;
   background-color: white;
-  padding-bottom: 2%
+  padding-bottom: 2%;
+  box-shadow: 0px 0px 5px rgb(156, 156, 156);
 }
 
 .route{
@@ -174,7 +174,8 @@ footer{
 
 
 .footDivKoz{
-  margin-left: 3em;
+  margin-left: 20%;
+
 }
 .footDivBal{
     margin-left: 15%;
@@ -210,7 +211,7 @@ footer{
 /*Animációk*/
 
 .menuLinks:hover{
-    font-size: 125%;
+    color: #ff6257;
 
 }
 
@@ -232,6 +233,7 @@ footer{
     transition-delay: 0;
     background-color: white;
     z-index: 1;
+    padding-top: 3em;
 }
 
 .dropdown:hover .dropdownMain{
@@ -241,20 +243,25 @@ footer{
     margin-left: 2.5em;
     opacity: 100;
     visibility: visible;
-    transition-delay: 0.5s;
+    transition: opacity 0.4s;
+    transition-delay: 0.1s;
 }
 
 .dropdownLinks{
+    text-transform: uppercase;
     font-variant: small-caps;
     padding: 0.2em;
-    margin: 0.3em;
     text-decoration: none;
     color:black;
+    font-weight: 500;
     transition: background-color 0.2s ease-out ;
     padding-bottom: 0.8em;
     margin-bottom: 0px;
+    padding-top: 6px;
+    padding-left: 10px;
     border-bottom: 1px solid rgb(190, 190, 190);
-    font-weight: bold;
+    border-width: 100%;
+    font-size: medium;
 
 }
 
