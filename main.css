@@ -358,7 +358,7 @@ h2::after {
 
 .add-to-cart {
   position: absolute;
-  width: 70%;
+  width: 65%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
