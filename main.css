@@ -378,6 +378,10 @@ h2::after {
   opacity: 1;
 }
 
+.card-container:hover .ikonok {
+  opacity: 1;
+}
+
 .add-to-cart:hover {
   background-color: rgb(29, 29, 29);
   border: none;
@@ -467,6 +471,25 @@ h2::after {
 
 .card:hover {
   background: var(--hover-bg);
+}
+.ikonok{
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.ikonok img{
+  opacity: 0;
+  width: 2.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: aliceblue;
+  border-radius: 50%;
 }
 /* asztal */
 @media only screen and (min-width: 1024px) {
