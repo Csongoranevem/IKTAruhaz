@@ -6,10 +6,9 @@ html{
 }
 
 body{
-    margin: 2px;
+    margin: 0;
     letter-spacing: 0.02em;
-    /*font-family: "Oswald", sans-serif;*/
-    font-family: "Poppins", sans-serif;
+    font-family: 'Barlow', sans-serif;    
 }
 
 .main{
@@ -40,8 +39,7 @@ body{
     flex-direction: row;
     justify-content: center;
     margin-top:auto;
-    margin-bottom:auto;
-    
+    margin-bottom:auto;    
 }
 
 .oldalnev, .motto{
@@ -74,12 +72,13 @@ body{
 }
 
 .menuLinks{
-    margin-left: 2.5em;
+    margin-left: 2em;
     padding-left: 0.5em;
     padding-right: 0.5em;
-    font-size: larger;
-    font-weight: 700;
-    font-variant:small-caps; 
+    font-size: large;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-variant: small-caps;
     color: black;
     margin-top:  auto;
     margin-bottom: auto;
@@ -111,8 +110,8 @@ body{
   position: sticky;
   top: 0%;
   background-color: white;
-  box-shadow: rgb(199, 199, 199) 0px 2px 10px;
-  padding-bottom: 2%
+  padding-bottom: 2%;
+  box-shadow: 0px 0px 5px rgb(156, 156, 156);
 }
 
 .route{
@@ -141,24 +140,27 @@ footer{
   height: 2em;
   font-size: larger;
   background-color: transparent;
-  color: rgb(116, 116, 116);
-  border: 2px solid rgb(194, 194, 194) ;
+  color: rgb(170, 170, 170);
+  border: 1px solid rgb(194, 194, 194) ;
   align-self: center;
-  transition: 0.2s ease-out;
+  transition: 0.4s ease-out;
   position: fixed;
   bottom: 8vh;
   right: 4vh;
 }
 
 .visszaBTN:hover{
-  background-color: rgb(211, 211, 211);
-  color: black;
+  background-color: rgb(235, 73, 73);
+  color: white;
+  border-color: rgb(235, 73, 73);
 }
 
 .footDivBal, .footDivKoz, .footDivJobb{
     width: 20%;
     text-align: justify;
-    color: rgba(216, 216, 216, 0.788);
+    color: rgba(255, 255, 255, 0.616);
+    letter-spacing: 0;
+    font-weight: 400;
 
 }
 
@@ -169,13 +171,12 @@ footer{
   display: flex;
   flex-direction: row;
   align-items: center;
-
 }
 
 
 .footDivKoz{
-  margin-left: 3em;
 }
+
 .footDivBal{
     margin-left: 15%;
 }
@@ -210,7 +211,7 @@ footer{
 /*Animációk*/
 
 .menuLinks:hover{
-    font-size: 125%;
+    color: #ff6257;
 
 }
 
@@ -224,7 +225,7 @@ footer{
 
 .dropdownMain{
     position: absolute;
-    min-width: 9em;
+    min-width: 12em;
     height: fit-content;
     opacity: 0;
     transition: opacity 0.2s ease visibility 0.2s ease;
@@ -232,6 +233,7 @@ footer{
     transition-delay: 0;
     background-color: white;
     z-index: 1;
+    padding-top: 3em;
 }
 
 .dropdown:hover .dropdownMain{
@@ -241,20 +243,25 @@ footer{
     margin-left: 2.5em;
     opacity: 100;
     visibility: visible;
-    transition-delay: 0.5s;
+    transition: opacity 0.4s;
+    transition-delay: 0.1s;
 }
 
 .dropdownLinks{
+    text-transform: uppercase;
     font-variant: small-caps;
     padding: 0.2em;
-    margin: 0.3em;
     text-decoration: none;
     color:black;
+    font-weight: 500;
     transition: background-color 0.2s ease-out ;
     padding-bottom: 0.8em;
     margin-bottom: 0px;
+    padding-top: 6px;
+    padding-left: 10px;
     border-bottom: 1px solid rgb(190, 190, 190);
-    font-weight: bold;
+    border-width: 100%;
+    font-size: medium;
 
 }
 
@@ -282,6 +289,9 @@ footer{
   display: flex;
   justify-content: space-between;
   color: gray;
+  align-items: baseline;
+  margin-top: -4%;
+  margin-bottom: 2%;
 }
 
 h2 {
@@ -314,32 +324,93 @@ h2::after {
 .card {
   background-color: rgb(248, 248, 248);
   display: flex;
-  width: 25vh;
+  width: 100%;
   flex-direction: column; 
   overflow: hidden;
   position: relative;
+  
 }
+.card-container {
+  position: relative;
+  overflow: hidden;
+}
+/*tudja faszom*/
+.card-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-container:hover img {
+  transition: 0.3s ease-in-out;
+
+  opacity: 0.5;
+  filter: brightness(0.7);
+}
+
+.card-container:hover {
+  background-color: rgb(235, 73, 73);
+} 
+
+.card-container {
+  position: relative; 
+}
+
+.add-to-cart {
+  position: absolute;
+  text-decoration: none;
+  width: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-variant: small-caps;
+  font-weight: 600;
+  border: solid;
+  border-width: 1px;
+  padding: 5px 7px; 
+  border-color: white;
+  opacity: 0;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.card-container:hover .add-to-cart {
+  opacity: 1;
+}
+
+.card-container:hover .ikonok {
+  opacity: 1;
+}
+
+.add-to-cart:hover {
+  background-color: rgb(29, 29, 29);
+  border: none;
+  color: white;
+}
+
 .card img {
   width: 100%;
-  height: 25vh;
+  height: 100%;
   object-fit: cover; 
 }
 
 .alja {
-  background-color: rgb(243, 243, 243);
   padding: 5px;
+  margin-left: 5%;
   flex-grow: 1; 
 
 }
 
 .card h1 {
-  font-size: 1.2em;
+  font-size: 0.9em;
   font-weight: 400;
   margin: 10px 0;
 }
 
 .card .price {
   color: rgb(235, 73, 73);
+  margin-top: -3%;
 }
 
 .select {
@@ -348,12 +419,14 @@ h2::after {
 
 #default-sorting {
   color: gray;
+  width: 100%;
   border-style: groove;
   padding: 3%;
+  background-color: white;
 }
 
 #athuzott {
-  color: gray;
+  color: rgb(218, 218, 218);
   margin-right: 5%;
 }
 
@@ -371,6 +444,54 @@ h2::after {
   color: white;
 }
 
+.card > strong {
+  display: block;
+  font-size: 1.4rem;
+  letter-spacing: -.035em;
+}
+
+.card button {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--hover-text);
+  border-radius: 5px;
+  font-weight: bold;
+  top: 100%;
+  transition: all .3s cubic-bezier(.6,.4,0,1);
+}
+
+.card:hover button {
+  top: 0;
+  font-size: 1.2em;
+}
+
+.card:hover {
+  background: var(--hover-bg);
+}
+.ikonok{
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.ikonok img{
+  opacity: 0;
+  width: 2.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: aliceblue;
+  border-radius: 50%;
+}
 /* asztal */
 @media only screen and (min-width: 1024px) {
   .row {
