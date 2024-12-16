@@ -432,14 +432,18 @@ h2::after {
   position:absolute;
   background-color: rgb(235, 73, 73);
   border-radius: 100px;
-  padding-left: 2%;
-  padding-right: 2%;
-  z-index: 1;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+  z-index: 9;
+  overflow: visible;
+  transform: translate(-10px,-10px);
 }
 
 .KartyaSaleP{
   font-weight: bold;
   color: white;
+  overflow: visible;
+  position: relative;
 }
 
 .card > strong {
@@ -510,6 +514,7 @@ h2::after {
 
   #LeatherJ{
     font-size: 100%;
+    margin-bottom: 2.4vh;
   }
 }
 
