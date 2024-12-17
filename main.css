@@ -20,12 +20,12 @@ body{
 
 .jobb{
     margin-top: 0.2vw;
-    margin-right: 15%;
+    margin-right: 10%;
     width: 35%;
 }
 
 .bal{
-    margin-left: 15%;
+    margin-left: 10%;
     margin-right: 1vw;
     width: 65%;
     margin-right: 3.5%;
@@ -96,8 +96,8 @@ body{
 /*Lécek*/
 
 .felsoLec{
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 10%;
+    margin-right: 10%;
     padding-top: 20px;
     display: flex;
     flex-direction: row;
@@ -178,12 +178,11 @@ footer{
 }
 
 .footDivBal{
-    margin-left: 15%;
+  margin-left: 10%;
 }
 
 .footDivJobb{
-    margin-right: 15%;
-
+  margin-right: 10%;
 }
 
 .contactKepek{
