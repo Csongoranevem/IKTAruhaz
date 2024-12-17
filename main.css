@@ -481,7 +481,16 @@ h2::after {
   right: 2px;
   display: flex;
   flex-direction: column;
-  gap: 3px; 
+  gap: 3px;
+  opacity: 0;
+  transition: 0.3s ease;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  z-index: 10; 
+}
+.card-container:hover .ikonok {
+  opacity: 1;
+  transition: none;
+  
 }
 .szivikon,
 .szemikon {
@@ -493,13 +502,17 @@ h2::after {
   justify-content: center;
   border-radius: 50%;
   cursor: pointer;
+  z-index: 15;
 }
  
 .szivikon img,
 .szemikon img {
   width: 50%;
   height: 50%;
+  opacity: 1 !important;
   object-fit: contain;
+  filter: none;
+  transition: none;
 }
  
 /* asztal */
