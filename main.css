@@ -124,6 +124,7 @@ body{
     margin-top: 0px;
 }
 
+
 footer{
   padding-top: 2em;
     display: flex;
@@ -198,7 +199,7 @@ footer{
 
 .route>p{
     
-    margin-left: 15%;
+    margin-left: 10%;
     font-size: larger;
     font-weight: 500;
     color: white;
