@@ -107,7 +107,7 @@
 
   .Akciozott{
     text-decoration: none;
-    background-color: rgb(239, 255, 183);
+    background-color: rgba(252, 255, 96, 0.788);
     margin-left: 2%;
   }
 
@@ -304,6 +304,6 @@
   }
   
   .range-slider:hover > div > .range-slider-tooltip {
-    opacity: 1;
+    /*opacity: 1;*/
   }
   
