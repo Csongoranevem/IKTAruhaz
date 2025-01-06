@@ -172,8 +172,12 @@ footer{
   display: flex;
   flex-direction: row;
   align-items: center;
+  
 }
 
+.footDivTeto > .contactKepek{
+  margin-right: 1em;
+}
 
 .footDivBal{
   margin-left: 10%;
@@ -181,6 +185,13 @@ footer{
 
 .footDivJobb{
   margin-right: 10%;
+  width: fit-content;
+
+}
+
+.jobbSzoveg{
+  text-indent: 1em;
+  text-align: start;
 }
 
 .contactKepek{
