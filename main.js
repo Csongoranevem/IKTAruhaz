@@ -50,3 +50,19 @@ document.querySelector('#RangeSlider .range-slider-input-right').addEventListene
 
 	children[13].childNodes[1].innerHTML = e.target.value;
 });
+
+
+function HambiLenyilas() {
+	let h = document.getElementById('mobilMenu')
+	h.style.display = (h.style.display === 'none') ? 'flex' : 'none'
+
+	const hamburger = document.querySelector('.hamburger');
+	const mobilMenu = document.querySelector('.mobil-menu-tartalom');
+	
+	hamburger.addEventListener('click', () => {
+		hamburger.classList.toggle('open');
+		mobilMenu.classList.toggle('visible');
+	});
+	
+
+}
