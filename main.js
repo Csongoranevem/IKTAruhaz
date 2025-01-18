@@ -51,18 +51,28 @@ document.querySelector('#RangeSlider .range-slider-input-right').addEventListene
 	children[13].childNodes[1].innerHTML = e.target.value;
 });
 
-
-function HambiLenyilas() {
-	let h = document.getElementById('mobilMenu')
-	h.style.display = (h.style.display === 'none') ? 'flex' : 'none'
-
+	//foMobil
+	document.querySelector('.hamburger').addEventListener('click', () => {
+	const h = document.getElementById('mobilMenu');
 	const hamburger = document.querySelector('.hamburger');
-	const mobilMenu = document.querySelector('.mobil-menu-tartalom');
-	
-	hamburger.addEventListener('click', () => {
-		hamburger.classList.toggle('open');
-		mobilMenu.classList.toggle('visible');
-	});
-	
+	const mobilMenu = document.querySelector('.mobilTartalom');
+  
+	h.style.display = (h.style.display === 'flex') ? 'none' : 'flex';
+  
+	hamburger.classList.toggle('open');
+	mobilMenu.classList.toggle('visible');
+  
+	console.log(hamburger.classList.contains('open'));
+  });
+  //aloldalak
+  document.querySelector('.hamburgerAloldal').addEventListener('click', () => {
+	const hAloldal = document.getElementById('dropdownMobil');
+	const hamburgerAloldal = document.querySelector('.hamburgerAloldal');
+  
+	hAloldal.style.display = (hAloldal.style.display === 'block') ? 'none' : 'block';
+  
+	hamburgerAloldal.classList.toggle('open');
+  
+	console.log(hamburger.classList.contains('open'));
+  });
 
-}

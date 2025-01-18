@@ -612,17 +612,19 @@ h2::after {
   position: fixed;
   top: 4vh;
   right: 4vh;
+  transition: all 1s;
 }
 
   #mobilMenu{
     width: 100%;
+    margin-top: 1em;
     display: none;
     flex-direction: column;
     background-color: rgb(235, 73, 73);
 
   }
 
-  .MobilmenuLinks{
+  .MobilmenuLinks, .MobilmenuLinksSplit{
     font-size: larger;
     display: flex;
     flex-direction: column;
@@ -637,7 +639,27 @@ h2::after {
     border-radius: 5px;
     transition: 150ms ease-in;
     white-space: nowrap;
-    margin-left: 20%;
+    padding-left: 5%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-bottom: rgb(214, 214, 214) 1px solid;
+
+  }
+
+  .MobilmenuLinksSplit{
+    display: flex;
+    flex-direction: row;
+    border-bottom: rgb(214, 214, 214) 1px solid;
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border: none;
+
+
+  }
+
+  .MobilmenuLinksSplit .MobilmenuLinks{
+    width: 80%;
   }
 
   .MobilmenuLinks:hover{
@@ -648,6 +670,26 @@ h2::after {
   .dropdownMobil{
     display: none;
   }
+
+  .hamburgerAloldal{
+    position: relative;
+    align-self: flex-end;
+    margin-right: 2em;
+  }
+  .hamburgerAloldal span{
+    display: block;
+    height: 4px;
+    width: 25px;
+    margin-bottom: 5px;
+    background-color: rgb(255, 201, 201);
+    border-radius: 5px;
+
+  }
+
+  .hamburgerAloldal span:nth-child(2) {
+    transform: rotate(90deg)translate(-8.5px)
+  }
+  
   /*Nézetek*/
 
   @media only screen and (max-width: 1410px) {
@@ -684,7 +726,7 @@ h2::after {
 
     .webName{
       align-self: flex-start;
-      margin-left: 20%;
+      margin-left: 5%;
     }
 
     .asztaliNezet{
