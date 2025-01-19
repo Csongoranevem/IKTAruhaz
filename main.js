@@ -55,9 +55,9 @@ document.querySelector('#RangeSlider .range-slider-input-right').addEventListene
 	document.querySelector('.hamburger').addEventListener('click', () => {
 	const h = document.getElementById('mobilMenu');
 	const hamburger = document.querySelector('.hamburger');
-	const mobilMenu = document.querySelector('.mobilTartalom');
+	const mobilMenu = document.querySelector('#mobilMenu');
   
-	h.style.display = (h.style.display === 'flex') ? 'none' : 'flex';
+	h.style.display = (h.style.display === 'block') ? 'none' : 'block';
   
 	hamburger.classList.toggle('open');
 	mobilMenu.classList.toggle('visible');
