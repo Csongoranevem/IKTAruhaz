@@ -65,14 +65,10 @@ document.querySelector('#RangeSlider .range-slider-input-right').addEventListene
 	console.log(hamburger.classList.contains('open'));
   });
   //aloldalak
-  document.querySelector('.hamburgerAloldal').addEventListener('click', () => {
-	const hAloldal = document.getElementById('dropdownMobil');
-	const hamburgerAloldal = document.querySelector('.hamburgerAloldal');
-  
-	hAloldal.style.display = (hAloldal.style.display === 'block') ? 'none' : 'block';
-  
-	hamburgerAloldal.classList.toggle('open');
-  
-	console.log(hamburger.classList.contains('open'));
+  document.querySelector('.lenyit').addEventListener('click', () => {
+	const hAloldal = [document.querySelector('.DropdownEgesz')];	
+	});
+	hAloldal.style.display = (hAloldal.style.display === 'block') ? 'none' : 'block';  
+	//console.log(hamburger.classList.contains('open'));
   });
 

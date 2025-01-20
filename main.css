@@ -684,6 +684,28 @@ h2::after {
 }
 
 
+i{
+  text-decoration: none;
+  color: white;
+  font-size: larger;
+  margin: 0 auto;
+}
+
+.lenyit{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 60px;
+  width: 15%;
+  border-left: #e0e0e0 1px solid;  
+  text-decoration: none;
+
+
+}
+
+.MobilDropdown{
+  display: none;
+}
 
 .menuLink:hover{
   background-color: whiq;
