@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+     <!--Menü és felsőléc-->
+     <a href="" id="top"></a>
+     <div class="stickyteto">
+         <div class="felsoLec">
+             <div class="webName">
+                 <p class="oldalnev">Csudajó Áruház</p>
+                 <p class="motto">Itt még romániát is megtalálod!</p>
+             </div>
+             <div class="hamburger" onclick="HambiLenyilas()">
+                 <span></span>
+                 <span></span>
+                 <span></span>
+             </div>
+ 
+ 
+             <!--Mobil nézet-->
+             <div id="mobilMenu">
+                 <ul class="egeszMobil">
+                         <li class="menuItem">
+                             <a href="./home.html" class="mobilMenuLinks">home</a>
+                         </li>
+                     <li class="menuItem">
+                         <a href="./index.html" class="mobilMenuLinks">shop</a>
+                     </li>
+                     <li class="menuItem">
+                         <a href="./HTML/myaccount.html" class="MobilDropdown">accessories</a>
+                     </li>
+                     <li class="menuItem">
+                         <a href="./HTML/myaccount.html" class="MobilDropdown">casual</a>
+                     </li>
+                     <li class="menuItem">
+                         <a href="./HTML/myaccount.html" class="MobilDropdown">casual</a>
+                     </li>
+                     <li class="menuItem">
+                         <a href="./HTML/myaccount.html" class="MobilDropdown">casual</a>
+                     </li>
+                     <li class="menuItem">
+                         <a href="./HTML/myaccount.html" class="MobilDropdown">casual</a>
+                     </li>
+                     <li class="menuItem">
+                         <a href="./HTML/myaccount.html" class="MobilDropdown">casual</a>
+                     </li>
+                     <li class="menuItem">
+                         <a href="./HTML/myaccount.html" class="MobilDropdown">casual</a>
+                     </li>
+ 
+                     <li class="menuItem">
+                         <a href="./HTML/myaccount.html" class="mobilMenuLinks">casual</a>
+                     </li>
+                     <li class="menuItem">
+                         <a href="./HTML/myaccount.html" class="MobilDropdown">casual</a>
+                     </li>
+                     <li class="menuItem">
+                         <a href="./HTML/myaccount.html" class="MobilDropdown">casual</a>
+                     </li>
+                     <li class="menuItem">
+                         <a href="./HTML/myaccount.html" class="MobilDropdown">casual</a>
+                     </li>
+                     <li class="menuItem">
+ 
+                     </li>
+                     <li class="menuItem">
+                         <a href="./HTML/myaccount.html" class="mobilMenuLinks">casual</a>
+                     </li>
+                     <li class="menuItem">
+                         <a href="./HTML/myaccount.html" class="mobilMenuLinks">casual</a>
+                     </li>
+                 </ul>
+             </div>
+ 
+ 
+             <div class="foMenu">
+                 <!--Asztali nézet-->
+                 <div class="asztaliNezet">
+                     <a href="./home.html" class="menuLinks">home</a>                     
+                     <div class="dropdown">
+                         <a href="./index.html" class="menuLinks" id="dropbtn">shop<span class="menuNyil">▾</span></a>
+                             <div class="dropdownMain">
+                                 <a href="./HTML/myaccount.html" class="dropdownLinks">accessories</a>
+                                 <a href="./HTML/myaccount.html" class="dropdownLinks">casual</a>
+                                 <a href="./HTML/myaccount.html" class="dropdownLinks">clothing</a>
+                                 <a href="./HTML/myaccount.html" class="dropdownLinks">men</a>
+                                 <a href="./HTML/myaccount.html" class="dropdownLinks">women</a>  
+                             </div>
+                     </div>  
+                     <div class="dropdown">
+                     <a href="./HTML/myaccount.html" class="menuLinks" id="dropbtn">my account<span class="menuNyil">▾</span></a>
+                         <div class="dropdownMain">
+                             <a href="./HTML/myaccount.html" class="dropdownLinks">Account details</a>
+                             <a href="./HTML/myaccount.html" class="dropdownLinks">Log out</a>
+                             <a href="./HTML/myaccount.html" class="dropdownLinks">Coupons</a>
+                         </div>
+                     </div>
+                     <a href="./HTML/blog.html" class="menuLinks">blog</a>
+                     <a href="./HTML/contact.html" class="menuLinks">contact us</a>
+                 </div>    
+             </div>
+         </div>
+         <!--slider-->
+         <div class="center">
+            <div class="carousel-wrapper">
+              <!-- abstract radio buttons for slides -->
+              <input id="slide1" type="radio" name="controls" checked="checked" />
+              <input id="slide2" type="radio" name="controls" />
+              <input id="slide3" type="radio" name="controls" />
+              <input id="slide4" type="radio" name="controls" />
+              <input id="slide5" type="radio" name="controls" />
+          
+              <!-- navigation dots -->
+              <label for="slide1" class="nav-dot"></label>
+              <label for="slide2" class="nav-dot"></label>
+              <label for="slide3" class="nav-dot"></label>
+              <label for="slide4" class="nav-dot"></label>
+              <label for="slide5" class="nav-dot"></label>
+          
+              <!-- arrows -->
+              <label for="slide1" class="left-arrow"> < </label>
+              <label for="slide2" class="left-arrow"> < </label>
+              <label for="slide3" class="left-arrow"> < </label>
+              <label for="slide4" class="left-arrow"> < </label>
+              <label for="slide5" class="left-arrow"> < </label>
+          
+              <label for="slide1" class="right-arrow"> > </label>
+              <label for="slide2" class="right-arrow"> > </label>
+              <label for="slide3" class="right-arrow"> > </label>
+              <label for="slide4" class="right-arrow"> > </label>
+              <label for="slide5" class="right-arrow"> > </label>
+          
+              <div class="carousel">
+                <ul>
+                  <li>
+                    <img src="https://raw.githubusercontent.com/osef-art/osef-art.github.io/master/src/assets/wallpapers/canyon.jpg" />
+                  </li>
+                  <li>
+                    <img src="https://m.media-amazon.com/images/I/31Y+R3Y3nvL._SL1000_.jpg" alt="">
+                  </li>
+                  <li>
+                    <img src="https://raw.githubusercontent.com/osef-art/ministick/main/data/img/main/ministick-clip-3.gif" />
+                  </li>
+                  <li>
+                    <img src="https://raw.githubusercontent.com/osef-art/osef-art.github.io/master/src/assets/wallpapers/smoke.jpg">
+                  </li>
+                  <li>
+                    <img src="https://images.ctfassets.net/9l3tjzgyn9gr/photo-157575/d224d518da6c26515a470a9b7e490df8/157575-honey-bun-baby.jpg?fm=jpg&fl=progressive&q=50&w=1200" alt="">
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <script src="home.js"></script>
+     </div>
+</body>
+</html>
