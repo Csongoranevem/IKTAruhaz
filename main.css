@@ -810,9 +810,31 @@ i{
       align-items: center;
     }
 
-    .jobb{
+    .jobb, .bal{
+      width: 100%;
       margin: 0;
+      margin-right: 1%;
+      margin-left: 1%;
       width: fit-content;
+    }
+
+    .szuroDiv{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .filterek{
+      display: flex;
+      flex-direction: column;
+      margin-right: 50px;
+    }
+
+  }
+
+  @media only screen and (max-width: 500px) {
+    .szuroDiv{
+      flex-direction: column;
     }
 
   }

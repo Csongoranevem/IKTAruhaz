@@ -21,7 +21,7 @@
         <div class="felsoLec">
             <div class="webName">
                 <p class="oldalnev">Csudajó Áruház</p>
-                <p class="motto">Itt még romániát is megtalálod!</p>
+                <p class="motto">Fedezd fel a lehetetlent!</p>
             </div>
             <div class="hamburger" onclick="HambiLenyilas()">
                 <span></span>
@@ -267,60 +267,62 @@
         </div>
         <div class="jobb">
             <div class="szuroDiv">
-                <div class="csuszkaSzuroDiv">
-                    <h2>Filter by price</h2>
-                </div>
-                <div id="RangeSlider" class="range-slider">
-                    <div>
-                        <div class="range-slider-val-left"></div>
-                        <div class="range-slider-val-right"></div>
-                        <div class="range-slider-val-range"></div>
-                
-                        <span class="range-slider-handle range-slider-handle-left"></span>
-                        <span class="range-slider-handle range-slider-handle-right"></span>
-                
-                        <div class="range-slider-tooltip range-slider-tooltip-left">
-                            <span class="range-slider-tooltip-text"></span>
+                <div class="filterek">
+                    <div class="csuszkaSzuroDiv">
+                        <h2>Filter by price</h2>
+                    </div>
+                    <div id="RangeSlider" class="range-slider">
+                        <div>
+                            <div class="range-slider-val-left"></div>
+                            <div class="range-slider-val-right"></div>
+                            <div class="range-slider-val-range"></div>
+                    
+                            <span class="range-slider-handle range-slider-handle-left"></span>
+                            <span class="range-slider-handle range-slider-handle-right"></span>
+                    
+                            <div class="range-slider-tooltip range-slider-tooltip-left">
+                                <span class="range-slider-tooltip-text"></span>
+                            </div>
+                    
+                            <div class="range-slider-tooltip range-slider-tooltip-right">
+                                <span class="range-slider-tooltip-text"></span>
+                            </div>
                         </div>
-                
-                        <div class="range-slider-tooltip range-slider-tooltip-right">
-                            <span class="range-slider-tooltip-text"></span>
+                    
+                        <input type="range" class="range-slider-input-left" tabindex="0" max="100" min="0" step="1">
+                        <input type="range" class="range-slider-input-right" tabindex="0" max="100" min="0" step="1">
+                    </div>
+                    <div class="arEsGombDiv">
+                        <button id="FilterGombDiv" onclick="FilterTeszt()">FILTER</button>
+                        <div id="PriceDiv">
+                            <p>Price:</p>
+                            <p id="MinErtekId"> $0 </p>
+                            <p> - </p>
+                            <p id="MaxErtekId"> $100 </p>
                         </div>
                     </div>
-                
-                    <input type="range" class="range-slider-input-left" tabindex="0" max="100" min="0" step="1">
-                    <input type="range" class="range-slider-input-right" tabindex="0" max="100" min="0" step="1">
-                </div>
-                <div class="arEsGombDiv">
-                    <button id="FilterGombDiv" onclick="FilterTeszt()">FILTER</button>
-                    <div id="PriceDiv">
-                        <p>Price:</p>
-                        <p id="MinErtekId"> $0 </p>
-                        <p> - </p>
-                        <p id="MaxErtekId"> $100 </p>
+                    <div class="kategoriaSzuroDiv">
+                        <h2>Product categories</h2>
+                        <ul id="szuzoKategoriakOl">
+                            <li class="szuroLiClass"><a href="" class="SzuroAnchor">Accessories</a></li>
+                            <li class="szuroLiClass"><a href="" class="SzuroAnchor">Casual</a></li>
+                            <li class="szuroLiClass"><a href="" class="SzuroAnchor">Clothing</a></li>
+                            <li class="szuroLiClass"><a href="" class="SzuroAnchor">Men</a></li>
+                            <li><a href="" class="SzuroAnchor , NoBorder">Women</a></li>
+                        </ul>
                     </div>
-                </div>
-                <div class="kategoriaSzuroDiv">
-                    <h2>Product categories</h2>
-                    <ul id="szuzoKategoriakOl">
-                        <li class="szuroLiClass"><a href="" class="SzuroAnchor">Accessories</a></li>
-                        <li class="szuroLiClass"><a href="" class="SzuroAnchor">Casual</a></li>
-                        <li class="szuroLiClass"><a href="" class="SzuroAnchor">Clothing</a></li>
-                        <li class="szuroLiClass"><a href="" class="SzuroAnchor">Men</a></li>
-                        <li><a href="" class="SzuroAnchor , NoBorder">Women</a></li>
-                    </ul>
                 </div>
                 <div class="topRatedSzuroDiv">
                     <h2>Top rated products</h2>
                     <ul id="TopKategoriakUl">
                         <img src="./TermekKartyak/jeansjacket.jpg" class="TopKep" alt="" srcset="">
-                        <li><a href="" class="TopAnchor">Jeans Jacket</a></li>
+                        <li><a href="" class="TopAnchor" class="Jacket">Jeans Jacket</a></li>
                         <p class="szuroLiClass">$59.00</p>
                         <img src="./TermekKartyak/pulcsinigger.jpg" class="TopKep" alt="" srcset="">
                         <li><a href="" class="TopAnchor">Black Shorts</a></li>
                         <p class="szuroLiClass">$25.00</p>
                         <img src="./TermekKartyak/kabatnigger.jpg" class="TopKep" alt="" srcset="">
-                        <li><a href="" class="TopAnchor">Leather Jacket</a></li>
+                        <li><a href="" class="TopAnchor" class="Jacket">Leather Jacket</a></li>
                         <p class="szuroLiClass"><s id="athuzott" class="AkcioS">$100.00</s id="athuzott"><s id="athuzott" class="Akciozott">$50.00</s id="athuzott"></p>
                         <img src="./TermekKartyak/feherPoloLatina.jpg" class="TopKep" alt="" srcset="">
                         <li><a href="" class="TopAnchor">Women Tops</a></li>
