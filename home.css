@@ -11,18 +11,13 @@
   justify-content: center;
 }
 
-.carousel-wrapper {
-  position: relative;
-  max-width: 600px;
-  margin: 50px;
-}
+
 .carousel-wrapper input {
   display: none;
 }
 
 .carousel {
   overflow: hidden;
-  border-radius: 15px;
 }
 .carousel ul {
   position: relative;
@@ -30,12 +25,8 @@
   overflow: hidden;
   margin: 0;
   padding: 0;
-  height: 100%;
-  width: 500%;
+  height: 80%;
   transition: left 0.8s cubic-bezier(0.77, 0, 0.175, 1);
-}
-.carousel li img {
-  border-radius: 15px;
 }
 
 .nav-dot {
