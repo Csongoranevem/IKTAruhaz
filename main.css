@@ -307,7 +307,7 @@ footer{
 
 h2 {
   border-bottom: 1px solid gray;
-  font-size: 1.5vw;
+  font-size: 25px;
   color: gray;
 }
 
@@ -607,6 +607,7 @@ h2::after {
     margin-bottom: 5px;
     background-color: rgb(235, 73, 73);
     border-radius: 5px;
+    transition: 0.3s;
 }
 
 .hamburger.open span:nth-child(1) {
@@ -623,10 +624,14 @@ h2::after {
 
 .hamburger{
   display: none;
-  position: fixed;
+  position: absolute;
   top: 4vh;
   right: 4vh;
   transition: all 1s;
+}
+
+.hamburger.open{
+  position: absolute;
 }
 
 #mobilMenu{
@@ -707,6 +712,14 @@ i{
   color: rgb(235, 73, 73);
 }
 
+i.open{
+  transform: rotate(135deg);
+}
+
+i{
+  transition: 0.2s;
+}
+
 .menuItemDropdown1{
 
   display: none;
@@ -759,7 +772,7 @@ i{
 
   }
 
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 870px) {
 
     .felsoLec{
       width: 100%;
@@ -779,22 +792,27 @@ i{
       display: block;
 
     }
-  }
 
-
-  @media only screen and (max-width: 1000px) {
     footer{
-        flex-direction: column;
-        align-items: center;
+      flex-direction: column;
+      align-items: center;
     }
-    
-    .footDivKoz, .footDivBal, .footDivJobb{
-        width: 40%;
-        margin: 0;
+  
+  .footDivKoz, .footDivBal, .footDivJobb{
+      width: 40%;
+      margin: 0;
 
-    
+  
     }
 
+    .main{
+      flex-direction: column;
+      align-items: center;
+    }
 
+    .jobb{
+      margin: 0;
+      width: fit-content;
+    }
 
-}
+  }

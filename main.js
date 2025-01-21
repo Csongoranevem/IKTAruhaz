@@ -72,6 +72,7 @@ document.querySelector('#RangeSlider .range-slider-input-right').addEventListene
 			e.style.display = (e.style.display === 'block') ? 'none' : 'block';
 
 		});
+		document.querySelector('.lenyit i').classList.toggle('open');
 		});
 
 	document.querySelector('.lenyit2').addEventListener('click', () => {
@@ -81,6 +82,7 @@ document.querySelector('#RangeSlider .range-slider-input-right').addEventListene
 			e.style.display = (e.style.display === 'block') ? 'none' : 'block';
 
 		});
+		document.querySelector('.lenyit2 i').classList.toggle('open');	
 		});
 	//console.log(hamburger.classList.contains('open'));
 
