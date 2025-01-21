@@ -646,7 +646,7 @@ h2::after {
   padding: 0;
 }
 
-.menuItem{
+.menuItem, .menuItemDropdown1, .menuItemDropdown2{
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -684,6 +684,40 @@ h2::after {
 }
 
 
+i{
+  text-decoration: none;
+  color: white;
+  font-size: larger;
+  margin: 0 auto;
+}
+
+.lenyit, .lenyit2{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 60px;
+  width: 15%;
+  border-left: #e0e0e0 1px solid;  
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.lenyit:hover, .lenyit2:hover{
+  background-color: rgb(255, 136, 136);
+  color: rgb(235, 73, 73);
+}
+
+.menuItemDropdown1{
+
+  display: none;
+  padding-left: 2em;
+}
+
+.menuItemDropdown2{
+
+  display: none;
+  padding-left: 2em;
+}
 
 .menuLink:hover{
   background-color: whiq;
@@ -748,11 +782,7 @@ h2::after {
   }
 
 
-/*@media only screen and (max-width: 700px) {
-    .foMenu{
-        display: none;
-    }
-
+  @media only screen and (max-width: 1000px) {
     footer{
         flex-direction: column;
         align-items: center;
