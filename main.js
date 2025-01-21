@@ -62,17 +62,25 @@ document.querySelector('#RangeSlider .range-slider-input-right').addEventListene
 	hamburger.classList.toggle('open');
 	mobilMenu.classList.toggle('visible');
   
-	console.log(hamburger.classList.contains('open'));
+	//console.log(hamburger.classList.contains('open'));
   });
   //aloldalak
-  document.querySelector('.hamburgerAloldal').addEventListener('click', () => {
-	const hAloldal = document.getElementById('dropdownMobil');
-	const hamburgerAloldal = document.querySelector('.hamburgerAloldal');
-  
-	hAloldal.style.display = (hAloldal.style.display === 'block') ? 'none' : 'block';
-  
-	hamburgerAloldal.classList.toggle('open');
-  
-	console.log(hamburger.classList.contains('open'));
-  });
+	document.querySelector('.lenyit').addEventListener('click', () => {
+		const hAloldal = document.querySelectorAll('.menuItemDropdown1');
+
+		hAloldal.forEach(e => {
+			e.style.display = (e.style.display === 'block') ? 'none' : 'block';
+
+		});
+		});
+
+	document.querySelector('.lenyit2').addEventListener('click', () => {
+		const hAloldal2 = document.querySelectorAll('.menuItemDropdown2');
+
+		hAloldal2.forEach(e => {
+			e.style.display = (e.style.display === 'block') ? 'none' : 'block';
+
+		});
+		});
+	//console.log(hamburger.classList.contains('open'));
 
