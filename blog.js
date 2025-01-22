@@ -1,0 +1,3 @@
+function KepKlikkTeszt(){
+    alert("Haiii")
+}
