@@ -30,7 +30,7 @@
   }
 
   #FilterGombDiv{
-    height: 2vw;
+    height: 45px;
     margin-top: 0.5vw;
     margin-bottom: auto;
     border: 0px solid;
@@ -38,12 +38,12 @@
     font-weight: bold;
     padding-left: 1.2vw;
     padding-right: 1.2vw;
-    font-size: 1vw;
+    font-size: 20px;
   }
 
   #PriceDiv{
     display: flex;
-    font-size: 1vw;
+    font-size: 15px;
     font-weight: lighter;
     color: rgb(184, 184, 184);
   }
@@ -58,7 +58,7 @@
     margin-bottom: 4%;
     padding-bottom: 3%;
 
-    font-size: 1.2vw;
+    font-size: 20px;
   }
 
   .SzuroAnchor{
@@ -80,12 +80,12 @@
     color: black;
     font-weight: bold;
     margin-bottom: 4%;
-    font-size: 1.4vw;
+    font-size: 30px;
   }
 
   #TopKategoriakUl > p{
     padding-bottom: 3%;
-    font-size: 1vw;
+    font-size: 15px;
   }
 
   .TopAnchor{
