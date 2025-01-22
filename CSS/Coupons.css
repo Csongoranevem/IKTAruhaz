@@ -1,0 +1,16 @@
+.couponPic{
+    width: 320px;
+    box-shadow: inset 5px black;
+}
+
+.couponmain{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    background-color: rgb(252, 229, 229);
+}
+
+.couponLeiras{
+    width: 66%;
+}
