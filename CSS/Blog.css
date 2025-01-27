@@ -42,7 +42,7 @@ a{
     margin-left: 2%;
     padding: 0.5% 3.5% 0.5% 1.50%;
     font-weight: bold;
-    font-size: larger;
+    font-size: 1.5vw;
     border-radius:  0px 0px 20px 20px;
 }
 
@@ -117,6 +117,8 @@ a{
     display: flex;
 }
 
+
+
 #BlogKeresesSelectID{
     width: 100%;
     height: 120%;
@@ -126,4 +128,57 @@ a{
     color: gray;
     margin-left: 3%;
     padding: 1%;
+}
+
+.BalRendezesNagyDiv{
+    display: none;
+}
+
+
+@media screen and (max-width: 870px){
+    .BalBlogCimSpan{
+        font-size: 2vw;
+    }
+}
+
+@media  screen and (max-width: 770px){
+    .FoDiv{
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 5%;
+    }
+    
+    .BalBlogDiv{
+        width: 95%;
+    }
+    
+    .JobbBlogDiv{
+        display:none;
+    }
+    
+    .BalRendezesNagyDiv{
+        display: flex;
+        margin-bottom: 5%;
+        margin-top: 5%;
+        width: 80%;
+
+    }
+
+    #BalBlogKeresesSelectID{
+        width: 50%;
+        border-color: rgba(131, 131, 131, 0.514);
+        box-shadow: 9px 14px 34px -11px rgba(88, 88, 88, 0.55);
+        color: gray;
+        margin-left: 3%;
+        padding: 1%;
+        font-weight: 900;
+    }
+
+    .BalRendezesHead{
+        width: 50%;
+        color: rgb(235, 73, 73);;
+    }
 }
