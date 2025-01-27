@@ -41,20 +41,21 @@ h1{
     font-weight: 500;
     letter-spacing: 2px;
     margin-right: 10%;
-    width: 300px;
+    width: 320px;
     height: 70px;
     color: rgb(235, 73, 73);
     border: navajowhite;
     background-color: rgb(255, 255, 255);
     border: rgb(235, 73, 73) 1px solid;
     border-radius: 3px;
-    transition: 0.3s 
+    transition: 0.3s ;
+    text-align: center;
 }
 
 .couponMain button:hover{
     background-color: rgb(235, 73, 73);
     color: white;
-    font-size: 23px;
+    font-size: 21px;
     border-color: rgb(192, 0, 0);
 }
 
