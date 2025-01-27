@@ -1,0 +1,118 @@
+.main{
+    display: flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+
+}
+
+
+.couponPic{
+    width: 320px;
+    box-shadow: 0px 0px 5px black;
+}
+
+.couponMain{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    background-color: rgb(236, 229, 229);
+    box-shadow: 0px 0px 1em rgb(160, 160, 160);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.couponLeiras{
+    margin-left: 2em;
+    width: 66%;
+    text-align: justify; 
+}
+
+h1{
+    font-weight: 500;
+    margin-left: 1em;
+    letter-spacing: 2px;
+}
+
+.couponMain button{
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-right: 10%;
+    width: 320px;
+    height: 70px;
+    color: rgb(235, 73, 73);
+    border: navajowhite;
+    background-color: rgb(255, 255, 255);
+    border: rgb(235, 73, 73) 1px solid;
+    border-radius: 3px;
+    transition: 0.3s ;
+    text-align: center;
+}
+
+.couponMain button:hover{
+    background-color: rgb(235, 73, 73);
+    color: white;
+    font-size: 21px;
+    border-color: rgb(192, 0, 0);
+}
+
+.kep{
+    position: relative;
+}
+
+.kedvezmeny{
+    position: absolute;
+    top: 10%;
+    left: 3%;
+    z-index: 999;
+    font-size: 50px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.479);
+}
+
+
+@media only screen and (max-width: 1000px){
+    .couponMain{
+        flex-wrap: wrap;     
+        
+    }
+
+    .couponMain button{
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+
+    h1{
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .couponPic{
+        margin-right: 1em;
+    }
+
+    .couponLeiras{
+        margin: 0 auto;
+        margin-bottom: 1em;
+        text-align-last: center;
+    }
+}
+
+@media only screen and (max-width: 870px){
+
+    .couponMain{
+        flex-direction: column;
+        align-items: center;
+    }
+    .couponPic{
+        margin-right: 0;
+        width: 100%;
+    }
+    .couponMain button{
+        width: 90%;
+    }
+}
