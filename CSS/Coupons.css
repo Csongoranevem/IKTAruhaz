@@ -41,7 +41,8 @@ h1{
     font-weight: 500;
     letter-spacing: 2px;
     margin-right: 10%;
-    width: 320px;
+    width: 17%;
+    max-width: 17%;
     height: 70px;
     color: rgb(235, 73, 73);
     border: navajowhite;
