@@ -116,3 +116,26 @@ function slide(wrapper, items, prev, next) {
 }
 
 slide(slider, sliderItems, prev, next);
+
+document.addEventListener("DOMContentLoaded", function () {
+  const slides = document.querySelectorAll(".slide");
+  const indicators = document.querySelectorAll(".slider-indicators span");
+
+  let currentIndex = 0;
+
+  function updateIndicators(index) {
+      indicators.forEach((dot, i) => {
+          dot.classList.toggle("active", i === index);
+      });
+  }
+
+  indicators.forEach((dot, i) => {
+      dot.addEventListener("click", () => {
+          currentIndex = i;
+          document.getElementById("slides").style.transform = `translateX(-${i * 100}%)`;
+          updateIndicators(i);
+      });
+  });
+
+  updateIndicators(currentIndex);
+});
