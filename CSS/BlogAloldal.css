@@ -16,8 +16,90 @@
 
 .FoGombokDiv{
     display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.BlogFoGomb{
+    background-color: rgb(235, 73, 73);
+    color: white;
+    border: 0px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    width: 25%;
+    box-sizing: content-box;
+    height: 5vh;
+    font-size: larger;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    text-align: left;
+}
+
+.FoSzoveg > span{
+    padding-left: 3%;
+}
+
+.FoSzoveg > h3{
+    font-weight: 600;
+}
+
+.BlogFoGomb:hover{
+    animation: HoverEffect 0.2s ease-in-out;
+    animation-fill-mode:both;
+}
+
+@keyframes HoverEffect{
+    from{
+        background-color: rgb(235, 73, 73);
+    }
+    to{
+        background-color: rgb(0, 5, 46);
+        width: 26%;
+        height: 5.2vh;
+    }
 }
 
 span{
     font-size: 130%;
+}
+
+@media  screen and (max-width: 1150px){
+    .FoDiv{
+        width: 90%;
+    }
+}
+
+@media  screen and (max-width: 1065px){
+    .FoDiv{
+        width: 95%;
+    }
+}
+
+
+@media  screen and (max-width: 1010px){
+    .FoSzoveg > h2{
+        font-size: 130%;
+    }
+}
+
+
+@media  screen and (max-width: 930px){
+    .FoSzoveg > h2{
+        font-size: 110%;
+    }
+}
+
+@media  screen and (max-width: 905px){
+    .FoSzoveg > span{
+        font-size: 120%;
+    }
+}
+
+@media  screen and (max-width: 847px){
+    .FoSzoveg > span{
+        font-size: 110%;
+    }
+    .FoSzoveg > h2{
+        font-size: 100%;
+    }
 }
