@@ -47,7 +47,6 @@
   justify-content: center;
   transition: all 1s;
   position: relative;
-  background: #FFCF47;
   border-radius: 2px;
 }
 
@@ -93,16 +92,7 @@
   height: 35%;
 
 }
-.container{
-  margin-top:5%;
-  margin-bottom: 5%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin-inline: 5%;
-  margin-left: 1%;
-  margin-right: 1%;
-}
+
 .slider-indicators {
   position: absolute;
   bottom: 15px;
@@ -178,4 +168,67 @@ margin-right: 12%;
 .vonal{
   margin-bottom:-15%;
   margin-top: 5%;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 5%;
+}
+
+.image-box {
+  position: relative;
+  width: 30%;
+}
+
+.image-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  padding: 20px;
+  width: 80%;
+}
+
+.banner-title {
+  margin-top: 25%;
+  font-size: 27px;
+  margin-left: 10%;
+  margin-right: 10%;
+
+}
+
+.banner-discount {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: -2%;
+  margin-top: -3%;
+}
+
+.banner-btna {
+  background: transparent;
+  color: white;
+  padding: 5px 10px;
+  border: solid 1px 1px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.banner-btna:hover {
+  background-color: rgb(176, 176, 176);
+}
+.vonalketto{
+  color: white;
+}
+.vonalharom{
+  color: white;
+  margin-bottom: 25%;
 }
