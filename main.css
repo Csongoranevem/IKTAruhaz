@@ -71,7 +71,7 @@ body{
     gap: 5px;
 }
 
-.menuLinks{
+.menuLinks, .dropdown{
     margin-left: 2em;
     padding-left: 0.5em;
     padding-right: 0.5em;
@@ -88,6 +88,11 @@ body{
     white-space: nowrap;
 
 }
+
+.dropdown{
+
+}
+
 
 .menuNyil{
     display: inline;
@@ -230,7 +235,7 @@ footer{
 /*Dropdown animációk*/
 
 .dropdown{
-    margin-top: 0.7em;
+  padding-top: 0.15em;
     
 }
 
@@ -767,6 +772,7 @@ i{
 
     .dropdown{
       margin: auto;
+      padding-top: 0.1em;
     }
 
 
