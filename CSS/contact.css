@@ -1,0 +1,61 @@
+.main{
+    width: 40%;
+    margin: 0 auto;
+    height: fit-content;
+    margin-bottom: 80px;
+
+}
+
+.tajekoztato{
+    font-size: medium;
+}
+
+input, select, #uzenet{
+    width: 100%;
+    height: 50px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+select{
+    margin-top: 0;
+    width: 20%;
+    min-width: 70px;
+    background-color: rgb(233, 233, 233);
+    box-shadow: none;
+    border-radius: 5px;
+}
+
+#uzenet{
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 150px;
+    max-height: 150px;
+}
+
+button{
+    align-self: flex-end;
+    background-color: rgb(235, 73, 73);
+    color: white;
+    width: 110px;
+    height: 40px;
+    font-weight: 600;
+    font-size: larger;
+    border: 1px solid rgb(235, 73, 73);
+    transition: 0.3s;
+    letter-spacing: 2px;
+}
+button:hover{
+    background-color: white;
+    color: rgb(235, 73, 73);
+    font-size: 20px
+}
+
+.urlap{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
