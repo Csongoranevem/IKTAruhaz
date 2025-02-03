@@ -59,3 +59,21 @@ button:hover{
     flex-direction: column;
     align-items: stretch;
 }
+
+@media screen and (max-width: 870px){
+    .urlap{
+        width: 100%;
+    }
+    .main{
+        width: 80%;
+    }
+    .tajekoztato{
+        font-size: 150%;
+    }
+    
+    #SendGomb{
+        width: 100%;
+        margin-top: 2%;
+        font-size: 200%;
+    }
+}
