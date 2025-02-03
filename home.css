@@ -166,7 +166,7 @@ margin-right: 12%;
   background-color: #ff4040;
 }
 .vonal{
-  margin-bottom:-15%;
+  margin-bottom:-5%;
   margin-top: 5%;
 }
 .container {
@@ -193,7 +193,7 @@ margin-right: 12%;
   left: 40%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: white;
+  color: rgb(255, 255, 255);
   padding: 20px;
   width: 80%;
 }
@@ -201,16 +201,14 @@ margin-right: 12%;
 .banner-title {
   margin-top: 25%;
   font-size: 27px;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 17%;
+  margin-right: 17%;
 
 }
 
 .banner-discount {
   font-size: 32px;
   font-weight: bold;
-  margin-bottom: -2%;
-  margin-top: -3%;
 }
 
 .banner-btna {
@@ -222,13 +220,12 @@ margin-right: 12%;
   cursor: pointer;
 }
 
-.banner-btna:hover {
-  background-color: rgb(176, 176, 176);
-}
 .vonalketto{
   color: white;
+
+
 }
 .vonalharom{
   color: white;
-  margin-bottom: 25%;
+  margin-bottom: 15%;
 }
