@@ -1,5 +1,5 @@
 .main{
-    width: 40%;
+    width: 70vh;
     margin: 0 auto;
     height: fit-content;
     margin-bottom: 80px;
@@ -74,6 +74,6 @@ button:hover{
     #SendGomb{
         width: 100%;
         margin-top: 2%;
-        font-size: 200%;
+        font-size: 205%;
     }
 }
