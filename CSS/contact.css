@@ -60,6 +60,7 @@ button:hover{
     align-items: stretch;
 }
 
+
 @media screen and (max-width: 870px){
     .urlap{
         width: 100%;
