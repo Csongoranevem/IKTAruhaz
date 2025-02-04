@@ -4,9 +4,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Account</title>
+    <link rel="stylesheet" href="../main.css">
     <link rel="stylesheet" href="../myaccount.css">
+    
 </head>
 <body>
+    <!--Menü és felsőléc-->
+    <a href="" id="top"></a>
+    <div class="stickyteto">
+        <div class="felsoLec">
+            <div class="webName">
+                <p class="oldalnev">Csudajó Áruház</p>
+                <p class="motto">Fedezd fel a lehetetlent!</p>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+
+            <!--Mobil nézet-->
+            <div id="mobilMenu">
+                <ul class="egeszMobil">
+                        <li class="menuItem">
+                            <a href="./home.html" class="mobilMenuLinks">home</a>
+                        </li>
+                    <li class="menuItem">
+                        <a href="../index.html" class="mobilMenuLinks">shop</a>
+                        <a class="lenyit"><i class="fa fa-plus"></i></a>
+                    </li>
+                    <li class="menuItemDropdown1">
+                        <a href="../index.html" class="MobilDropdown">accessories</a>
+                    </li>
+                    <li class="menuItemDropdown1">
+                        <a href="../index.html" class="MobilDropdown">casual</a>
+                    </li>
+                    <li class="menuItemDropdown1">
+                        <a href="../index.html" class="MobilDropdown">clothing</a>
+                    </li>
+                    <li class="menuItemDropdown1">
+                        <a href="../index.html" class="MobilDropdown">men</a>
+                    </li>
+                    <li class="menuItemDropdown1">
+                        <a href="../index.html" class="MobilDropdown">women</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="./HTML/myaccount.html" class="mobilMenuLinks">my account</a>
+                        <a class="lenyit2"><i class="fa fa-plus"></i></a>
+                    </li>
+                    <li class="menuItemDropdown2">
+                        <a href="./myaccount.html" class="MobilDropdown">account details</a>
+                    </li>
+                    <li class="menuItemDropdown2">
+                        <a href="./myaccount.html" class="MobilDropdown">log out</a>
+                    </li>
+                    <li class="menuItemDropdown2">
+                        <a href="./coupons.html" class="MobilDropdown">coupons</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="./blog.html" class="mobilMenuLinks">blog</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="./contact.html" class="mobilMenuLinks">contact us</a>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="foMenu">
+                <!--Asztali nézet-->
+                <div class="asztaliNezet">
+                    <a href="./home.html" class="menuLinks">home</a>                     
+                    <div class="dropdown">
+                        <a href="../index.html" class="menuLinks" id="dropbtn">shop<span class="menuNyil">▾</span></a>
+                            <div class="dropdownMain">
+                                <a href="../index.html" class="dropdownLinks">accessories</a>
+                                <a href="../index.html" class="dropdownLinks">casual</a>
+                                <a href="../index.html" class="dropdownLinks">clothing</a>
+                                <a href="../index.html" class="dropdownLinks">men</a>
+                                <a href="../index.html" class="dropdownLinks">women</a>  
+                            </div>
+                    </div>  
+                    <div class="dropdown">
+                    <a href="./HTML/myaccount.html" class="menuLinks" id="dropbtn">my account<span class="menuNyil">▾</span></a>
+                        <div class="dropdownMain">
+                            <a href="./myaccount.html" class="dropdownLinks">Account details</a>
+                            <a href="./myaccount.html" class="dropdownLinks">Log out</a>
+                            <a href="./coupons.html" class="dropdownLinks">Coupons</a>
+                        </div>
+                    </div>
+        
+        
+        
+                    <a href="./blog.html" class="menuLinks">blog</a>
+                    <a href="./contact.html" class="menuLinks">contact us</a>
+        
     
+                </div>    
+            </div>
+        </div>
+    </div>
+    <div class="route">
+        <p>Home/Account/Coupons</p>
+    </div>
+    <div class="container">
+        <p class="login"><label>Last Login:</label><span class="value" >2024.12.26 15:02</span></p>
+        <p><label>Name:</label><span class="value">Gipszkarton Géza</span></p>
+        <p><label>Billing address:</label><span class="value">6500 Baja Bácska tér 1.</span></p>
+        <p><label>Shipping address:</label><span class="value">6500 Baja Bácska tér 1.</span></p>
+        <p><label>Phone:</label><span class="value">+36116123 (ne hívd fel)</span></p>
+        <p><label>E-mail:</label><span class="value"><a href="mailto:gipszgeza73@citromail.ru">gipszgeza73@citromail.ru</a></span></p>
+
+    </div>
+    <script src="../hambi.js"></script>
 </body>
 </html>
