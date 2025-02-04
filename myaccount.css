@@ -1,0 +1,27 @@
+
+.container {
+    border: 1px solid #ccc;
+    padding: 15px;
+    height: auto;
+}
+.container label {
+    font-weight: bold;
+    color: gray;
+}
+.container .value {
+    margin-left: 10px;
+    color: black;
+}
+.container a , a:visited{
+    color: black;
+    pointer-events: none;
+  cursor: default;
+    text-decoration: none;
+}
+.login{
+    position: absolute;
+    margin-left: 50%;
+    margin-top: 8%;
+        font-weight: bold;
+        color: gray;
+}
