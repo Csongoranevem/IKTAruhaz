@@ -117,10 +117,10 @@
     </div>
 
     <div class="main">
-        <form action="" class="urlap">
+        <form action="https://formsubmit.co/your@email.com" method="POST" class="urlap">
             <p class="tajekoztato">If you can’t find the answer to you question, feel free to e-mail us here.</p>
-            <input type="text" class="normal" placeholder="Name" required>
-            <input type="email" class="normal" placeholder="E-mail" required>
+            <input type="text" name="input" class="normal" placeholder="Name" required>
+            <input type="email" class="normal" name="email" placeholder="E-mail" required>
             <p class="tajekoztato">Have you ordered from us before?</p>
 
             <select name="" id="rendeltMar">
@@ -128,7 +128,7 @@
                 <option value="No">No</option>
             </select>
         
-            <textarea name="" id="uzenet" placeholder="Message"></textarea>
+            <textarea name="textarea" id="uzenet" placeholder="Message"></textarea>
             <button type="submit" id="SendGomb">Send</button>
         </form>
     </div>
