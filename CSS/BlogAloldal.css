@@ -102,4 +102,11 @@ span{
     .FoSzoveg > h2{
         font-size: 100%;
     }
+    .foMenu{
+        display: none;
+    }
+
+    .stickyteto{
+        height: 14vh
+    }
 }
