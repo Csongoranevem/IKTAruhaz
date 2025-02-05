@@ -48,6 +48,12 @@
     animation-fill-mode:both;
 }
 
+.JobbKicsiGomb:hover{
+    animation-name: HoverEffect2;
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
+}
+
 @keyframes HoverEffect{
     from{
         background-color: rgb(235, 73, 73);
@@ -56,6 +62,16 @@
         background-color: rgb(0, 5, 46);
         width: 26%;
         height: 5.2vh;
+    }
+}
+
+@keyframes HoverEffect2{
+    from{
+        background-color: rgb(235, 73, 73);
+    }
+    to{
+        background-color: rgb(255, 255, 255);
+        color: rgb(235, 73, 73);
     }
 }
 
@@ -108,5 +124,14 @@ span{
 
     .stickyteto{
         height: 14vh
+    }
+    .BlogFoGomb{
+        font-size: medium;
+    }
+}
+
+@media screen and (max-width: 395px) {
+    .BlogFoGomb{
+        font-size: xx-small;
     }
 }
