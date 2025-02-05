@@ -326,7 +326,6 @@ h2::after {
 }
 
 .kartyak {
-  gap: 5px;
   width: 100%;
   min-width: 280px;
   max-width: 280px;
@@ -336,7 +335,6 @@ h2::after {
 .row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .card {
