@@ -19,24 +19,23 @@ function slide(wrapper, items, prev, next) {
       index = 0,
       allowShift = true;
   
-  // Clone first and last slide
+
   items.appendChild(cloneFirst);
   items.insertBefore(cloneLast, firstSlide);
   wrapper.classList.add('loaded');
   
-  // Mouse events
+ 
   items.onmousedown = dragStart;
-  
-  // Touch events
+
   items.addEventListener('touchstart', dragStart);
   items.addEventListener('touchend', dragEnd);
   items.addEventListener('touchmove', dragAction);
   
-  // Click events
+
   prev.addEventListener('click', function () { shiftSlide(-1) });
   next.addEventListener('click', function () { shiftSlide(1) });
   
-  // Transition events
+
   items.addEventListener('transitionend', checkIndex);
   
   function dragStart (e) {
