@@ -2,12 +2,7 @@
   --slider-height: 80vh;  
 }
 
-* {
-  box-sizing: border-box;
-}
-.felsoLec{
-  margin-bottom: 10px;
-}
+
 .slider {
   position: relative;
   width: 100%;
@@ -198,10 +193,11 @@
   .image-box {
     width: 45%; 
   }
+
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 870px) {
   .image-box {
     width: 100%; 
   }
@@ -274,7 +270,7 @@
 }
 
 /* Telefon méretek */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 870px) {
   :root {
     --slider-height: 40vh; 
   }
