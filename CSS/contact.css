@@ -61,6 +61,15 @@ button:hover{
 }
 
 
+@media only screen and (min-height: 900px) {
+    footer{
+      position: fixed;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+
 @media screen and (max-width: 870px){
     .urlap{
         width: 100%;
