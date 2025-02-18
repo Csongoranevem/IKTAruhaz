@@ -12,6 +12,14 @@ body {
   position: relative;
   text-align: center;
   overflow: hidden;
+  background-image: url("../Home képek/OUR-COMPANY_HISTORY.jpg");
+  padding-top: 2%;
+  padding-bottom: 2%;
+  background-repeat: no-repeat;
+  background-size:cover;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
 }
 
 .fastest h1{
@@ -23,10 +31,6 @@ body {
 
 }
 
-.banner img {
-  width: 100%;
-  height: auto;
-}
 .banner-btn{
   background-color: rgb(235, 73, 73);
   color: white;
@@ -34,20 +38,19 @@ body {
   font-size:x-large;
 }
 .slider-banner {
-  position: absolute;
     top: 50%;  
-    left: 5%;  
-    transform: translateY(-50%); 
+    position: relative;
     background-color: rgba(13, 13, 43, 0.8); 
     color: white;
     padding: 20px;
     width: 90%; 
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
     max-width: 350px; 
     text-align: center;
     border: 2px solid rgba(255, 255, 255, 0.2);
     font-size: xx-large;
 }
-
 .announcement {
   background-color: rgb(235, 73, 73);
   color: white;
@@ -111,6 +114,7 @@ body {
   font-size: xx-large;
   padding-top: 5%;
   padding-bottom:5%;
+  
 }
 
 
@@ -123,24 +127,26 @@ body {
   width: 300px;
 }
 /*Szimpi reszponz*/
+@media (min-width:1257px){
+  .slider-banner{
+    left: 5%;
+  }
+}
 @media (max-width:1257px){
   .slider-banner {
     align-items: center;
       top: 5%;
       transform: translateY(0%);
-      transform: translateX(75%);
-      left: 10%;
       font-size: x-large;
+      margin-left: auto;
+    margin-right: auto;
   }
 }
 /* Tablet nézet */
 @media (max-width: 1024px) {
   .slider-banner {
     align-items: center;
-      top: 5%;
       transform: translateY(0%);
-      transform: translateX(50%);
-      left: 10%;
       font-size: large;
   }
   .banner-btn{
@@ -159,16 +165,17 @@ body {
 /* Mobil nézet */
 @media (max-width: 660px) {
   .slider-banner {
-    align-items: center;
-    left: 5%;  
+      align-items: center;
     width: 80%;
     max-width: 250px;
     padding: 10px;
-    transform: translateX(50%);
     font-size: smaller;
+    margin-left: auto;
+    margin-right: auto;
 }
 .banner-btn {
   font-size: smaller;
+  padding: 3%;
 }
   .announcement p {
       animation-duration: 15s;
