@@ -12,8 +12,7 @@ body{
 }
 
 ::selection{
-  color: rgb(235, 73, 73);
-  background-color: rgb(80, 0, 0);
+  background: rgb(74, 144, 226);
 }
 .main{
     display: flex;
