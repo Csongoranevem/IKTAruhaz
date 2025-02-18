@@ -3,8 +3,11 @@
     flex-direction: row;
     width: 100%;
     margin: 0 auto;
-    height: fit-content;
-    margin-bottom: 80px;
+    background-image: url("../Weboldal képek/contactusKep 1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 10em;
+
 
 }
 
@@ -21,17 +24,34 @@
 
 }
 
+.contactCim{
+    font-size: 40px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.urlap >.contactCim{
+    text-align: center;
+}
+
+.adatok{
+    font-size: large;
+    color: white;
+}
+
 .tajekoztato{
     font-size: medium;
+    color: white;
 }
 
 input, select, #uzenet{
     width: 100%;
-    height: 50px;
-    margin-top: 8px;
+    height: 55px;
     margin-bottom: 8px;
     font-size: 20px;
     box-sizing: border-box;
+    background-color: rgb(221, 221, 221);
+    border-radius: 10px;
 }
 
 select{
@@ -41,6 +61,26 @@ select{
     background-color: rgb(233, 233, 233);
     box-shadow: none;
     border-radius: 5px;
+}
+
+.rendeltE{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.ertekeles{
+    display: flex;
+    flex-direction: row;
+    font-size: 40px;
+    justify-content: space-between;
+}
+
+.valaszto{
+    width: 5px;
+    height: 55px;
+    background-color: rgb(221, 221, 221);
+    border-radius: 3px;
 }
 
 #uzenet{
@@ -76,14 +116,14 @@ button:hover{
 }
 
 
-@media only screen and (min-height: 900px) {
+/*@media only screen and (min-height: 900px) {
     footer{
       position: fixed;
       bottom: 0;
       left: 0;
       width: 100%;
     }
-  }
+  }*/
 
 
 @media screen and (max-width: 870px){

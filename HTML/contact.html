@@ -119,21 +119,35 @@
     <div class="main">
         <div class="elerhetosegek">
             <p class="contactCim">Elérhetőségeink</p>
-            <p class="adatok">tel.: +36 123 456<br>
-                e-mail: csudajoshop@gmail.com<br>
-                Bácska Tér 1</p>
+            <p class="adatok"><b>Tel.: </b>+36 123 456<br>
+                <b>E-mail: </b>csudajoshop@gmail.com<br>
+                <b>Székhely: </b>Bácska Tér 1</p>
         </div>
         <div class="urlap">
             <form action="https://formsubmit.co/czakocsongor@turr.hu" method="POST" class="urlap">
-                <p class="tajekoztato">If you can’t find the answer to you question, feel free to e-mail us here.</p>
-                <input type="text" name="input" class="normal" placeholder="Name" required>
+                <p class="contactCim">Contact us</p>
+                <p class="tajekoztato"><b>A *-al jelölt mezők kitöltése kötelező.</b></p>
+                <input type="text" name="input" class="normal" placeholder="Név" required>
                 <input type="email" class="normal" name="email" placeholder="E-mail" required>
-                <p class="tajekoztato">Have you ordered from us before?</p>
+                <p class="tajekoztato"><b>Rendeltél már tőlünk ezelőtt?</b></p>
+                <div class="rendeltE">
+                    <select name="" id="rendeltMar">
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
 
-                <select name="" id="rendeltMar">
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
-                </select>
+                    <div class="valaszto"></div>
+                    
+                    <div class="ertekeles">
+                        <p>★</p>
+                        <p>★</p>
+                        <p>★</p>
+                        <p>★</p>
+                        <p>★</p>
+                    </div>
+
+                </div>
+
             
                 <textarea name="textarea" id="uzenet" placeholder="Message"></textarea>
                 <button type="submit" id="SendGomb">Send</button>
