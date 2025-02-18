@@ -1,8 +1,23 @@
 .main{
-    width: 70vh;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
     margin: 0 auto;
     height: fit-content;
     margin-bottom: 80px;
+
+}
+
+
+.elerhetosegek{
+    width: 50%;
+    padding-right: 10em;
+    margin-left: 10%;
+}
+
+.urlap{
+    width: 50%;
+    margin-right: 10%;
 
 }
 
