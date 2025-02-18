@@ -19,7 +19,10 @@
 }
 
 .urlap{
-    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 40%;
     margin-right: 10%;
 
 }
@@ -40,47 +43,127 @@
 }
 
 .tajekoztato{
-    font-size: medium;
+    font-size: large;
     color: white;
 }
 
-input, select, #uzenet{
+input, #slider, #uzenet{
     width: 100%;
     height: 55px;
     margin-bottom: 8px;
     font-size: 20px;
     box-sizing: border-box;
-    background-color: rgb(221, 221, 221);
+    background-color: white;
+    opacity: .80;
     border-radius: 10px;
 }
 
-select{
-    margin-top: 0;
-    width: 20%;
-    min-width: 70px;
-    background-color: rgb(233, 233, 233);
-    box-shadow: none;
-    border-radius: 5px;
-}
+/*Switch formázása*/
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 40px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 50px;
+    width: 50px;
+    top: -5px;
+    left: -6px;
+    bottom: 4px;
+    background-color: rgb(235, 73, 73);
+    transition: .4s;
+  }
+
+  input:checked + .slider {
+    background-color: rgb(235, 73, 73);
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(40px);
+  }
+
+  input:checked + .slider:before{
+    background-color: white;
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+/*Switch vége (adta Isten)*/
+
 
 .rendeltE{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1em;
+}
+
+#jobb, #bal{
+    display: block;
+}
+
+.switchesDiv{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    align-items: center;
+}
+
+
+.rendeltP{
+    color: white;
+    font-weight: 200;
+    text-transform: uppercase;
+    font-size: larger;
 }
 
 .ertekeles{
     display: flex;
     flex-direction: row;
-    font-size: 40px;
-    justify-content: space-between;
+    font-size: 50px;
+    color: white;
+    height: 50px;
+    align-items: center;
+}
+
+.ertekeles > p{
+    margin-right: 1em;
 }
 
 .valaszto{
-    width: 5px;
-    height: 55px;
-    background-color: rgb(221, 221, 221);
+    width: 2px;
+    height: 110px;
+    background-color: rgb(243, 243, 243);
     border-radius: 3px;
+    margin: 0;
 }
 
 #uzenet{
@@ -90,32 +173,24 @@ select{
     max-height: 150px;
 }
 
-button{
+.urlap > button{
     align-self: flex-end;
     background-color: rgb(235, 73, 73);
     color: white;
-    width: 110px;
-    height: 40px;
+    width: 150px;
+    height: 50px;
     font-weight: 600;
     font-size: larger;
     border: 1px solid rgb(235, 73, 73);
     transition: 0.3s;
     letter-spacing: 2px;
+    border-radius: 4px;
 }
 button:hover{
     background-color: white;
     color: rgb(235, 73, 73);
     font-size: 20px
 }
-
-.urlap{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-}
-
-
 /*@media only screen and (min-height: 900px) {
     footer{
       position: fixed;

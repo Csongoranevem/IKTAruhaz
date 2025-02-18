@@ -123,34 +123,46 @@
                 <b>E-mail: </b>csudajoshop@gmail.com<br>
                 <b>Székhely: </b>Bácska Tér 1</p>
         </div>
-        <div class="urlap">
             <form action="https://formsubmit.co/czakocsongor@turr.hu" method="POST" class="urlap">
                 <p class="contactCim">Contact us</p>
+
                 <p class="tajekoztato"><b>A *-al jelölt mezők kitöltése kötelező.</b></p>
+
                 <input type="text" name="input" class="normal" placeholder="Név" required>
+
                 <input type="email" class="normal" name="email" placeholder="E-mail" required>
-                <p class="tajekoztato"><b>Rendeltél már tőlünk ezelőtt?</b></p>
+                
                 <div class="rendeltE">
-                    <select name="" id="rendeltMar">
-                        <option value="Yes">Yes</option>
-                        <option value="No">No</option>
-                    </select>
+                    <div id="bal">
+                        <p class="tajekoztato"><b>Rendeltél már tőlünk?</b></p>
+                        <div class="switchesDiv">
+                            <p class="rendeltP">nem</p>
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider round"></span>
+                            </label>
+                            <p class="rendeltP">igen</p>
+                        </div>
+                    </div>
 
                     <div class="valaszto"></div>
-                    
-                    <div class="ertekeles">
-                        <p>★</p>
-                        <p>★</p>
-                        <p>★</p>
-                        <p>★</p>
-                        <p>★</p>
+                    <div id="jobb">
+                        <p class="tajekoztato"><b>Rendeltél már tőlünk?</b></p>
+                        <div class="ertekeles">
+                            <p>★</p>
+                            <p>★</p>
+                            <p>★</p>
+                            <p>★</p>
+                            <p>★</p>
+                        </div>
+    
                     </div>
 
                 </div>
 
             
                 <textarea name="textarea" id="uzenet" placeholder="Message"></textarea>
-                <button type="submit" id="SendGomb">Send</button>
+                <button type="submit" id="SendGomb">Küldés</button>
             </form>
         </div>
     </div>
