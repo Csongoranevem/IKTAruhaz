@@ -11,6 +11,9 @@ body{
     font-family: 'Barlow', sans-serif;    
 }
 
+::selection{
+  background: rgb(74, 144, 226);
+}
 .main{
     display: flex;
     flex-direction: row;
