@@ -1,305 +1,188 @@
-:root {
-  --slider-height: 80vh;  
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
 }
 
 
-.slider {
+.tartalom {
+  margin: auto;
+}
+.banner {
   position: relative;
-  width: 100%;
-  height: var(--slider-height);
+  text-align: center;
   overflow: hidden;
 }
 
-.slides {
-  display: flex;
-  position: relative;
+.fastest h1{
+  text-align: center;
+  font-weight: 100;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: xxx-large;
+
+}
+
+.banner img {
   width: 100%;
+  height: auto;
 }
-
-.slides img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.wrapper {
-  overflow: hidden;
-  position: relative;
-  width: 100%;  
-  height: var(--slider-height); 
-}
-
-.slides.shifting {
-  transition: left .2s ease-out;
-}
-
-.slide {
-  flex-shrink: 0;
-  width: 100%;
-  height: var(--slider-height); 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.control {
-  opacity: 30%;
-  position: absolute;
-  top: 50%;
-  width: 40px; 
-  height: 40px; 
-  background: #fff;
-  border-radius: 50%;
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
-  z-index: 2;
-  transform: translateY(-50%);
-}
-
-.prev,
-.next {
-  background-size: 22px;
-  background-position: center;
-  background-repeat: no-repeat;
-  cursor: pointer;
-}
-
-.prev {
-  background-image: url(https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/ChevronLeft-512.png);
-  left: 10px;
-}
-
-.next {
-  background-image: url(https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/ChevronRight-512.png);
-  right: 10px;;
-}
-
-.prev:active,
-.next:active {
-  transform: scale(0.9);
-}
-#kep{
-  width: 30%;
-  height: 35%;
-
-}
-
-.slider-indicators {
-  position: absolute;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 8px;
-}
-
-.slider-indicators span {
-  width: 12px;
-  height: 12px;
-  background-color: rgba(255, 255, 255, 0.8); 
-  border-radius: 50%; 
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.slider-indicators span.active {
-  background-color: #ff0000; 
+.banner-btn{
+  background-color: rgb(235, 73, 73);
+  color: white;
+  padding: 10%;
+  font-size:x-large;
 }
 .slider-banner {
   position: absolute;
-  top: 10%;
-  left: 5%;
-  background-color: rgba(13, 13, 43, 0.8); 
+    top: 50%;  
+    left: 5%;  
+    transform: translateY(-50%); 
+    background-color: rgba(13, 13, 43, 0.8); 
+    color: white;
+    padding: 20px;
+    width: 90%; 
+    max-width: 350px; 
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    font-size: xx-large;
+}
+
+.announcement {
+  background-color: rgb(235, 73, 73);
   color: white;
-  padding: 20px;
-  width: 90%; 
-  max-width: 350px; 
   text-align: center;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-}
-
-.banner-title {
-  font-size: 1.5rem; 
-  font-weight: 400;
-}
-
-.banner-main {
-  font-size: 2.5rem; 
-  font-weight: 700;
-  margin: 5px 0;
-}
-
-.banner-discount {
-  font-size: 2.5rem;
-  font-weight: 700;
-}
-
-.banner-sub {
-  font-size: 0.9rem; 
-  font-weight: 300;
-}
-
-.banner-btn {
-  background-color: #e10000;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  margin-top: 10px;
-  cursor: pointer;
-  font-size: 1rem; 
-  font-weight: 600;
-}
-
-.banner-btn:hover {
-  background-color: #ff8989;
-}
-.vonal{
-  margin-bottom:-5%;
-  margin-top: 5%;
-}
-
-.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin: 5%;
-  flex-wrap: wrap;
-}
-
-.image-box {
-  position: relative;
-  width: 30%; 
-  margin-bottom: 20px; 
-}
-
-.image-box img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.overlay {
-  position: absolute;
-  top: 40%;
-  left: 40%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: rgb(255, 255, 255);
-  padding: 20px;
-  width: 80%;
-}
-
-
-@media screen and (max-width: 1024px) {
-  .image-box {
-    width: 45%; 
-  }
-
-}
-
-
-@media screen and (max-width: 870px) {
-  .image-box {
-    width: 100%; 
-  }
-}
-
-.banner-title {
-  margin-top: 25%;
-  font-size: 27px;
-  margin-left: 17%;
-  margin-right: 17%;
-
-}
-
-.banner-discount {
-  font-size: 32px;
+  padding: 15px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  height: 100%;
   font-weight: bold;
-}
-
-.banner-btna {
-  background: transparent;
-  color: white;
-  padding: 5px 10px;
-  border: solid 1px 1px;
-  font-size: 16px;
-  cursor: pointer;
-  animation: 0.2s;
-}
-
-.banner-btna:hover{
-  background-color: white;
-  color: black;
-}
-
-.vonalketto{
-  color: white;
-
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  font-size: xxx-large;
 
 }
-.vonalharom{
-  color: white;
-  margin-bottom: 15%;
-}
-/* Tablet méretek */
-@media screen and (max-width: 1024px) {
 
+
+
+
+
+.announcement p {
+  white-space: nowrap;
+  animation: marquee 10s linear infinite;
+}
+
+
+.categories {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+
+.category img {
+  width: 100%;
+  max-width: 300px;
+}
+
+
+
+.offer {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+
+
+.shipping {
+  display: flex;
+  color: rgb(0, 0, 0);
+  justify-content: space-between;
+  gap: 20px;
+  margin-left: 11%;
+  margin-right: 10%;
+  font-size: xx-large;
+  padding-top: 5%;
+  padding-bottom:5%;
+}
+
+
+#transport{
+  margin-left: 50%;
+  text-align:justify ;
+}
+
+.shipping img {
+  width: 300px;
+}
+/*Szimpi reszponz*/
+@media (max-width:1257px){
   .slider-banner {
-    top: 5%;
-    left: 5%;
+    align-items: center;
+      top: 5%;
+      transform: translateY(0%);
+      transform: translateX(75%);
+      left: 10%;
+      font-size: x-large;
+  }
+}
+/* Tablet nézet */
+@media (max-width: 1024px) {
+  .slider-banner {
+    align-items: center;
+      top: 5%;
+      transform: translateY(0%);
+      transform: translateX(50%);
+      left: 10%;
+      font-size: large;
+  }
+  .banner-btn{
+    font-size: large;
+  }
+  .categories {
+      flex-direction: column;
+      gap: 20px;
+  }
+  .shipping {
+      flex-direction: column;
+      text-align: center;
+  }
+}
+
+/* Mobil nézet */
+@media (max-width: 660px) {
+  .slider-banner {
+    align-items: center;
+    left: 5%;  
     width: 80%;
-    padding: 15px;
-  }
-
-  .banner-title {
-    font-size: 1.2rem;
-  }
-
-  .banner-main {
-    font-size: 2rem;
-  }
-
-  .banner-discount {
-    font-size: 2rem;
-  }
-
-  .banner-sub {
-    font-size: 0.8rem;
-  }
-
-  .banner-btn {
-    font-size: 0.9rem;
-    padding: 8px 16px;
-  }
-}
-
-/* Telefon méretek */
-@media screen and (max-width: 870px) {
-
-  .slider-banner {
-    top: 2%;
-    left: 2%;
-    width: 90%;
+    max-width: 250px;
     padding: 10px;
+    transform: translateX(50%);
+    font-size: smaller;
+}
+.banner-btn {
+  font-size: smaller;
+}
+  .announcement p {
+      animation-duration: 15s;
   }
-
-  .banner-title {
-    font-size: 1rem;
+  .categories {
+      flex-direction: column;
+      gap: 30px;
   }
-
-  .banner-main {
-    font-size: 1.5rem;
+  .shipping {
+      flex-direction: column;
+      text-align: center;
+      gap: 15px;
   }
-
-  .banner-discount {
-    font-size: 1.5rem;
-  }
-
-  .banner-sub {
-    font-size: 0.7rem;
-  }
-
-  .banner-btn {
-    font-size: 0.8rem;
-    padding: 6px 12px;
+  .shipping img {
+      width: 80px;
   }
 }
