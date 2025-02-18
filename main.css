@@ -11,6 +11,10 @@ body{
     font-family: 'Barlow', sans-serif;    
 }
 
+::selection{
+  color: white;
+  background-color: rgb(235, 73, 73);
+}
 .main{
     display: flex;
     flex-direction: row;
