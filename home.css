@@ -12,7 +12,7 @@ body {
   position: relative;
   text-align: center;
   overflow: hidden;
-  background-image: url("../Home képek/OUR-COMPANY_HISTORY.jpg");
+  background-image: url("./Home képek/OUR-COMPANY_HISTORY.jpg");
   padding-top: 2%;
   padding-bottom: 2%;
   background-repeat: no-repeat;
@@ -22,6 +22,20 @@ body {
   align-items: center;
 }
 
+.js-animate-element {
+  opacity: 1;
+
+  &.bottom-animation{
+      transform: translateY(1.5em);
+  }
+
+
+  &.insight {
+      transform: translateY(0) translateX(0);
+      opacity: 1;
+      transition: 1s all ease;
+  }
+}
 .fastest h1{
   text-align: center;
   font-weight: 100;
@@ -114,7 +128,7 @@ body {
   font-size: xx-large;
   padding-top: 5%;
   padding-bottom:5%;
-  
+
 }
 
 
