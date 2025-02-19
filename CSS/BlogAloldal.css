@@ -35,6 +35,22 @@
     text-align: left;
 }
 
+#BlogRateCsillagokDiv{
+    background-color: lime;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    padding-right: 1.5vw;
+    padding-top: 3%;
+    display: none;
+}
+.BlogRateCsillagIMG{
+    width: 10%;
+    background-color: red;
+    margin-left: 2%;
+}
+
+
 .FoSzoveg > span{
     padding-left: 3%;
 }
