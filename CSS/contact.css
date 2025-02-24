@@ -229,18 +229,6 @@ button:hover{
     }
   }*/
 
-@media screen and (min-height: 1500px){
-
-  footer{
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
-
-  .main{
-    padding-bottom: 40em;
-  }
-}
 
 
 
