@@ -1,0 +1,59 @@
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.containerAcc {
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
+    height: 330px;
+
+}
+
+.containerAcc p{
+    margin-left: 5%;
+    margin-top: 20px;
+}
+.containerAcc label {
+    font-weight: bold;
+    color: gray;
+}
+.containerAcc .value {
+    margin-left: 10px;
+    color: black;
+}
+.containerAcc a ,.containerAcc a:visited{
+    color: black;
+    pointer-events: none;
+  cursor: default;
+    text-decoration: none;
+}
+.login{
+    position:relative;
+    left: 60%;
+    bottom: 12em;
+        font-weight: bold;
+        color: gray;
+}
+
+
+.szerkeszt{
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    margin-left: 30px;
+    background-color: #dad6d6c4;
+    border: 1px dashed rgb(199, 199, 199);
+    border-radius: 3px 5px;
+    transition: 0.2s;
+}
+
+.szerkeszt:hover{
+    background-color: rgb(235, 73, 73);
+    border: #5f1c1ca8 1px solid;
+}
