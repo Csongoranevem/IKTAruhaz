@@ -498,7 +498,7 @@ h2::after {
   opacity: 0;
   transition: 0.3s ease;
   -webkit-transition: opacity 0.3s ease-in-out;
-  z-index: 10; 
+  z-index: 1; 
 }
 .card-container:hover .ikonok {
   opacity: 1;
@@ -515,7 +515,7 @@ h2::after {
   justify-content: center;
   border-radius: 50%;
   cursor: pointer;
-  z-index: 15;
+  z-index: 2;
 }
  
 .szivikon img,
