@@ -171,7 +171,7 @@ function KartyaLetrehoz(termek, tipus, gender) {
             
         price.innerHTML=termek.price
     
-        price.innerHTML+="$"
+        price.innerHTML="$"+price.innerHTML
     
         //console.log(termek.name)
     
