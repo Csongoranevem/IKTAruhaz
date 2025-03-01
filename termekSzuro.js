@@ -60,7 +60,14 @@ let termekek = [
                         price: 29, 
                         gender: "M",
                         type: "casual",
-                        onSale: true}
+                        onSale: true},
+    Ladieshat =   {image: "../TermekKartyak/sapkasarga.jpg", 
+                        name: "Ladies Hat", 
+                        price: 19, 
+                        gender: "W",
+                        type: "casual",
+                        onSale: false}
+    
     
                     
     
@@ -87,7 +94,6 @@ function KartyaLetrehoz(termek, tipus, gender) {
     let genderBackup = termek.gender
     if (tipus == "casual" || tipus=="clothing") {
         termek.gender=null
-        console.log(tipus)
     }
     if (tipus == termek.type || gender == termek.gender || termek.gender=="U") {
         let kartyak = document.createElement('div');
@@ -133,6 +139,8 @@ function KartyaLetrehoz(termek, tipus, gender) {
     
         let price = document.createElement('p');
         price.className = "price";
+
+        let old_price =`<s id="athuzott">${Math.floor(termek.price*1.2)}.00</s>`
     
         let akcios = document.createElement('span')
         akcios.className= "KartyaSaleDiv"
@@ -158,7 +166,8 @@ function KartyaLetrehoz(termek, tipus, gender) {
         card.appendChild(alja);
     
         if (termek.onSale) {
-            column.appendChild(akcios)
+            column.appendChild(akcios) 
+            price.innerHTML+=old_price
         }
         column.appendChild(card);
         akcios.appendChild(akciosP)
@@ -167,12 +176,8 @@ function KartyaLetrehoz(termek, tipus, gender) {
         
         nev.innerHTML=termek.name
             
-        kartyakep.src=termek.image
-            
-        price.innerHTML=termek.price
-    
-        price.innerHTML="$"+price.innerHTML
-    
+        kartyakep.src=termek.image    
+        price.innerHTML+=" $"+termek.price+".00"
         //console.log(termek.name)
     
         termek.gender = genderBackup
