@@ -16,29 +16,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 /*home oldal alul shipping animacio*/
-(function () {
+document.addEventListener("DOMContentLoaded", function () {
+    const elements = document.querySelectorAll('.js-animate-element, .fastest, .shipping');
 
-  function reveal() {
-      var wrapper = document.querySelectorAll(".js-animate-wrapper");
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.2 });
 
-      wrapper.forEach(function (parent, index) {
-          var windowHeight = window.innerHeight;
-          var elementTop = parent.getBoundingClientRect().top;
-          var elementVisible = 150;
-
-          if (elementTop < windowHeight - elementVisible) {
-              var reveals = parent.querySelectorAll(".js-animate-element");
-
-              reveals.forEach(function (ele, index) {
-                  setTimeout(function () {
-                      ele.classList.add("insight");
-                  }, index * 500);
-              });
-          }
-      });
-  }
-
-  window.addEventListener("scroll", reveal);
-  reveal();
-
-})(jQuery);
+    elements.forEach(element => observer.observe(element));
+});
