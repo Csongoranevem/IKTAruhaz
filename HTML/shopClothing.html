@@ -3,24 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
     <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="../szuroterv.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+ 
+
+    <title>Shop - Clothing</title>
 </head>
 <body>
-     <!--Menü és felsőléc-->
-     <a href="" id="top"></a>
-     <div class="stickyteto">
-         <div class="felsoLec">
-             <div class="webName">
-                 <p class="oldalnev">Csudajó Áruház</p>
-                 <p class="motto">Itt még romániát is megtalálod!</p>
-             </div>
-             <div class="hamburger">
+    <!--Menü és felsőléc-->
+
+    <p class="oldalType" style="display: none;">clothing</p>
+
+
+    <a href="" id="top"></a>
+    <div class="stickyteto">
+        <div class="felsoLec">
+            <div class="webName">
+                <p class="oldalnev">Csudajó Áruház</p>
+                <p class="motto">Fedezd fel a lehetetlent!</p>
+            </div>
+            <div class="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -71,7 +78,7 @@
                     <li class="menuItem">
                         <a href="./contact.html" class="mobilMenuLinks">contact us</a>
                     </li>
-                </ul>
+            </ul>
             </div>
 
 
@@ -93,7 +100,7 @@
                     <a href="./myaccount.html" class="menuLinks" id="dropbtn">my account<span class="menuNyil">▾</span></a>
                         <div class="dropdownMain">
                             <a href="./myaccount.html" class="dropdownLinks">Account details</a>
-                            <a href="./logOut.html" class="dropdownLinks">Log out</a>
+                            <a href="./myaccount.html" class="dropdownLinks">Log out</a>
                             <a href="./coupons.html" class="dropdownLinks">Coupons</a>
                         </div>
                     </div>
@@ -106,60 +113,106 @@
     
                 </div>    
             </div>
-
-         </div>
-         
-          
-     </div>
-     <div class="route">
-        <p>Home</p>
+        </div>
     </div>
-    <div class="tartalom">
-        <header class="banner">
-            <div class="slider-banner">
-                <p class="banner-title">Fashion</p>
-                <p class="banner-main">MEGA SALE</p>
-                <hr width="25%" class="vonal">
-                <p class="banner-discount">50% OFF</p>
-                <p class="banner-sub">FREE SHIPPING ABOVE 100$ PURCHASE</p>
-                <button class="banner-btn">SHOP NOW</button>
+    <div class="route">
+        <p>Home/Shop/Accessories</p>
+    </div>
+    <!--Baloldal, Jobboldal-->
+    <div class="main">
+        <div class="bal">
+            <div class="cim">
+                <h2>Casual</h2>
             </div>
-        </header>
-        
-        <div class="announcement">
-            <p id="marquee-text">OUR SHOP HAS INCREDIBLE DEALS! GET YOUR HANDS ON IT NOW!</p>
-        </div>
-        
-        <div class="categories">
-            <div class="category">
-                <img src="../Home képek/ralpmen.jpg" alt="Men Fashion">
-                <h3>MEN</h3>
+            <div class="alatta">
+                <p id="result">Showing all 0 results</p>
+                <div class="select">
+                    <select name="sorting" id="default-sorting">
+                        <option value="">Default sorting</option>
+                        <option value="low">Price: Low to High</option>
+                        <option value="high">Price: High to Low</option>
+                    </select>
+                </div>
             </div>
-            <div class="offer">
-                <h2>GET YOURS NOW! 50% OFF</h2>
-            </div>
-            <div class="category">
-                <img src="..//Home képek/ralphwomen.png" alt="Women Fashion">
-                <h3>WOMEN</h3>
+            <div class="row">
             </div>
         </div>
-        <div class="fastest">
-            <h1>We have THE FASTEST shipping!</h1>
+        <div class="jobb">
+            <div class="szuroDiv">
+                <div class="filterek">
+                    <div class="csuszkaSzuroDiv">
+                        <h2>Filter by price</h2>
+                    </div>
+                    <div id="RangeSlider" class="range-slider">
+                        <div>
+                            <div class="range-slider-val-left"></div>
+                            <div class="range-slider-val-right"></div>
+                            <div class="range-slider-val-range"></div>
+                    
+                            <span class="range-slider-handle range-slider-handle-left"></span>
+                            <span class="range-slider-handle range-slider-handle-right"></span>
+                    
+                            <div class="range-slider-tooltip range-slider-tooltip-left">
+                                <span class="range-slider-tooltip-text"></span>
+                            </div>
+                    
+                            <div class="range-slider-tooltip range-slider-tooltip-right">
+                                <span class="range-slider-tooltip-text"></span>
+                            </div>
+                        </div>
+                    
+                        <input type="range" class="range-slider-input-left" tabindex="0" max="100" min="0" step="1">
+                        <input type="range" class="range-slider-input-right" tabindex="0" max="100" min="0" step="1">
+                    </div>
+                    <div class="arEsGombDiv">
+                        <button id="FilterGombDiv" onclick="FilterTeszt()">FILTER</button>
+                        <div id="PriceDiv">
+                            <p>Price:</p>
+                            <p id="MinErtekId"> $0 </p>
+                            <p> - </p>
+                            <p id="MaxErtekId"> $100 </p>
+                        </div>
+                    </div>
+                    <div class="kategoriaSzuroDiv">
+                        <h2>Product categories</h2>
+                        <ul id="szuzoKategoriakOl">
+                            <li class="szuroLiClass"><a href="" class="SzuroAnchor">Accessories</a></li>
+                            <li class="szuroLiClass"><a href="" class="SzuroAnchor">Casual</a></li>
+                            <li class="szuroLiClass"><a href="" class="SzuroAnchor">Clothing</a></li>
+                            <li class="szuroLiClass"><a href="" class="SzuroAnchor">Men</a></li>
+                            <li><a href="" class="SzuroAnchor , NoBorder">Women</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="topRatedSzuroDiv">
+                    <h2>Top rated products</h2>
+                    <ul id="TopKategoriakUl">
+                        <img src="../TermekKartyak/jeansjacket.jpg" class="TopKep" alt="" srcset="">
+                        <li><a href="" class="TopAnchor" class="Jacket">Jeans Jacket</a></li>
+                        <p class="szuroLiClass">$59.00</p>
+                        <img src="../TermekKartyak/pulcsinigger.jpg" class="TopKep" alt="" srcset="">
+                        <li><a href="" class="TopAnchor">Black Shorts</a></li>
+                        <p class="szuroLiClass">$25.00</p>
+                        <img src="../TermekKartyak/kabatnigger.jpg" class="TopKep" alt="" srcset="">
+                        <li><a href="" class="TopAnchor" class="Jacket">Leather Jacket</a></li>
+                        <p class="szuroLiClass"><s id="athuzott" class="AkcioS">$100.00</s id="athuzott"><s id="athuzott" class="Akciozott">$50.00</s id="athuzott"></p>
+                        <img src="../TermekKartyak/feherPoloLatina.jpg" class="TopKep" alt="" srcset="">
+                        <li><a href="" class="TopAnchor">Women Tops</a></li>
+                        <p class="szuroLiClass">$45.00</p>
+                        <img src="../TermekKartyak/niggercollarshirt.jpg" class="TopKep" alt="" srcset="">
+                        <li ><a href="" class="TopAnchor">Collar T-Shirt</a></li>
+                        <p>$35.00</p style="border-bottom:0px solid white">
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="module">
-            <div class="shipping">
-            
-                <img  src="../Home képek/gls.jpg" alt="GLS Logo">
-                <p id="transport">We work with one of the largest transport companies</p>
-        </div>
-        </div>
-            
-       
+
+
     </div>
 
-<!--footer-->
-
-      <footer>
+    
+    
+    <footer>
         <div class="footDivBal">
             <p class="footDivTeto">About</p>
             <p>Our shop was founded 10 years ago. We offer a curated collection of stylish, high-quality clothing that blends comfort with modern trends, making it easy for you to express your unique style. </p>
@@ -184,7 +237,9 @@
         <button onclick="window.location.href='#top'" class="visszaBTN">⬆</button>
 
     </footer>
-      <script src="../home.js"></script>
-      <script src="../hambi.js"></script>
+
+<script src="../hambi.js"></script>
+<script src="../main.js"></script>
+<script src="../termekSzuro.js"></script>
 </body>
 </html>

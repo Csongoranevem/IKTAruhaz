@@ -196,8 +196,8 @@ input, #slider, #uzenet{
   
 
 @keyframes ertekelesAnim {
-    0%{box-shadow: white 3px 3px 3px;}
-    100%{box-shadow: rgba(255, 255, 255, 0) 3px 3px 3px;}
+    0%{text-shadow: white 3px 3px 3px;}
+    100%{text-shadow: rgba(255, 255, 255, 0) 3px 3px 3px;}
 
 }
 /*Értékelés formázásának vége*/
@@ -245,39 +245,49 @@ button:hover{
   }*/
 
 
+
+
+@media screen and (max-width: 1410px){
+
+  .rendeltE{
+    flex-direction: column;
+  }
+
+  .valaszto{
+    width: 330px;
+    height: 2px;
+  }
+}
+
+@media screen and (max-width: 1080px){
+  .main{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .urlap{margin-right: 0;
+  }
+
+  .elerhetosegek{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+}
+
+
 @media screen and (max-width: 870px){
-    .urlap{
-        width: 100%;
-    }
-    .main{
-        width: 80%;
-        flex-direction: column;
-    }
-
-    .adatok{
-        align-items: center;
-        row-gap: 20px;
-    }
-
-    .elerhetosegek{
-        width: 100%;
-        text-align: center;
-        padding-right: 0px;
-        margin-left: 0px;
-    }
-
-    .urlap{
-        margin-right: 0px;
-        width: 85%;
-    }
-
-    .tajekoztato{
-        font-size: 150%;
-    }
-    
-    #SendGomb{
-        width: 100%;
-        margin-top: 2%;
-        font-size: 200%;
-    }
+  .urlap{
+      width: 90%;
+  }
+  .tajekoztato{
+      font-size: 150%;
+  }
+  
+  #SendGomb{
+      width: 90%;
+      margin-top: 2%;
+      font-size: 200%;
+      align-self: center;
+  }
 }
