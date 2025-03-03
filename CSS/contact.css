@@ -162,24 +162,45 @@ input, #slider, #uzenet{
     font-size: larger;
 }
 
-.ertekeles{
-    display: flex;
-    flex-direction: row;
+/*Értékelés formázása*/
+.rating {
+    display: inline-block;
+  }
+  
+  .rating input {
+    display: none;
+  }
+  
+  .rating label {
+    float: right;
+    cursor: pointer;
+    color: #ffffff;
+    transition: color 0.3s;
+  }
+  
+  .rating label:before {
+    content: '\2605';
+    font-size: 30px;
     font-size: 50px;
-    color: white;
-    height: 50px;
-    align-items: center;
-    column-gap: 2px;
-}
+    margin-right: 0.2em;
+  }
+  
+  .rating input:checked ~ label,
+  .rating label:hover,
+  .rating label:hover ~ label {
+    color: rgb(235, 73, 73);
+    animation-name: ertekelesAnim;
+    animation-duration: .5s;
+    transition: color 0.3s;
+  }
+  
 
-.CsillagB{
-    font-size: 80%;
-}
+@keyframes ertekelesAnim {
+    0%{box-shadow: white 3px 3px 3px;}
+    100%{box-shadow: rgba(255, 255, 255, 0) 3px 3px 3px;}
 
-.ertekeles > p{
-    margin-top: 3%;
-    margin-right: 3%
 }
+/*Értékelés formázásának vége*/
 
 .valaszto{
     width: 2px;
