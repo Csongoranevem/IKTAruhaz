@@ -202,16 +202,16 @@
         <div class="JobbBlogDiv">
             <h2>Search</h2>
             <div class="KeresesDiv">     
-                <input type="text" class="BlogSearchClass" placeholder="Keresés a blogok között">       
+                <input type="text" class="BlogSearchClass" id="BlogSearchBarId" placeholder="Keresés a blogok között">       
                 <img id="keresesIkon" onclick="BlogKereses()" src="../Blog képek/free-search-icon-download-in-svg-png-gif-file-formats--find-magnifier-glass-magnify-ios-11-ui-elements-vol-2-pack-user-interface-icons-475061.webp" alt="" srcset="">
             </div>
             <div class="RendezesNagyDiv">
                 <h3>Rendezés:</h3>
                 <select name="BlogKeresesSelectNev" id="BlogKeresesSelectID">
-                    <option value="UjOPT">Legújabbak</option>
-                    <option value="RegiOPT">Legrégibbek</option>
-                    <option value="NepszeruOPT">Népszerűek</option>
-                    <option value="OlvasottakOPT">Legolvasottabbak  </option>
+                    <option value="UjOPT" onclick="Szures('newest')">Legújabbak</option>
+                    <option value="RegiOPT" onclick="Szures('old')">Legrégibbek</option>
+                    <option value="NepszeruOPT" onclick="Szures('rate')">Legkedveltebbek</option>
+                    <option value="OlvasottakOPT" onclick="Szures('trending')">Legolvasottabbak  </option>
                 </select>
             </div>
             <div class="JobbKepDivClass">
