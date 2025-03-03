@@ -45,6 +45,7 @@ body {
 
 }
 
+
 .banner-btn{
   background-color: rgb(235, 73, 73);
   color: white;
@@ -101,13 +102,21 @@ body {
   margin-right: 10%;
 }
 
-
+.category:hover{
+  background-color: rgb(209, 209, 209);
+  opacity: 0.5;
+}
 .category img {
   width: 100%;
   max-width: 300px;
 }
 
-
+a:link{
+  text-decoration: none;
+}
+a{
+  color: black;
+}
 
 .offer {
   font-size: 1.5em;
