@@ -22,20 +22,21 @@ body {
   align-items: center;
 }
 
-.js-animate-element {
-  opacity: 1;
-
-  &.bottom-animation{
-      transform: translateY(1.5em);
-  }
-
-
-  &.insight {
-      transform: translateY(0) translateX(0);
-      opacity: 1;
-      transition: 1s all ease;
-  }
+.js-animate-element,
+.fastest,
+.shipping {
+    opacity: 0;
+    transform: translatey(50px);
+    transition: all 0.8s ease-in-out;
 }
+
+.js-animate-element.visible,
+.fastest.visible,
+.shipping.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 .fastest h1{
   text-align: center;
   font-weight: 100;
@@ -44,6 +45,7 @@ body {
   font-size: xxx-large;
 
 }
+
 
 .banner-btn{
   background-color: rgb(235, 73, 73);
@@ -101,13 +103,21 @@ body {
   margin-right: 10%;
 }
 
-
+.category:hover{
+  background-color: rgb(209, 209, 209);
+  opacity: 0.5;
+}
 .category img {
   width: 100%;
   max-width: 300px;
 }
 
-
+a:link{
+  text-decoration: none;
+}
+a{
+  color: black;
+}
 
 .offer {
   font-size: 1.5em;
@@ -133,8 +143,7 @@ body {
 
 
 #transport{
-  margin-left: 50%;
-  text-align:justify ;
+  margin-left: 35%;
 }
 
 .shipping img {

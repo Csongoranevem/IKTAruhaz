@@ -55,55 +55,86 @@ let termekek = [
                         gender: "M",
                         type: "casual",
                         onSale: false},
+
     GentsTshirt =       {image: "../TermekKartyak/gentsTshirt.jpg", 
                         name: "Gents T-shirt", 
                         price: 29, 
                         gender: "M",
                         type: "casual",
                         onSale: true},
+
     Ladieshat =         {image: "../TermekKartyak/sapkasarga.jpg", 
                         name: "Ladies Hat", 
                         price: 19, 
                         gender: "W",
                         type: "casual",
                         onSale: false},
+
     LeatherJacket =     {image: "../TermekKartyak/LeatherJacket.jpg", 
                         name: "Leather Jacket", 
                         price: 50, 
                         gender: "M",
                         type: "clothing",
                         onSale: true},
+
     BlueTshirt =        {image: "../TermekKartyak/BlueT-shirt.jpg", 
                         name: "Blue T-shirt", 
                         price: 50, 
                         gender: "W",
                         type: "casual",
                         onSale: false},
+
     PrintedTops =       {image: "../TermekKartyak/PrintedTops.jpg", 
                         name: "Printed Tops", 
                         price: 75, 
                         gender: "W",
                         type: "casual",
                         onSale: false},
+
     WhiteTshirt  =      {image: "../TermekKartyak/feherPoloLatina.jpg", 
                         name: "Loose T-shirt (White)", 
                         price: 59, 
                         gender: "W",
                         type: "casual",
                         onSale: false},
-    WhiteTshirt  =      {image: "../TermekKartyak/WhitePJacket.jpg", 
+    WhitePJacket  =      {image: "../TermekKartyak/WhitePJacket.jpg", 
                         name: "Winter jacket (White)", 
                         price: 80, 
                         gender: "W",
                         type: "clothing",
                         onSale: false},
-    WhiteTshirt  =      {image: "../TermekKartyak/WhiteThinJacket.jpg", 
+
+    WhiteThinJacket  =      {image: "../TermekKartyak/WhiteThinJacket.jpg", 
                         name: "Light jacket (White)", 
                         price: 90, 
                         gender: "W",
                         type: "clothing",
                         onSale: true},
-        
+
+    patternedSocks =    {image: "../TermekKartyak/patternedSocks.jpg", 
+                        name: "Patterned Socks", 
+                        price: 10, 
+                        gender: "U",
+                        type: "accessories",
+                        onSale: false},
+
+    TrumpSocks   =      {image: "../TermekKartyak/TrumpSocks.jpg", 
+                        name: "Make socks great again", 
+                        price: 9430,
+                        gender: "M",
+                        type: "accessories",
+                        onSale: true},
+
+    blueSocks   =      {image: "../TermekKartyak/blueSocks.jpg", 
+                        name: "Dark Blue socks", 
+                        price: 16,
+                        gender: "U",
+                        type: "accessories",
+                        onSale: false},
+
+
+
+     
     
     
     
