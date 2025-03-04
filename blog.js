@@ -2,10 +2,47 @@ function KepKlikkTeszt(){
     alert("Haiii")
 }
 
-document.getElementById("BlogRateCsillagokDiv")
-let bloggomb = document.getElementById("BlogRateGomb").addEventListener('mouseover',{
-    
+let csillagok = document.getElementById("BlogRateCsillagokDiv")
+let bloggomb = document.getElementById("BlogRateGomb").addEventListener('mouseover',() => {
+    csillagok.style.display = "block";
 })
+let bloggomb2 = document.getElementById("BlogRateGomb").addEventListener('mouseout',() => {
+    csillagok.style.display = "none";
+})
+
+let blogratediv = document.getElementById("BlogRateCsillagokDiv").addEventListener('mouseover',()=>{
+    csillagok.style.display = "block"
+})
+let blogratediv2 = document.getElementById("BlogRateCsillagokDiv").addEventListener('mouseout',()=>{
+    csillagok.style.display = "none"
+})
+
+
+let shareIcon = document.getElementById("BlogShareDiv")
+let blogSgomb = document.getElementById("BlogShareGomb").addEventListener('mouseover',() => {
+    BlogShareDiv.style.display = "flex"
+})
+let blogSgomb2 = document.getElementById("BlogShareGomb").addEventListener('mouseout',() => {
+    BlogShareDiv.style.display = "none"
+})
+let blogSdib = document.getElementById("BlogShareDiv").addEventListener('mouseover',() => {
+    BlogShareDiv.style.display = "flex"
+})
+let blogSdiv2 = document.getElementById("BlogShareDiv").addEventListener('mouseout',() => {
+    BlogShareDiv.style.display = "none"
+})
+
+function CommentBar(){
+    document.getElementById("CommentFulDiv").style.display = "block"
+    document.getElementById("CommentUzi").style.display = "none"
+    document.getElementById("uzenet").value = ""
+}
+
+function CommentBarDis(){
+    document.getElementById("CommentUzi").style.display = "block"
+    document.getElementById("CommentFulDiv").style.display = "none"
+    setTimeout(() => {document.getElementById("CommentUzi").style.display = "none"}, 1500)
+}
 
 
 let Blogok = [
@@ -88,6 +125,7 @@ function BlogKereses(){
 }
 
 function Szures(Akcio){
+    alert("Lefutott")
     switch(Akcio){
         case newest:
             alert("newest");
