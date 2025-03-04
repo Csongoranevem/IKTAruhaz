@@ -37,42 +37,42 @@ let termekek = [
 
     ezustFulbe =        {image: "../TermekKartyak/silverEarring.jpg", 
                         name: "Silver earring", 
-                        price: 79, 
+                        price: 80, 
                         gender: "W", 
                         type: "accessories", 
                         onSale: true},
 
     aranynapszemcsi =   {image: "../TermekKartyak/goldenSunglasses.jpg", 
                         name: "Golden sunglasses (Unisex)", 
-                        price: 189, 
+                        price: 180, 
                         gender: "U", 
                         type: "accessories",
                         onSale: false},
 
     CollarTshirt =      {image: "../TermekKartyak/collarshirt.jpg", 
                         name: "Collar T-shirt", 
-                        price: 19, 
+                        price: 20, 
                         gender: "M",
                         type: "casual",
                         onSale: false},
 
     GentsTshirt =       {image: "../TermekKartyak/gentsTshirt.jpg", 
                         name: "Gents T-shirt", 
-                        price: 29, 
+                        price: 30, 
                         gender: "M",
                         type: "casual",
                         onSale: true},
 
     Ladieshat =         {image: "../TermekKartyak/sapkasarga.jpg", 
                         name: "Ladies Hat", 
-                        price: 19, 
+                        price: 50, 
                         gender: "W",
                         type: "casual",
                         onSale: false},
 
     LeatherJacket =     {image: "../TermekKartyak/LeatherJacket.jpg", 
                         name: "Leather Jacket", 
-                        price: 50, 
+                        price: 49, 
                         gender: "M",
                         type: "clothing",
                         onSale: true},
@@ -93,7 +93,7 @@ let termekek = [
 
     WhiteTshirt  =      {image: "../TermekKartyak/feherPoloLatina.jpg", 
                         name: "Loose T-shirt (White)", 
-                        price: 59, 
+                        price: 60, 
                         gender: "W",
                         type: "casual",
                         onSale: false},
@@ -105,8 +105,8 @@ let termekek = [
                         onSale: false},
 
     WhiteThinJacket  =      {image: "../TermekKartyak/WhiteThinJacket.jpg", 
-                        name: "Light jacket (White)", 
-                        price: 90, 
+                        name: "White coat", 
+                        price: 110, 
                         gender: "W",
                         type: "clothing",
                         onSale: true},
@@ -123,14 +123,35 @@ let termekek = [
                         price: 9430,
                         gender: "M",
                         type: "accessories",
-                        onSale: true},
+                        onSale: false},
 
-    blueSocks   =      {image: "../TermekKartyak/blueSocks.jpg", 
+    blueSocks   =       {image: "../TermekKartyak/blueSocks.jpg", 
                         name: "Dark Blue socks", 
-                        price: 16,
+                        price: 20,
                         gender: "U",
                         type: "accessories",
                         onSale: false},
+    DarkBlueJacket =    {image: "../TermekKartyak/DarkBlueJacketMen.jpg", 
+                        name: "Dark Blue Jacket", 
+                        price: 100,
+                        gender: "M",
+                        type: "clothing",
+                        onSale: false},
+    WhiteJacket =       {image: "../TermekKartyak/WhiteJacketMen.jpg", 
+                        name: "White Jacket", 
+                        price: 100,
+                        gender: "M",
+                        type: "clothing",
+                        onSale: false},
+    BlackJeansMen =     {image: "../TermekKartyak/BlackJeans.jpg", 
+                        name: "Black jeans", 
+                        price: 100,
+                        gender: "M",
+                        type: "clothing",
+                        onSale: true},
+
+
+
 
 
 
@@ -248,7 +269,7 @@ function KartyaLetrehoz(termek, tipus, gender) {
         nev.innerHTML=termek.name
             
         kartyakep.src=termek.image    
-        price.innerHTML+=" $"+termek.price+".00"
+        price.innerHTML+=`$${termek.price-1}.99`
         //console.log(termek.name)
     
         termek.gender = genderBackup
@@ -259,7 +280,35 @@ function KartyaLetrehoz(termek, tipus, gender) {
 }
 
     
+//Slider szűrő
+
+
+let MinErtekId = document.querySelector("#MinErtekId")
+let MaxErtekId = document.querySelector("#MaxErtekId")
+
+let minimum = document.querySelector(".range-slider-input-left").addEventListener( 'input', e => {
+	e.target.value = Math.max(e.target.value, e.target.parentNode.childNodes[3].value - (-1));
+	var value = (1000 / ( parseInt(e.target.max) - parseInt(e.target.min) )) * parseInt(e.target.value) - (100 / ( parseInt(e.target.max) - parseInt(e.target.min) )) * parseInt(e.target.min)
+    MinErtekId.innerHTML = `$${value}`
+});
+let maximum = document.querySelector(".range-slider-input-right").addEventListener( 'input', e => {
+	e.target.value = Math.max(e.target.value, e.target.parentNode.childNodes[3].value - (-1));
+	var value = (1000 / ( parseInt(e.target.max) - parseInt(e.target.min) )) * parseInt(e.target.value) - (100 / ( parseInt(e.target.max) - parseInt(e.target.min) )) * parseInt(e.target.min)
+    MaxErtekId.innerHTML = `$${value}`
+});
+
+function sliderSzures() {
+
+
+
+    for (const termek of termekek) {
+        let hozzadadott = KartyaLetrehoz(termek, oldalTipus, oldalGender)
+        if (hozzadadott!=false) {
+            main.appendChild(hozzadadott)
+        }
     
+    }
+}
 
 
 
