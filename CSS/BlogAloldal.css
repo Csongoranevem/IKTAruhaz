@@ -36,7 +36,6 @@
 }
 
 #BlogRateCsillagokDiv{
-    background-color: lime;
     display: flex;
     flex-direction: row;
     justify-content: right;
@@ -50,6 +49,41 @@
     margin-left: 2%;
 }
 
+
+#uzenet{
+    resize: none;
+    margin-top: 5%;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 150px;
+    max-height: 150px;
+    margin-bottom: 2%;
+    padding: 0.5%;
+    font-size: x-large;
+    color: rgb(70, 70, 70);
+}
+
+#CommentFulDiv{
+    display: none;
+}
+
+#CommentUzi{
+    display: none;
+    font-size: larger;
+    color: darkgray;
+}
+
+#BlogShareDiv{
+    display: flex;
+    justify-content: right;
+    column-gap: 3%;
+    display: none;
+}
+.BlogShareIMG{
+    width: 8%;
+    padding-top: 3%;
+    padding-right: 1.33%;
+}
 
 .FoSzoveg > span{
     padding-left: 3%;

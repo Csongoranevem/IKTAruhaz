@@ -191,9 +191,9 @@
                 </h2>
             </div>
             <div class="FoGombokDiv">
-                <button class="BlogFoGomb" id="BlogShareGomb">SHARE</button>
-                <button class="BlogFoGomb" id="BlogCommentGomb">COMMENT</button>    
                 <button class="BlogFoGomb" id="BlogRateGomb">RATE</button>
+                <button class="BlogFoGomb" onclick="CommentBar()" id="BlogCommentGomb">COMMENT</button>    
+                <button class="BlogFoGomb" id="BlogShareGomb">SHARE</button>
             </div>
             <div id="BlogRateCsillagokDiv">
                 <img src="../Weboldal képek/emailIcon.png" class="BlogRateCsillagIMG" alt="">
@@ -201,6 +201,16 @@
                 <img src="../Weboldal képek/emailIcon.png" class="BlogRateCsillagIMG" alt="">
                 <img src="../Weboldal képek/emailIcon.png" class="BlogRateCsillagIMG" alt="">
                 <img src="../Weboldal képek/emailIcon.png" class="BlogRateCsillagIMG" alt="">
+            </div>
+            <div id="BlogShareDiv">
+                <img src="../Blog képek/Facebook_icon_2013.svg.png" class="BlogShareIMG" alt="">
+                <img src="../Blog képek/Instagram_logo_2016.svg.png" class="BlogShareIMG" alt="">
+                <img src="../Blog képek/X logo.png" class="BlogShareIMG" alt="">
+            </div>
+            <p id="CommentUzi">Üzeneted sikeresen elküldtük! Köszönjük a visszajelzést!</p>
+            <div id="CommentFulDiv">
+                <textarea name="textarea" id="uzenet" placeholder="Üzenet"></textarea>
+                <button type="submit" id="BlogCommentSendGomb" onclick="CommentBarDis()" class="BlogFoGomb">KÜLDÉS</button>
             </div>
         </div>
 
