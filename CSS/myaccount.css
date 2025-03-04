@@ -1,10 +1,126 @@
 
-.main{
+
+.accountdetails{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 100%;
+    margin-top: 5%;
 }
 
+.torzs{
+    display: flex;
+    margin-right: 10%;
+    margin-left: 10%;
+
+}
+#pfp{
+    width: 150px;
+    
+}
+h1{
+    font-weight: 500;
+    color: rgb(94, 94, 94);
+    font-size: 60px;
+    margin-left: 2%;
+}
+.input {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    background-color: #ffffff;
+    justify-content: center;
+    border-radius: 5px;
+  }
+  
+  .value {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    display: flex;
+    position: relative;
+    gap: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .value:not(:active):hover,
+  .value:focus {
+    background-color: rgb(238, 109, 109);
+  }
+  
+  .value:focus,
+  .value:active {
+    background-color: rgb(238, 109, 109);
+    outline: none;
+  }
+  
+  .value::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -10px;
+    width: 5px;
+    height: 80%;
+    background-color: #2F81F7;
+    border-radius: 5px;
+    opacity: 0;
+  }
+  
+  .value:focus::before,
+  .value:active::before {
+    opacity: 1;
+  }
+  
+  .value svg {
+    width: 15px
+  }
+.right{
+    margin-left: 5%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 .containerAcc {
     border: 1px solid #ccc;
     display: flex;
@@ -57,3 +173,13 @@
     background-color: rgb(235, 73, 73);
     border: #5f1c1ca8 1px solid;
 }
+@media only screen and (max-width: 870px){
+    .login{
+        left: 0;
+        bottom: 0;
+        position: relative;
+    }
+    .containerAcc{
+
+    }
+}*/
