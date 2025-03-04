@@ -107,11 +107,14 @@ body {
   background-color: rgb(209, 209, 209);
   opacity: 0.5;
 
-  transition: all 0.5s ease-in-out;
+  
 }
 .category img {
   width: 100%;
   max-width: 300px;
+}
+.category{
+  transition: all 0.5s ease-in-out;
 }
 
 a:link{
