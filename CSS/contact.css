@@ -244,10 +244,7 @@ button:hover{
     }
   }*/
 
-
-
-
-@media screen and (max-width: 1410px){
+@media screen and (max-width: 1570px){
 
   .rendeltE{
     flex-direction: column;
@@ -284,10 +281,23 @@ button:hover{
       font-size: 150%;
   }
   
+  .elerhetosegek{
+    width: 100%;
+  }
   #SendGomb{
       width: 90%;
       margin-top: 2%;
       font-size: 200%;
       align-self: center;
+  }
+}
+
+@media screen and (max-width: 400px){
+
+  .contactCim{
+    font-size: 35px;
+  }
+  .adatok{
+    font-size: larger;
   }
 }
