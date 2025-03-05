@@ -45,8 +45,21 @@
 }
 .BlogRateCsillagIMG{
     width: 10%;
-    background-color: red;
     margin-left: 2%;
+}
+.BlogRateCsillagIMG:hover{
+    animation-name: CsillagHover;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes CsillagHover{
+    from{
+        width: 10%;
+    }
+    to{
+        width: 11%;
+    }
 }
 
 
