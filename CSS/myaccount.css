@@ -72,7 +72,7 @@ h1 {
   cursor: pointer;
   border-radius: 4px;
   font-size: x-large;
-  width: 100%;
+  width: 90%;
   margin-bottom: 5%;
 }
 
@@ -114,12 +114,12 @@ a {
 }
 
 .right {
-  margin-left: 5%;
   display: flex;
   flex-direction: column;
   max-width: 800px;
   width: 100%;
   padding-right: 20px;
+  flex: 1;
 }
 .right > * {
   margin-bottom: 5%;
