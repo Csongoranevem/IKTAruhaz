@@ -44,6 +44,13 @@ function CommentBarDis(){
     setTimeout(() => {document.getElementById("CommentUzi").style.display = "none"}, 1500)
 }
 
+function BlogSClickF(){
+    document.getElementById("BlogShareDiv").style.display = "flex"
+}
+function BlogRClickF(){
+    document.getElementById("BlogRateCsillagokDiv").style.display = "block"
+}
+
 
 let Blogok = [
     UjAjanlatok = {
