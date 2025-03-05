@@ -18,6 +18,56 @@ let blogratediv2 = document.getElementById("BlogRateCsillagokDiv").addEventListe
 })
 
 
+
+let BlogRateCsillag1 = document.getElementById("BlogCsillag1")
+let BlogRateCsillag2 = document.getElementById("BlogCsillag2")
+let BlogRateCsillag3 = document.getElementById("BlogCsillag3")
+let BlogRateCsillag4 = document.getElementById("BlogCsillag4")
+let BlogRateCsillag5 = document.getElementById("BlogCsillag5")
+let BlogCsillagKepTomb = [BlogRateCsillag1,BlogRateCsillag2,BlogRateCsillag3,BlogRateCsillag4,BlogRateCsillag5]
+
+BlogRateCsillag1.addEventListener('mouseover',()=>{
+    for(let i = 0; i < BlogCsillagKepTomb.length; i++){
+        BlogCsillagKepTomb[i].src="../Blog képek/star-602148_1280.png"
+    }
+    BlogRateCsillag1.src="../Blog képek/CsillagNarancs.png"
+})
+BlogRateCsillag2.addEventListener('mouseover',()=>{
+    for(let i = 0; i < BlogCsillagKepTomb.length; i++){
+        BlogCsillagKepTomb[i].src="../Blog képek/star-602148_1280.png"
+    }
+    BlogRateCsillag1.src="../Blog képek/CsillagNarancs.png"
+    BlogRateCsillag2.src="../Blog képek/CsillagNarancs.png"
+})
+BlogRateCsillag3.addEventListener('mouseover',()=>{
+    for(let i = 0; i < BlogCsillagKepTomb.length; i++){
+        BlogCsillagKepTomb[i].src="../Blog képek/star-602148_1280.png"
+    }
+    BlogRateCsillag1.src="../Blog képek/CsillagNarancs.png"
+    BlogRateCsillag2.src="../Blog képek/CsillagNarancs.png"
+    BlogRateCsillag3.src="../Blog képek/CsillagNarancs.png"
+})
+BlogRateCsillag4.addEventListener('mouseover',()=>{
+    for(let i = 0; i < BlogCsillagKepTomb.length; i++){
+        BlogCsillagKepTomb[i].src="../Blog képek/star-602148_1280.png"
+    }
+    BlogRateCsillag1.src="../Blog képek/CsillagNarancs.png"
+    BlogRateCsillag2.src="../Blog képek/CsillagNarancs.png"
+    BlogRateCsillag3.src="../Blog képek/CsillagNarancs.png"
+    BlogRateCsillag4.src="../Blog képek/CsillagNarancs.png"
+})
+BlogRateCsillag5.addEventListener('mouseover',()=>{
+    for(let i = 0; i < BlogCsillagKepTomb.length; i++){
+        BlogCsillagKepTomb[i].src="../Blog képek/star-602148_1280.png"
+    }
+    BlogRateCsillag1.src="../Blog képek/CsillagNarancs.png"
+    BlogRateCsillag2.src="../Blog képek/CsillagNarancs.png"
+    BlogRateCsillag3.src="../Blog képek/CsillagNarancs.png"
+    BlogRateCsillag4.src="../Blog képek/CsillagNarancs.png"
+    BlogRateCsillag5.src="../Blog képek/CsillagNarancs.png"
+})
+
+
 let shareIcon = document.getElementById("BlogShareDiv")
 let blogSgomb = document.getElementById("BlogShareGomb").addEventListener('mouseover',() => {
     BlogShareDiv.style.display = "flex"
@@ -42,6 +92,13 @@ function CommentBarDis(){
     document.getElementById("CommentUzi").style.display = "block"
     document.getElementById("CommentFulDiv").style.display = "none"
     setTimeout(() => {document.getElementById("CommentUzi").style.display = "none"}, 1500)
+}
+
+function BlogSClickF(){
+    document.getElementById("BlogShareDiv").style.display = "flex"
+}
+function BlogRClickF(){
+    document.getElementById("BlogRateCsillagokDiv").style.display = "block"
 }
 
 
