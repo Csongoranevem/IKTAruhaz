@@ -1,59 +1,188 @@
-
-.main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.accountdetails {
+  display: flex;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 3%;
+}
+.left{
+  width: 30%;
+}
+.torzs {
+  display: flex;
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-top: 3%;
 }
 
-.containerAcc {
-    border: 1px solid #ccc;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 80%;
-    height: 330px;
+#pfp {
+  width: 150px;
+
+}
+h1 {
+  font-weight: 500;
+  color: rgb(94, 94, 94);
+  font-size: 60px;
+  margin-left: 2%;
+}
+
+.input {
+  height: 44px;
+  background-color: #05060f0a;
+  border-radius: .5rem;
+  padding: 0 1rem;
+  border: 2px solid transparent;
+  font-size: 1rem;
+  transition: border-color .3s cubic-bezier(.25, .01, .25, 1) 0s, color .3s cubic-bezier(.25, .01, .25, 1) 0s, background .2s cubic-bezier(.25, .01, .25, 1) 0s;
+}
+
+.label {
+  display: block;
+  margin-bottom: .3rem;
+  font-size: x-large;
+  font-weight: bold;
+  color: #05060f99;
+  transition: color .3s cubic-bezier(.25, .01, .25, 1) 0s;
+}
+
+.input:hover,
+.input:focus,
+.input-group:hover .input {
+  outline: none;
+  border-color: #05060f;
+}
+
+.input-group {
+  margin-right: 0.5%;
+  margin-bottom: 5%;
+}
+
+.input-group:hover .label,
+.input:focus {
+  color: #05060fc2;
+}
+
+.value {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  color: rgb(0, 0, 0);
+  display: flex;
+  position: relative;
+  gap: 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: x-large;
+  width: 100%;
+  margin-bottom: 5%;
+}
+
+.value:not(:active):hover,
+.value:focus {
+  background-color: rgb(184, 184, 184);
 
 }
 
-.containerAcc p{
-    margin-left: 5%;
-    margin-top: 20px;
-}
-.containerAcc label {
-    font-weight: bold;
-    color: gray;
-}
-.containerAcc .value {
-    margin-left: 10px;
-    color: black;
-}
-.containerAcc a ,.containerAcc a:visited{
-    color: black;
-    pointer-events: none;
-  cursor: default;
-    text-decoration: none;
-}
-.login{
-    position:relative;
-    left: 60%;
-    bottom: 12em;
-        font-weight: bold;
-        color: gray;
+.value:focus,
+.value:active {
+  background-color: rgb(88, 88, 88);
+  outline: none;
 }
 
-
-.szerkeszt{
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    margin-left: 30px;
-    background-color: #dad6d6c4;
-    border: 1px dashed rgb(199, 199, 199);
-    border-radius: 3px 5px;
-    transition: 0.2s;
+.value::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -10px;
+  width: 5px;
+  height: 80%;
+  background-color: #000000;
+  border-radius: 5px;
+  opacity: 0;
 }
 
-.szerkeszt:hover{
-    background-color: rgb(235, 73, 73);
-    border: #5f1c1ca8 1px solid;
+.value:focus::before,
+.value:active::before {
+  opacity: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+.value svg {
+  width: 15px
+}
+
+.right {
+  margin-left: 5%;
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  width: 100%;
+  padding-right: 20px;
+}
+.right > * {
+  margin-bottom: 5%;
+}
+h3 {
+  align-items: center;
+  font-size: 2.5em;
+  color: rgb(94, 94, 94);
+  margin-top: 0;
+}
+
+#szoveg {
+  color: #666;
+}
+
+.account-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.account-info-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5%;
+  width: 100%;
+}
+
+.account-info-row label {
+  width: 200px;
+  color: #05060f99;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.account-info-row .input-wrapper {
+  flex-grow: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.account-info-row input {
+  width: 100%;
+  height: 50px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  padding: 0 15px;
+  border: 1px solid #d0d0d0;
+  font-size: 16px;
+  color: #333;
+}
+
+.account-info-row input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0,123,255,0.25);
+}
+
+.edit-icon {
+  margin-left: 10px;
+  cursor: pointer;
+}
+img.edit-icon{
+  width: 30px;
 }

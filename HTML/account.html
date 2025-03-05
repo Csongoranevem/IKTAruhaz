@@ -7,7 +7,10 @@
     <title>My Account</title>
     <link rel="stylesheet" href="../main.css">
     <link rel="stylesheet" href="../CSS/myaccount.css">
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/account.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -109,7 +112,7 @@
         </div>
     </div>
     <div class="route">
-        <p>Home/Account/My Account</p>
+        <p>Home/Account/Account</p>
     </div>
     <div class="acctop">
         <div class="accountdetails">
@@ -167,53 +170,33 @@
                     </button></a>
             </div>
             <div class="right">
-                <h3>General Settings</h3>
-                <p id="szoveg">Manage the account details you've shared with Csudajó Áruház including your name, contact
-                    info and more</p>
-                <h3>Account Info</h3>
+                <h3>Account settings</h3>
+                <h4 style="color: rgb(94, 94, 94); font-size: larger;">Profile Picture Change:</h4>
+                <form action="upload.php" method="post" enctype="multipart/form-data">
+                    <label for="fileToUpload">
+                  <div class="profile-pic" style="background-image: url('john-pork.jpeg')">
+                      <span class="glyphicon glyphicon-camera"></span>
+                      <span>Change Image</span>
+                  </div>
+                  </label>
+                  <input type="File" name="fileToUpload" id="fileToUpload">
+                </form>
                 <div class="account-info">
                     <div class="account-info-row">
-                        <label>ID:</label>
+                        <label>Password:</label>
                         <div class="input-wrapper">
-                            ce9296ea34f4499302d0bd2db44a76
-                        </div>
-                    </div>
-                    <div class="account-info-row">
-                        <label>Display Name:</label>
-                        <div class="input-wrapper">
-                            <input type="text" value="Török Péter" readonly>
+                            <input type="text" value="************" readonly>
                             <img class="edit-icon" src="../Weboldal képek/cerka.png" alt="">
                         </div>
                     </div>
                     <div class="account-info-row">
-                        <label>Email:</label>
+                        <label>Card Number:</label>
                         <div class="input-wrapper">
-                            <input type="email" value="torokpeter@turr.hu " readonly>
+                            <input type="text" value="2720 5693 9192 3140, 08/25" readonly>
                             <img class="edit-icon" src="../Weboldal képek/cerka.png" alt="">
                         </div>
                     </div>
-                    <h3>Personal Details</h3>
-                    <div class="account-info-row">
-                        <label>Phone:</label>
-                        <div class="input-wrapper">
-                            <input type="text" value="(116-123)" readonly>
-                            <img class="edit-icon" src="../Weboldal képek/cerka.png" alt="">
-                        </div>
-                    </div>
-                    <div class="account-info-row">
-                        <label>Address:</label>
-                        <div class="input-wrapper">
-                            <input type="text" value=" Baja, Bácska tér 1" readonly>
-                            <img class="edit-icon" src="../Weboldal képek/cerka.png" alt="">
-                        </div>
-                    </div>
-                    <div class="account-info-row">
-                        <label>Country/Region:</label>
-                        <div class="input-wrapper">
-                            <input type="text" value="Hungary" readonly>
-                            <img class="edit-icon" src="../Weboldal képek/cerka.png" alt="">
-                        </div>
-                    </div>
+                   
                 </div>
             </div>
         </div>

@@ -106,10 +106,15 @@ body {
 .category:hover{
   background-color: rgb(209, 209, 209);
   opacity: 0.5;
+
+  
 }
 .category img {
   width: 100%;
   max-width: 300px;
+}
+.category{
+  transition: all 0.5s ease-in-out;
 }
 
 a:link{
@@ -164,6 +169,13 @@ a{
       margin-left: auto;
     margin-right: auto;
   }
+  .shipping.visible{
+    align-items: center;
+  }
+  #transport{
+    align-items: center;
+    margin-left: 0;
+  }
 }
 /* Tablet nézet */
 @media (max-width: 1024px) {
@@ -211,8 +223,5 @@ a{
       flex-direction: column;
       text-align: center;
       gap: 15px;
-  }
-  .shipping img {
-      width: 80px;
   }
 }
