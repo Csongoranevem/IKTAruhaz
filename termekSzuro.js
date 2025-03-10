@@ -151,14 +151,6 @@ let termekek = [
                         onSale: true},
 
 
-
-
-
-
-     
-    
-    
-    
     
     
                     
@@ -166,6 +158,7 @@ let termekek = [
 ]
 
 //globális változók
+let szurtKartyak =[]
 let main = document.querySelector(".row")
 let oldalTipus = document.querySelector(".oldalType").innerHTML
 
@@ -177,6 +170,7 @@ for (const termek of termekek) {
     let hozzadadott = KartyaLetrehoz(termek, oldalTipus, oldalGender)
     if (hozzadadott!=false) {
         main.appendChild(hozzadadott)
+        szurtKartyak.push(hozzadadott)
     }
 
 }
@@ -283,6 +277,10 @@ function KartyaLetrehoz(termek, tipus, gender) {
 //Slider szűrő
 
 
+
+let minValue;
+let maxValue;
+
 let MinErtekId = document.querySelector("#MinErtekId")
 let MaxErtekId = document.querySelector("#MaxErtekId")
 
@@ -290,24 +288,33 @@ let minimum = document.querySelector(".range-slider-input-left").addEventListene
 	e.target.value = Math.max(e.target.value, e.target.parentNode.childNodes[3].value - (-1));
 	var value = (1000 / ( parseInt(e.target.max) - parseInt(e.target.min) )) * parseInt(e.target.value) - (100 / ( parseInt(e.target.max) - parseInt(e.target.min) )) * parseInt(e.target.min)
     MinErtekId.innerHTML = `$${value}`
+    minValue=value
+    sliderSzures()
 });
 let maximum = document.querySelector(".range-slider-input-right").addEventListener( 'input', e => {
 	e.target.value = Math.max(e.target.value, e.target.parentNode.childNodes[3].value - (-1));
 	var value = (1000 / ( parseInt(e.target.max) - parseInt(e.target.min) )) * parseInt(e.target.value) - (100 / ( parseInt(e.target.max) - parseInt(e.target.min) )) * parseInt(e.target.min)
     MaxErtekId.innerHTML = `$${value}`
+    maxValue=value
+    sliderSzures()
 });
 
 function sliderSzures() {
 
+       let torles=document.getElementsByClassName("kartyak")
 
 
-    for (const termek of termekek) {
-        let hozzadadott = KartyaLetrehoz(termek, oldalTipus, oldalGender)
-        if (hozzadadott!=false) {
-            main.appendChild(hozzadadott)
-        }
-    
+    for (const torol of torles) {
+        main.removeChild(torol)
     }
+
+    for (const kart of szurtKartyak) {
+        if (kart.price >= minValue && kart.price <=maxValue) {
+            main.appendChild(kart)
+        }
+    }
+
+
 }
 
 
