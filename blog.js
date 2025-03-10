@@ -101,6 +101,12 @@ let blogSdiv2 = document.getElementById("BlogShareDiv").addEventListener('mouseo
     BlogShareDiv.style.display = "none"
 })
 
+function ShareF(){
+    BlogShareDiv.style.display = "none"
+    document.getElementById("ShareUzi").style.display = "block"
+    setTimeout(() => {document.getElementById("ShareUzi").style.display = "none"}, 1500)
+}
+
 function CommentBar(){
     document.getElementById("CommentFulDiv").style.display = "block"
     document.getElementById("CommentUzi").style.display = "none"
@@ -197,7 +203,8 @@ let Blogok = [
 let Kereso = document.getElementById("BlogSearchBarId")
 
 function BlogKereses(){
-    alert("A")
+    alert(document.getElementById("BlogKeresesSelectID").value)
+
 }
 
 function Szures(Akcio){
