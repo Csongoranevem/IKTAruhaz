@@ -47,20 +47,6 @@
     width: 10%;
     margin-left: 2%;
 }
-.BlogRateCsillagIMG:hover{
-    animation-name: CsillagHover;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes CsillagHover{
-    from{
-        width: 10%;
-    }
-    to{
-        width: 11%;
-    }
-}
 
 
 #uzenet{
@@ -81,6 +67,16 @@
 }
 
 #CommentUzi{
+    display: none;
+    font-size: larger;
+    color: darkgray;
+}
+#RateUziJo{
+    display: none;
+    font-size: larger;
+    color: darkgray;
+}
+#RateUziRossz{
     display: none;
     font-size: larger;
     color: darkgray;

@@ -31,6 +31,7 @@ BlogRateCsillag1.addEventListener('mouseover',()=>{
         BlogCsillagKepTomb[i].src="../Blog képek/star-602148_1280.png"
     }
     BlogRateCsillag1.src="../Blog képek/CsillagNarancs.png"
+
 })
 BlogRateCsillag2.addEventListener('mouseover',()=>{
     for(let i = 0; i < BlogCsillagKepTomb.length; i++){
@@ -38,6 +39,7 @@ BlogRateCsillag2.addEventListener('mouseover',()=>{
     }
     BlogRateCsillag1.src="../Blog képek/CsillagNarancs.png"
     BlogRateCsillag2.src="../Blog képek/CsillagNarancs.png"
+
 })
 BlogRateCsillag3.addEventListener('mouseover',()=>{
     for(let i = 0; i < BlogCsillagKepTomb.length; i++){
@@ -46,6 +48,7 @@ BlogRateCsillag3.addEventListener('mouseover',()=>{
     BlogRateCsillag1.src="../Blog képek/CsillagNarancs.png"
     BlogRateCsillag2.src="../Blog képek/CsillagNarancs.png"
     BlogRateCsillag3.src="../Blog képek/CsillagNarancs.png"
+
 })
 BlogRateCsillag4.addEventListener('mouseover',()=>{
     for(let i = 0; i < BlogCsillagKepTomb.length; i++){
@@ -55,6 +58,7 @@ BlogRateCsillag4.addEventListener('mouseover',()=>{
     BlogRateCsillag2.src="../Blog képek/CsillagNarancs.png"
     BlogRateCsillag3.src="../Blog képek/CsillagNarancs.png"
     BlogRateCsillag4.src="../Blog képek/CsillagNarancs.png"
+
 })
 BlogRateCsillag5.addEventListener('mouseover',()=>{
     for(let i = 0; i < BlogCsillagKepTomb.length; i++){
@@ -65,8 +69,23 @@ BlogRateCsillag5.addEventListener('mouseover',()=>{
     BlogRateCsillag3.src="../Blog képek/CsillagNarancs.png"
     BlogRateCsillag4.src="../Blog képek/CsillagNarancs.png"
     BlogRateCsillag5.src="../Blog képek/CsillagNarancs.png"
+
 })
 
+function CsillagRateF(Pont){
+    for(let i = 0; i < BlogCsillagKepTomb.length; i++){
+        BlogCsillagKepTomb[i].src="../Blog képek/star-602148_1280.png"
+    }
+    document.getElementById("BlogRateCsillagokDiv").style.display = "none"
+    if(Pont >= 3){
+        document.getElementById("RateUziJo").style.display = "block"
+        setTimeout(()=>{document.getElementById("RateUziJo").style.display = "none"},1000)
+    }
+    else{
+        document.getElementById("RateUziRossz").style.display = "block"
+        setTimeout(()=>{document.getElementById("RateUziRossz").style.display = "none"},1000)
+    }
+}
 
 let shareIcon = document.getElementById("BlogShareDiv")
 let blogSgomb = document.getElementById("BlogShareGomb").addEventListener('mouseover',() => {

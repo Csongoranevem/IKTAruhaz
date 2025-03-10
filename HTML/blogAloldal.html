@@ -96,7 +96,7 @@
                     <a href="./myaccount.html" class="menuLinks" id="dropbtn">my account<span class="menuNyil">▾</span></a>
                         <div class="dropdownMain">
                             <a href="./myaccount.html" class="dropdownLinks">Account details</a>
-                            <a href="./logOut.html" class="dropdownLinks">Log out</a>
+                            <a href="./logout.html" class="dropdownLinks">Log out</a>
                             <a href="./coupons.html" class="dropdownLinks">Coupons</a>
                         </div>
                     </div>
@@ -196,12 +196,14 @@
                 <button class="BlogFoGomb" onclick="BlogSClickF()" id="BlogShareGomb">SHARE</button>
             </div>
             <div id="BlogRateCsillagokDiv">
-                <img src="../Blog képek/star-602148_1280.png" id="BlogCsillag1" class="BlogRateCsillagIMG" alt="">
-                <img src="../Blog képek/star-602148_1280.png" id="BlogCsillag2" class="BlogRateCsillagIMG" alt="">
-                <img src="../Blog képek/star-602148_1280.png" id="BlogCsillag3" class="BlogRateCsillagIMG" alt="">
-                <img src="../Blog képek/star-602148_1280.png" id="BlogCsillag4" class="BlogRateCsillagIMG" alt="">
-                <img src="../Blog képek/star-602148_1280.png" id="BlogCsillag5" class="BlogRateCsillagIMG" alt="">
+                <img src="../Blog képek/star-602148_1280.png" id="BlogCsillag1" onclick="CsillagRateF(1)" class="BlogRateCsillagIMG" alt="">
+                <img src="../Blog képek/star-602148_1280.png" id="BlogCsillag2" onclick="CsillagRateF(2)" class="BlogRateCsillagIMG" alt="">
+                <img src="../Blog képek/star-602148_1280.png" id="BlogCsillag3" onclick="CsillagRateF(3)" class="BlogRateCsillagIMG" alt="">
+                <img src="../Blog képek/star-602148_1280.png" id="BlogCsillag4" onclick="CsillagRateF(4)" class="BlogRateCsillagIMG" alt="">
+                <img src="../Blog képek/star-602148_1280.png" id="BlogCsillag5" onclick="CsillagRateF(5)" class="BlogRateCsillagIMG" alt="">
             </div>
+            <p id="RateUziRossz">Köszönjük a visszajelzést! Sajnáljuk, hogy így gondolod..</p>
+            <p id="RateUziJo">Köszönjük a visszajelzést! Örülünk, hogy így gondolod!</p>
             <div id="BlogShareDiv">
                 <img src="../Blog képek/Facebook_icon_2013.svg.png" class="BlogShareIMG" alt="">
                 <img src="../Blog képek/Instagram_logo_2016.svg.png" class="BlogShareIMG" alt="">
