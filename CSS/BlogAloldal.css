@@ -81,6 +81,11 @@
     font-size: larger;
     color: darkgray;
 }
+#ShareUzi{
+    display: none;
+    font-size: larger;
+    color: darkgray;
+}
 
 #BlogShareDiv{
     display: flex;
