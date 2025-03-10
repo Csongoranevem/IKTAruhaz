@@ -158,10 +158,9 @@ let termekek = [
 ]
 
 //globális változók
-let szurtKartyak =[]
 let main = document.querySelector(".row")
 let oldalTipus = document.querySelector(".oldalType").innerHTML
-
+let filterGomb = document.getElementById('FilterGombDiv')
 let oldalGenderElement = document.querySelector(".oldalgender");
 let oldalGender = oldalGenderElement ? oldalGenderElement.innerHTML : "U";
 
@@ -170,7 +169,6 @@ for (const termek of termekek) {
     let hozzadadott = KartyaLetrehoz(termek, oldalTipus, oldalGender)
     if (hozzadadott!=false) {
         main.appendChild(hozzadadott)
-        szurtKartyak.push(hozzadadott)
     }
 
 }
@@ -289,31 +287,35 @@ let minimum = document.querySelector(".range-slider-input-left").addEventListene
 	var value = (1000 / ( parseInt(e.target.max) - parseInt(e.target.min) )) * parseInt(e.target.value) - (100 / ( parseInt(e.target.max) - parseInt(e.target.min) )) * parseInt(e.target.min)
     MinErtekId.innerHTML = `$${value}`
     minValue=value
-    sliderSzures()
+    filterGomb.disabled = false
 });
 let maximum = document.querySelector(".range-slider-input-right").addEventListener( 'input', e => {
 	e.target.value = Math.max(e.target.value, e.target.parentNode.childNodes[3].value - (-1));
 	var value = (1000 / ( parseInt(e.target.max) - parseInt(e.target.min) )) * parseInt(e.target.value) - (100 / ( parseInt(e.target.max) - parseInt(e.target.min) )) * parseInt(e.target.min)
     MaxErtekId.innerHTML = `$${value}`
     maxValue=value
-    sliderSzures()
+    filterGomb.disabled = false
 });
 
 function sliderSzures() {
 
        let torles=document.getElementsByClassName("kartyak")
 
-
-    for (const torol of torles) {
+       //console.log(torles.length)   
+       for (var torol of torles) {
         main.removeChild(torol)
     }
-
-    for (const kart of szurtKartyak) {
-        if (kart.price >= minValue && kart.price <=maxValue) {
-            main.appendChild(kart)
+       for (const termek of termekek) {
+        let termekUjra = KartyaLetrehoz(termek, oldalTipus, oldalGender)
+        if (termekUjra!=false && (termek.price>=minValue && termek.price<=maxValue)) {
+            main.appendChild(termekUjra)
+            console.log(termek.price)
+            console.log(minValue, maxValue)
         }
+    
     }
 
+    filterGomb.disabled = true
 
 }
 
