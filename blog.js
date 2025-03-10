@@ -167,35 +167,35 @@ let Blogok = [
         title: "Kuponok és akciók",
         date: "2019.03.22",
         img: "../Blog képek/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.jpg",
-        description: "",
+        description: "Webáruházunkban mindig fontosnak tartjuk, hogy a legjobb ajánlatokat kínáljuk vásárlóinknak! Nézd meg legújabb kuponjainkat és akcióinkat, hogy még többet spórolhass a legnépszerűbb termékeken. Ne hagyd ki a szezonális leárazásokat, vagy a különleges kedvezményeket, amelyek csak korlátozott ideig érhetők el! Iratkozz fel hírlevelünkre, és mindig elsőként értesülhetsz a legújabb kuponkódokkal",
         rating: 5
     },
     Sapis = {
         title: "Bábúk ilyen sapkával rajtuk",
         date: "2021.08.11",
         img: "../Blog képek/ruha3.jpg",
-        description: "",
+        description: "Örömmel értesítünk, hogy legújabb sapkáink már elérhetők webáruházunkban! Különleges, trendi dizájnok és prémium minőség vár rád – legyen szó sportos, klasszikus vagy éppen egyedi stílusról, nálunk mindenki megtalálja a tökéletes darabot. Ne hagyd ki az új kollekciót, és frissítsd a tavaszi/nyári ruhatáradat egy stílusos sapkával! Vásárolj most, és élvezd az új dizájnok kényelmét és egyediségét!",
         rating: 4.9,
     },
     Koltozes = {
         title: "Elköltöztünk!",
         date: "2021.07.02",
         img: "../Blog képek/ruha4.jpg",
-        description: "",
+        description: "Örömmel értesítünk, hogy webáruházunk mostantól új, még gyorsabb és felhasználóbarátabb platformon érhető el! A költözés célja, hogy még jobb vásárlási élményt nyújthassunk nektek. Az új oldalunkon gyorsabban navigálhattok, könnyebben találhatjátok meg kedvenc termékeiteket, és az új designnak köszönhetően még egyszerűbbé válik a vásárlás. Ne aggódj, minden eddigi rendelésed és fiókadat megőriztük! Látogass el új weboldalunkra, és fedezd fel a frissített dizájnt és kényelmesebb vásárlást!",
         rating: 4.8,
     },
     LimitaltR = {
         title: "Limitált ruhák",
         date: "2020.10.28",
         img: "../Blog képek/ruha7.jpg",
-        description: "",
+        description: "Exkluzív ajánlat! Webáruházunkban most elérhetők a legkülönlegesebb, limitált kiadású ruhadarabok, amelyek soha többé nem kerülnek vissza a készletre! Csak pár darab áll rendelkezésre, és amikor elérik a készlet végét, vége – nincs több esély a beszerzésükre. Ha szeretnél igazán egyedi darabokat, amelyek nem találhatók meg bárhol, most van itt az idő! Ne maradj le, vásárolj most, és tedd egyedivé a ruhatáradat!",
         rating: 4.7,
     },
     UjNadragok = {
         title: "Új nadrágok!",
         date: "2019.09.09",
         img: "../Blog képek/ruha8.jpg",
-        description: "",
+        description: "Friss, trendi és kényelmes – megérkeztek a legújabb nadrágjaink! A tavaszi és nyári szezonra tervezett modellek között biztosan megtalálod a tökéletes darabot, legyen szó sportos, elegáns vagy éppen laza hétköznapi stílusról. A prémium anyagok és a modern szabás minden mozdulatot kényelmessé tesznek, miközben a legújabb divatot képviselik. Ne hagyd ki az új kollekciót, és frissítsd a gardróbodat a legújabb nadrágokkal! Vásárolj most, és légy mindig stílusos!",
         rating: 4.5
     }
 ]
@@ -206,6 +206,31 @@ function BlogKereses(){
     alert(document.getElementById("BlogKeresesSelectID").value)
 
 }
+
+
+let JobbDiv = document.getElementById("JobbBlogDiv")
+let BalDiv = document.getElementById("BalBlogDiv")
+
+for (const blog of Blogok){
+    let jobbvagybal = Math.floor(Math.random()*2)
+    let hozzadadott = Letrehozas(jobbvagybal)
+    if (hozzadadott!=false) {
+        if(jobbvagybal){
+            JobbDiv.appendChild(hozzadadott)
+        }
+        else{
+            BalDiv.appendChild(hozzadadott)
+        }
+    }
+
+}
+function Letrehozas(hol){
+
+    let kartyak = document.createElement('div');
+    kartyak.className = "kartyak";
+}
+
+
 
 function Szures(Akcio){
     alert("Lefutott")
