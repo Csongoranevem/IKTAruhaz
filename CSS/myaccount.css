@@ -185,4 +185,84 @@ h3 {
 }
 img.edit-icon{
   width: 30px;
+} 
+
+@media screen and (max-width: 870px) {
+  .torzs {
+    flex-direction: column;
+  }
+  
+  .left {
+    width: 100%;
+    display: none; 
+    margin-bottom: 30px;
+  }
+  
+  .left.active {
+    display: block; 
+  }
+  
+  .right {
+    width: 100%;
+  }
+  
+  .mobile-menu-btn {
+    display: block;
+    position: relative;
+    margin: 20px 0 20px 10%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    z-index: 100;
+  }
+  
+  .mobile-menu-btn span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin: 6px 0;
+    background-color: #333;
+    transition: 0.4s;
+    border-radius: 2px;
+  }
+  
+  .mobile-menu-btn.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  
+  .mobile-menu-btn.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .mobile-menu-btn.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+  
+  h3 {
+    font-size: 1.8em;
+  }
+  
+
+  .account-info-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .account-info-row label {
+    margin-bottom: 8px;
+  }
+  
+  .account-info-row .input-wrapper {
+    width: 100%;
+  }
+}
+
+.mobile-menu-btn {
+  display: none;
 }
