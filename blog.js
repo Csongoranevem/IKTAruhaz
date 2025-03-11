@@ -211,21 +211,113 @@ function BlogKereses(){
 let JobbDiv = document.getElementById("JobbBlogDiv")
 let BalDiv = document.getElementById("BalBlogDiv")
 
-for (const blog of Blogok){
+for (let i = 0; i < Blogok.length(); i++){
     let jobbvagybal = Math.floor(Math.random()*2)
-    let hozzadadott = Letrehozas(jobbvagybal)
-    if (hozzadadott!=false) {
-        if(jobbvagybal){
-            JobbDiv.appendChild(hozzadadott)
-        }
-        else{
-            BalDiv.appendChild(hozzadadott)
-        }
+    Letrehozas(jobbvagybal,i)
+    if(jobbvagybal){
+        JobbDiv.appendChild(hozzadadott)
     }
-
+    else{
+        BalDiv.appendChild(hozzadadott)
+    }
 }
-function Letrehozas(hol){
+function Letrehozas(hol,hanyas){
+    if(hol){
+        let balBlogLeiras = document.createElement('p');
+        balBlogLeiras.className = "BlogP";
 
+        let balBlogKep = document.createElement('img');
+        balBlogKep.className = "BalKepClass";
+
+        let vonal = document.createElement('hr');
+
+        let balBlogLeirasDiv = document.createElement('div');
+        balBlogLeirasDiv.className = "BalKepDivClass";
+
+        let balBlogCimSpan = document.createElement('span');
+        balBlogCimSpan.className = "BalBlogCimSpan";
+
+        let balBlogCimP = document.createElement('p');
+        balBlogCimP.className = "BalBlogCímP";
+
+        let balBlogCimDate = document.createElement('p');
+        balBlogCimDate.className = "BalBlogDatumP";
+
+        let balBlogAnchor = document.createElement('a');
+        balBlogAnchor.setAttribute("href","blogAloldal.html")
+
+
+        balBlogLeiras.innerHTML = Blogok[hanyas].description
+        balBlogKep.src = Blogok[hanyas].img
+        balBlogCimP.innerHTML = Blogok[hanyas].title
+        balBlogCimDate.innerHTML = Blogok[hanyas].date
+
+
+        balBlogLeirasDiv.appendChild(balBlogKep)
+        balBlogLeirasDiv.appendChild(balBlogLeiras)
+        balBlogLeirasDiv.appendChild(vonal)
+
+        balBlogCimSpan.appendChild(balBlogCimP)
+        balBlogCimSpan.appendChild(balBlogCimDate)
+
+        balBlogAnchor.appendChild(balBlogCimSpan)
+        balBlogAnchor.appendChild(balBlogLeirasDiv)
+
+        balBlogAnchor.appendChild(BalDiv)
+    }
+    else{
+        let jobbBlogCim = document.createElement('h3');
+        
+        let jobbBlogDate = document.createElement('h4');
+
+        let jobbBlogCimDiv = document.createElement('div');
+        jobbBlogCimDiv.className = "JobbKicsiBal";
+
+        let jobbBlogRMbtn = document.createElement('button');
+        jobbBlogRMbtn.className = "JobbKicsiGomb"
+
+        let jobbBlogAnchor = document.createElement('a')
+        jobbBlogAnchor.setAttribute("href","blogAloldal.html")
+
+        let jobbBlogGombDiv = document.createElement('div');
+        jobbBlogCimDiv.className = "JobbKicsiJobb";
+
+        let jobbBlogTartalomDiv = document.createElement('div');
+        jobbBlogTartalomDiv.className = "JobbKicsiNagyDiv";
+
+        let jobbBlogKep = document.createElement('img');
+        jobbBlogKep.className = "JobbKepClass";
+
+        let vonal = document.createElement('hr');
+
+        let shh = document.createElement('p');
+        shh.className = "hidden";
+        shh.innerHTML = "a";
+
+        let jobbEgesz = document.createElement('div');
+        jobbEgesz.className = "JobbKepDivClass"
+
+
+        jobbBlogCim.innerHTML = Blogok[hanyas].title;
+        jobbBlogDate.innerHTML = Blogok[hanyas].date;
+        jobbBlogKep.innerHTML = Blogok[hanyas].img;
+        jobbBlogRMbtn.innerHTML = "READ MORE"
+
+        jobbBlogAnchor.appendChild(jobbBlogRMbtn)
+        jobbBlogGombDiv.appendChild(jobbBlogAnchor)
+
+        jobbBlogCimDiv.appendChild(jobbBlogCim)
+        jobbBlogCimDiv.appendChild(jobbBlogDate)
+
+        jobbBlogTartalomDiv.appendChild(jobbBlogCimDiv)
+        jobbBlogTartalomDiv.appendChild(jobbBlogGombDiv)
+
+        jobbEgesz.appendChild(jobbBlogKep)
+        jobbEgesz.appendChild(jobbBlogTartalomDiv)
+        jobbEgesz.appendChild(jobbBlogAnchor)
+        jobbEgesz.appendChild(vonal)
+        jobbEgesz.appendChild(shh)
+    }
     let kartyak = document.createElement('div');
     kartyak.className = "kartyak";
 }
