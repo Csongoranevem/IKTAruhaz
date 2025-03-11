@@ -301,24 +301,24 @@ function sliderSzures() {
 
        let torles=document.getElementsByClassName("kartyak")
 
-       //console.log(torles.length)   
-       for (var torol of torles) {
-        main.removeChild(torol)
-    }
+       let szamlalo = torles.length
+       for (let torol = 0; torol < szamlalo; torol++) {
+        main.removeChild(torles[0])        
+       }
+        
        for (const termek of termekek) {
         let termekUjra = KartyaLetrehoz(termek, oldalTipus, oldalGender)
         if (termekUjra!=false && (termek.price>=minValue && termek.price<=maxValue)) {
             main.appendChild(termekUjra)
-            console.log(termek.price)
-            console.log(minValue, maxValue)
+            //console.log(termek.price)
+            //console.log(minValue, maxValue)
         }
     
-    }
 
+    }
+    
     filterGomb.disabled = true
 
 }
-
-
 
 
