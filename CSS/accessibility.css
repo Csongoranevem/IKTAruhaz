@@ -10,6 +10,7 @@ body {
 }
 .right{
     align-items: center;
+    margin-top: 10%;
 }
 .loader {
     display: block;
@@ -43,4 +44,20 @@ body {
     100% {
       transform: translate(-50%, -100%) scale(0)
     }
+  }
+
+  @media screen and (max-width: 870px){
+   body{
+    min-height: 120vh;
+   }
+
+   .right{
+      text-align: center;
+      margin-top: 25%;
+   }
+   @media screen and (max-width: 660px){
+    body{
+      min-height: 150vh;
+     }
+   }
   }
