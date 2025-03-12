@@ -309,6 +309,7 @@ function Letrehozas(hol,hanyas){
         jobbBlogCimDiv.appendChild(jobbBlogDate)
 
         jobbBlogTartalomDiv.appendChild(jobbBlogCimDiv)
+        
         jobbBlogTartalomDiv.appendChild(jobbBlogGombDiv)
 
         jobbEgesz.appendChild(jobbBlogKep)
