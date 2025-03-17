@@ -210,7 +210,6 @@ let JobbDiv = document.getElementById("JobbBlogDiv")
 let BalDiv = document.getElementById("BalBlogDiv")
 
 
-alert("a")
 function StartFel(){
     for (let i = 0; i < Blogok.length; i++){
         let jobbvagybal = Math.floor(Math.random()*2)
@@ -218,6 +217,74 @@ function StartFel(){
     }
 }
 
+function StartFel2(){
+    for(let i = 0; i < Blogok.length; i++){
+        let jobbvagybal = Math.floor(Math.random()*2)
+        Letrehozas2(jobbvagybal,i)
+    }
+}
+
+function Letrehozas2(hol,hanyas){
+    if(hol == 1){
+
+    }
+    else{
+        let jobbBlogCim = document.createElement('h3');
+        
+        let jobbBlogDate = document.createElement('h4');
+
+        let jobbBlogCimDiv = document.createElement('div');
+        jobbBlogCimDiv.className = "JobbKicsiBal";
+
+        let jobbBlogRMbtn = document.createElement('button');
+        jobbBlogRMbtn.className = "JobbKicsiGomb"
+
+        let jobbBlogAnchor = document.createElement('a')
+        jobbBlogAnchor.setAttribute("href","blogAloldal.html")
+
+        let jobbBlogGombDiv = document.createElement('div');
+        jobbBlogGombDiv.className = "JobbKicsiJobb";
+
+        let jobbBlogTartalomDiv = document.createElement('div');
+        jobbBlogTartalomDiv.className = "JobbKicsiNagyDiv";
+
+        let jobbBlogKep = document.createElement('img');
+        jobbBlogKep.className = "JobbKepClass";
+
+        let vonal = document.createElement('hr');
+
+        let shh = document.createElement('p');
+        shh.className = "hidden";
+        shh.innerHTML = "a";
+
+        let jobbEgesz = document.createElement('div');
+        jobbEgesz.className = "JobbKepDivClass"
+
+
+        jobbBlogCim.innerHTML = Blogok[hanyas].title;
+        jobbBlogDate.innerHTML = Blogok[hanyas].date;
+        jobbBlogKep.src = Blogok[hanyas].img;
+        jobbBlogRMbtn.innerHTML = "READ MORE"
+
+        jobbBlogAnchor.appendChild(jobbBlogRMbtn)
+        jobbBlogGombDiv.appendChild(jobbBlogAnchor)
+
+        jobbBlogCimDiv.appendChild(jobbBlogCim)
+        jobbBlogCimDiv.appendChild(jobbBlogDate)
+
+        jobbBlogTartalomDiv.appendChild(jobbBlogCimDiv)
+        
+        jobbBlogTartalomDiv.appendChild(jobbBlogGombDiv)
+
+        jobbEgesz.appendChild(jobbBlogKep)
+        jobbEgesz.appendChild(jobbBlogTartalomDiv)
+        jobbEgesz.appendChild(vonal)
+        jobbEgesz.appendChild(shh)
+
+        let JobbEgeszDiv = document.getElementById("JobbEgeszDiv")
+        JobbEgeszDiv.appendChild(jobbEgesz) 
+    }
+}
 
 function Letrehozas(hol,hanyas){
     if(hol == 1){
@@ -314,7 +381,6 @@ function Letrehozas(hol,hanyas){
 
         jobbEgesz.appendChild(jobbBlogKep)
         jobbEgesz.appendChild(jobbBlogTartalomDiv)
-        jobbEgesz.appendChild(jobbBlogAnchor)
         jobbEgesz.appendChild(vonal)
         jobbEgesz.appendChild(shh)
 
@@ -323,7 +389,7 @@ function Letrehozas(hol,hanyas){
     }
 }
 
-StartFel()
+
 
 
 function Szures(Akcio){
