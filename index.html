@@ -16,6 +16,10 @@
 </head>
 <body>
     <!--Menü és felsőléc-->
+
+    <p class="oldalType" style="display: none;">all</p>
+
+
     <a href="" id="top"></a>
     <div class="stickyteto">
         <div class="felsoLec">
@@ -123,7 +127,7 @@
             <div class="alatta">
                 <p id="result">Showing all 6 results</p>
                 <div class="select">
-                    <select name="sorting" id="default-sorting">
+                    <select onchange="SortingFuggveny()" name="sorting" id="default-sorting">
                         <option value="">Default sorting</option>
                         <option value="low">Price: Low to High</option>
                         <option value="high">Price: High to Low</option>
@@ -131,138 +135,6 @@
                 </div>
             </div>
             <div class="row">
-                <div class="kartyak">
-                    <div class="column">
-                        <div class="card">
-                            <div class="card-container">
-                                <img src="./TermekKartyak/collarshirt.jpg" alt="Collar T-Shirt" class="kartyaKepek">
-                                <div class="ikonok">
-                                    <div class="szivikon"><img src="./TermekKartyak/sziv.png" alt=""></div>
-                                    <div class="szemikon"><img src="./TermekKartyak/szem.png" alt=""></div>
-                                </div>
-                                <div class="add-to-cart">add to cart</div>
-                                
-                            <a href="" class="add-to-cart">add to cart</a>
-                            </div>
-                            
-                            <div class="alja">
-                                <h1>Collar T-Shirt</h1>
-                            <p class="price">$35.00</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="kartyak">
-                    <div class="column">
-                        <div class="card">
-                            <div class="card-container">
-                            <img src="./TermekKartyak/gentsTshirt.jpg" alt="gentstshirt" class="kartyaKepek">
-                            <div class="ikonok">
-                                <div class="szivikon"><img src="./TermekKartyak/sziv.png" alt=""></div>
-                                <div class="szemikon"><img src="./TermekKartyak/szem.png" alt=""></div>
-                            </div>
-                            <div class="add-to-cart">add to cart</div>
-                            <a href="" class="add-to-cart">add to cart</a>
-                            </div>
-
-                            <div class="alja">
-                                <h1>Gents T-shirt</h1>
-                                <p class="price">$49.00</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="kartyak">
-                    <div class="column">
-                        <span class="KartyaSaleDiv">
-                            <p class="KartyaSaleP">Sale!</p>
-                        </span>
-                        <div class="card">
-                            <div class="card-container">
-                            <img src="./TermekKartyak/sapkasarga.jpg" alt="ladieshat" class="kartyaKepek">
-                            <div class="ikonok">
-                                <div class="szivikon"><img src="./TermekKartyak/sziv.png" alt=""></div>
-                                <div class="szemikon"><img src="./TermekKartyak/szem.png" alt=""></div>
-                            </div>
-                            <div class="add-to-cart">add to cart</div>
-                            <a href="" class="add-to-cart">add to cart</a>
-                            </div>
-
-                            <div class="alja">
-                                <h1>Ladies Hat</h1>
-                                <p class="price"><s id="athuzott">$22.00</s>$17.00</p></div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="kartyak">
-                    <div class="column">
-                        <div class="KartyaSaleDiv">
-                            <p class="KartyaSaleP">Sale!</p>
-                        </div>
-                        <div class="card">
-                            <div class="card-container">
-                            <img src="./TermekKartyak/LeatherJacket.jpg" alt="leatherjacket" class="kartyaKepek">
-                            <div class="ikonok">
-                                <div class="szivikon"><img src="./TermekKartyak/sziv.png" alt=""></div>
-                                <div class="szemikon"><img src="./TermekKartyak/szem.png" alt=""></div>
-                            </div>
-                            <div class="add-to-cart">add to cart</div>
-                            <a href="#" class="add-to-cart">add to cart</a>
-                            </div>
-
-                            <div class="alja">
-                                <h1>Leather Jacket</h1>
-                                <p class="price"><s id="athuzott">$100.00</s>$50.00</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="kartyak">
-                    <div class="column">
-                        <div class="card">
-                            <div class="card-container">
-                            <img src="./TermekKartyak/PrintedTops.jpg" class="kartyaKepek">
-                            <div class="ikonok">
-                                <div class="szivikon"><img src="./TermekKartyak/sziv.png" alt=""></div>
-                                <div class="szemikon"><img src="./TermekKartyak/szem.png" alt=""></div>
-                            </div>
-                            <div class="add-to-cart">add to cart</div>
-                            <a href="" class="add-to-cart">add to cart</a>
-                            </div>
-
-                            <div class="alja">
-                                <h1>Printed Tops</h1>
-                            <p class="price">$75.00</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="kartyak">
-                    <div class="column">
-                        <div class="card">
-                            <div class="card-container">
-                            <img src="./TermekKartyak/feherPoloLatina.jpg" alt="womentops" class="kartyaKepek">
-                            <div class="ikonok">
-                                <div class="szivikon"><img src="./TermekKartyak/sziv.png" alt=""></div>
-                                <div class="szemikon"><img src="./TermekKartyak/szem.png" alt=""></div>
-                            </div>
-                            <div class="add-to-cart">add to cart</div>
-                            <a href="" class="add-to-cart">add to cart</a>
-                            </div>
-
-                            <div class="alja">
-                                <h1>Women Tops</h1>
-                            <p class="price">$45.00</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
             </div>
         </div>
         <div class="jobb">
