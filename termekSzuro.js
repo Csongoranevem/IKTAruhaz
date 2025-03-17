@@ -158,6 +158,7 @@ let termekek = [
 ]
 
 //globális változók
+let resultCount = 0
 let main = document.querySelector(".row")
 let oldalTipus = document.querySelector(".oldalType").innerHTML
 let filterGomb = document.getElementById('FilterGombDiv')
@@ -176,10 +177,10 @@ for (const termek of termekek) {
 //Függvény létrehozása
 function KartyaLetrehoz(termek, tipus, gender) {
     let genderBackup = termek.gender
-    if (tipus == "casual" || tipus=="clothing") {
+    if (tipus == "casual" || tipus=="clothing" || tipus == "all") {
         termek.gender=null
     }
-    if (tipus == termek.type || gender == termek.gender || termek.gender=="U") {
+    if (tipus == termek.type || gender == termek.gender || termek.gender=="U" || tipus == "all") {
         let kartyak = document.createElement('div');
         kartyak.className = "kartyak";
     
@@ -271,7 +272,9 @@ function KartyaLetrehoz(termek, tipus, gender) {
     return false;
 }
 
-    
+let shows = document.getElementsByClassName("kartyak")
+let resultKiir = document.getElementById("result")
+resultKiir.innerHTML = `Showing all ${shows.length} results`
 //Slider szűrő
 
 
@@ -299,6 +302,8 @@ let maximum = document.querySelector(".range-slider-input-right").addEventListen
 
 function sliderSzures() {
 
+        resultCount = 0
+
        let torles=document.getElementsByClassName("kartyak")
 
        let szamlalo = torles.length
@@ -319,6 +324,12 @@ function sliderSzures() {
     
     filterGomb.disabled = true
 
+    let shows = document.getElementsByClassName("kartyak")
+    resultKiir.innerHTML = `Showing all ${shows.length} results`
+
 }
 
 
+function SortingFuggveny() {
+
+}
