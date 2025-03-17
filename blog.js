@@ -201,8 +201,37 @@ function BlogRClickF(){
 let Kereso = document.getElementById("BlogSearchBarId")
 
 function BlogKereses(){
-    alert(document.getElementById("BlogKeresesSelectID").value)
-
+    SortErtek = document.getElementById("BlogKeresesSelectID").value
+    BlogRendezes(SortErtek)
+    console.log("Valaszto--------------------------------------------------")
+    Blogok.sort((a,b) => b.rating - a.rating)
+    for(let i = 0; i < Blogok.length; i++){
+        console.log(Blogok[i])
+    }
+}
+function BlogRendezes(Tevekenyseg){
+    let KeresettBlog = document.getElementById("BlogSearchBarId").value
+    if(KeresettBlog == ""){
+        if(Tevekenyseg == "BalUjOPT"){
+            for(let i = 0; i < Blogok.length; i++){
+                let Ev = Blogok[i].date.split('.')[0]
+                let Honap = Blogok[i].date.split('.')[1]
+                let Nap = Blogok[i].date.split('.')[2]
+            }
+        }
+        else if(Tevekenyseg == "BalRegiOPT"){
+            
+        }
+        else if(Tevekenyseg == "BalNepszeruOPT"){
+            Blogok.sort((a,b) => b.rating - a.rating)
+        }
+        else if(Tevekenyseg == "BalOlvasottakOPT"){
+    
+        }
+        else{
+            alert("Sajnáljuk, valami hiba történt.\nPróbáld újra később")
+        }
+    }
 }
 
 
