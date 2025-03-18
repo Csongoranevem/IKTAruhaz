@@ -125,7 +125,7 @@
                 <h2>Casual</h2>
             </div>
             <div class="alatta">
-                <p id="result">Showing all 6 results</p>
+                <p id="result"></p>
                 <div class="select">
                     <select onchange="SortingFuggveny()" name="sorting" id="default-sorting">
                         <option value="">Default sorting</option>
@@ -161,16 +161,16 @@
                             </div>
                         </div>
                     
-                        <input type="range" class="range-slider-input-left" tabindex="0" max="1000" min="1" step="2">
-                        <input type="range" class="range-slider-input-right" tabindex="0" max="1000" min="1" step="2">
+                        <input type="range" class="range-slider-input-left" tabindex="0" max="100" min="0" step="1">
+                        <input type="range" class="range-slider-input-right" tabindex="0" max="100" min="0" step="1">
                     </div>
                     <div class="arEsGombDiv">
                         <button id="FilterGombDiv" onclick="sliderSzures()">FILTER</button>
                         <div id="PriceDiv">
                             <p>Price:</p>
-                            <p id="MinErtekId"> $0 </p>
+                            <p id="MinErtekId">-</p>
                             <p> - </p>
-                            <p id="MaxErtekId"> $100 </p>
+                            <p id="MaxErtekId">-</p>
                         </div>
                     </div>
                     <div class="kategoriaSzuroDiv">
@@ -240,5 +240,6 @@
 
 <script src="./hambi.js"></script>
 <script src="./main.js"></script>
+<script src="termekSzuro.js"></script>
 </body>
 </html>

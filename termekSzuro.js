@@ -180,7 +180,8 @@ function KartyaLetrehoz(termek, tipus, gender) {
     if (tipus == "casual" || tipus=="clothing" || tipus == "all") {
         termek.gender=null
     }
-    if (tipus == termek.type || gender == termek.gender || termek.gender=="U" || tipus == "all") {
+    console.log(tipus)
+    if (tipus == "all" || tipus == termek.type || gender == termek.gender || termek.gender=="U") {
         let kartyak = document.createElement('div');
         kartyak.className = "kartyak";
     
@@ -329,7 +330,25 @@ function sliderSzures() {
 
 }
 
-
 function SortingFuggveny() {
+
+
+    let letrehozottKartyak = document.getElementsByClassName("kartyak")
+    let torloBackup = letrehozottKartyak
+    letrehozottKartyak.sort((a,b) => (a.price > price) ? 1 : ((b.price > a.price) ? -1 : 0))
+
+    let szamlalo = torloBackup.length
+    for (let torol = 0; torol < szamlalo; torol++) {
+     main.removeChild(torloBackup[0])        
+    }
+
+    for (const termek of letrehozottKartyak) {
+        let termekUjra = KartyaLetrehoz(termek, oldalTipus, oldalGender)
+        if (termekUjra!=false) {
+            main.appendChild(termekUjra)
+        }
+    
+
+    }
 
 }
