@@ -210,26 +210,21 @@ function BlogKereses(){
     }
 }
 function BlogRendezes(Tevekenyseg){
-    let KeresettBlog = document.getElementById("BlogSearchBarId").value
+    let KeresettBlog = document.getElementById("BlogSearchBarId").value.split("")
+    console.log(KeresettBlog)
     if(KeresettBlog == ""){
-        if(Tevekenyseg == "BalUjOPT"){
-            for(let i = 0; i < Blogok.length; i++){
-                let Ev = Blogok[i].date.split('.')[0]
-                let Honap = Blogok[i].date.split('.')[1]
-                let Nap = Blogok[i].date.split('.')[2]
+    }
+    else{
+        document.querySelectorAll('.JobbKepDivClass').forEach(e => e.remove());
+        for(let i = 0; i < Blogok.length; i++){
+            for(let k = 0; k < KeresettBlog.length; i++){
+                if(Blogok[i].title.toLowerCase().includes(KeresettBlog[k])){
+                    JobbKeresFeltolt(i);
+                }
+                else if(Blogok[i].title.toUpperCase().includes(KeresettBlog[k])){
+                    JobbKeresFeltolt(i)
+                }
             }
-        }
-        else if(Tevekenyseg == "BalRegiOPT"){
-            
-        }
-        else if(Tevekenyseg == "BalNepszeruOPT"){
-            Blogok.sort((a,b) => b.rating - a.rating)
-        }
-        else if(Tevekenyseg == "BalOlvasottakOPT"){
-    
-        }
-        else{
-            alert("Sajnáljuk, valami hiba történt.\nPróbáld újra később")
         }
     }
 }
@@ -313,6 +308,63 @@ function Letrehozas2(hol,hanyas){
         let JobbEgeszDiv = document.getElementById("JobbEgeszDiv")
         JobbEgeszDiv.appendChild(jobbEgesz) 
     }
+}
+
+function JobbKeresFeltolt(keresett){
+    let jobbBlogCim = document.createElement('h3');
+        
+        let jobbBlogDate = document.createElement('h4');
+
+        let jobbBlogCimDiv = document.createElement('div');
+        jobbBlogCimDiv.className = "JobbKicsiBal";
+
+        let jobbBlogRMbtn = document.createElement('button');
+        jobbBlogRMbtn.className = "JobbKicsiGomb"
+
+        let jobbBlogAnchor = document.createElement('a')
+        jobbBlogAnchor.setAttribute("href","blogAloldal.html")
+
+        let jobbBlogGombDiv = document.createElement('div');
+        jobbBlogGombDiv.className = "JobbKicsiJobb";
+
+        let jobbBlogTartalomDiv = document.createElement('div');
+        jobbBlogTartalomDiv.className = "JobbKicsiNagyDiv";
+
+        let jobbBlogKep = document.createElement('img');
+        jobbBlogKep.className = "JobbKepClass";
+
+        let vonal = document.createElement('hr');
+
+        let shh = document.createElement('p');
+        shh.className = "hidden";
+        shh.innerHTML = "a";
+
+        let jobbEgesz = document.createElement('div');
+        jobbEgesz.className = "JobbKepDivClass"
+
+
+        jobbBlogCim.innerHTML = Blogok[keresett].title;
+        jobbBlogDate.innerHTML = Blogok[keresett].date;
+        jobbBlogKep.src = Blogok[keresett].img;
+        jobbBlogRMbtn.innerHTML = "READ MORE"
+
+        jobbBlogAnchor.appendChild(jobbBlogRMbtn)
+        jobbBlogGombDiv.appendChild(jobbBlogAnchor)
+
+        jobbBlogCimDiv.appendChild(jobbBlogCim)
+        jobbBlogCimDiv.appendChild(jobbBlogDate)
+
+        jobbBlogTartalomDiv.appendChild(jobbBlogCimDiv)
+        
+        jobbBlogTartalomDiv.appendChild(jobbBlogGombDiv)
+
+        jobbEgesz.appendChild(jobbBlogKep)
+        jobbEgesz.appendChild(jobbBlogTartalomDiv)
+        jobbEgesz.appendChild(vonal)
+        jobbEgesz.appendChild(shh)
+
+        let JobbEgeszDiv = document.getElementById("JobbEgeszDiv")
+        JobbEgeszDiv.appendChild(jobbEgesz)
 }
 
 function Letrehozas(hol,hanyas){
