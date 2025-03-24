@@ -253,7 +253,7 @@ function KartyaLetrehoz(termek, tipus, gender) {
     
         if (termek.onSale) {
             column.appendChild(akcios) 
-            price.innerHTML+=old_price
+            //price.innerHTML+=old_price
         }
         column.appendChild(card);
         akcios.appendChild(akciosP)
@@ -330,25 +330,33 @@ function sliderSzures() {
 
 }
 
-function SortingFuggveny() {
+// Az oldal összes .card elemének összegyűjtése
+const cardElements = document.querySelectorAll('.kartyak');
+const container = document.querySelector('.row');
+const sortSelect = document.querySelector('#default-sorting');
 
+// Rendezési függvény
+function sortCards(order) {
 
-    let letrehozottKartyak = document.getElementsByClassName("kartyak")
-    let torloBackup = letrehozottKartyak
-    letrehozottKartyak.sort((a,b) => (a.price > price) ? 1 : ((b.price > a.price) ? -1 : 0))
+    for (let i = 0; i < cardElements.length; i++) {
+        let a = cardElements[i]
+        let b = cardElements[i+1]
+        const priceA = parseFloat(a.querySelector('.price').innerHTML.slice(1));
+        const priceB = parseFloat(b.querySelector('.price').innerHTML.slice(1));
 
-    let szamlalo = torloBackup.length
-    for (let torol = 0; torol < szamlalo; torol++) {
-     main.removeChild(torloBackup[0])        
-    }
-
-    for (const termek of letrehozottKartyak) {
-        let termekUjra = KartyaLetrehoz(termek, oldalTipus, oldalGender)
-        if (termekUjra!=false) {
-            main.appendChild(termekUjra)
+        if (priceA>priceB) {
+            cardElements.splice(cardElements[i], 1)
+            cardElements.unshift(a)
         }
-    
+        else{
+            cardElements.splice(cardElements[i+1], 1)
+            cardElements.unshift(b)
+        }
 
     }
 
+    cardElements.forEach(a => console.log(a.querySelector('.price').innerHTML.slice(1)))
+    // Az eredeti konténerbe visszahelyezzük a rendezett elemeket
+    container.innerHTML = '';
+    cardElements.forEach(card => container.appendChild(card));
 }
