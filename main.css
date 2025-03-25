@@ -823,6 +823,11 @@ i{
     }
   }
 
+  .alatta{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
   @media only screen and (max-width: 600px) {
     .row {
       gap: 15px; 

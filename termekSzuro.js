@@ -180,7 +180,8 @@ function KartyaLetrehoz(termek, tipus, gender) {
     if (tipus == "casual" || tipus=="clothing" || tipus == "all") {
         termek.gender=null
     }
-    if (tipus == termek.type || gender == termek.gender || termek.gender=="U" || tipus == "all") {
+    console.log(tipus)
+    if (tipus == "all" || tipus == termek.type || gender == termek.gender || termek.gender=="U") {
         let kartyak = document.createElement('div');
         kartyak.className = "kartyak";
     
@@ -261,7 +262,7 @@ function KartyaLetrehoz(termek, tipus, gender) {
         
         nev.innerHTML=termek.name
             
-        kartyakep.src=termek.image    
+        kartyakep.src=termek.image
         price.innerHTML+=`$${termek.price-1}.99`
         //console.log(termek.name)
     
@@ -329,7 +330,31 @@ function sliderSzures() {
 
 }
 
+// Az oldal összes .card elemének összegyűjtése
+const cardElements = document.querySelectorAll('.kartyak');
+const container = document.querySelector('.row');
+const sortSelect = document.querySelector('#default-sorting');
 
-function SortingFuggveny() {
+// Rendezési függvény
 
+function sortCards() {
+    const sortingMethod = document.querySelector('#default-sorting').value;
+    const cards = Array.from(document.querySelectorAll('.kartyak'));
+    
+    cards.sort((a, b) => {
+        const priceA = parseFloat(a.querySelector('.price').textContent.split('$').pop());
+        const priceB = parseFloat(b.querySelector('.price').textContent.split('$').pop());
+
+        if (sortingMethod === 'novekvo') {
+            return priceA - priceB;
+        } else if (sortingMethod === 'csokkeno') {
+            return priceB - priceA;
+        }
+        return 0;
+    });
+    
+    const container = document.querySelector('.row');
+    cards.forEach(card => container.appendChild(card));
 }
+
+document.querySelector('#default-sorting').addEventListener('change', sortProducts);

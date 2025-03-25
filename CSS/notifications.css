@@ -81,7 +81,7 @@ body {
   
   .comment-react button svg {
     position: relative;
-    z-index: 9;
+    z-index: 6;
   }
   
   .comment-react button:hover:after {
