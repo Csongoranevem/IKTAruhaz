@@ -224,4 +224,8 @@ a{
     .stickyteto{
         height: 14vh
     }
+
+    #keresesIkon{
+        display: flex;
+    }
 }

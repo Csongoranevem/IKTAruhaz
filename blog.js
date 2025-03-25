@@ -5,6 +5,7 @@ let Blogok = [
         img: "../Blog képek/aaaaaaa2.jpg",
         description: "Ha valami különlegeset keresel, amit sehol máshol nem találsz, látogass el hozzánk! Itt minden termék egyedi és személyre szabott, legyen szó varázslatos könyvekről, ritka kincsekről vagy egy-egy mesebeli kiegészítőről. Minden sarkon új meglepetés vár, és garantáltan találkozhatsz olyan tárgyakkal, amelyek megváltoztatják a napodat. Gyere el és engedd, hogy a fantáziád szárnyaljon!",
         rating: 3.4,
+        trending: 81
     },
     Webshop = {
         title: "WEBSHOP",
@@ -12,6 +13,7 @@ let Blogok = [
         img: "../Blog képek/webshop.png",
         description: "Kedves Vásárlóink.\nÖrömmel értesítünk benneteket, hogy végre elindítottuk az új webshopunkat! Mostantól még könnyebben és kényelmesebben vásárolhattok kedvenc termékeinkből, mindössze néhány kattintással, akár otthonról, akár úton! 😊",
         rating: 4.6,
+        trending: 55,
     },
     KAkcio = {
         title: "Hatalmas Karácsonyi Akciók!",
@@ -19,13 +21,15 @@ let Blogok = [
         img: "../Blog képek/aaa3.jfif",
         description: "Kedves Vásárlóink!\nAz év legvarázslatosabb időszaka elérkezett, és mi szeretnénk segíteni abban, hogy az ünnepi készülődés még különlegesebb legyen! 🌟 A Csudajó Áruház webshopjában most indulnak a Karácsonyi Akcióink, ahol fantasztikus kedvezményekkel várunk Titeket!",
         rating: 4.6,
+        trending: 12,
     },
     Ujdonsag = {
         title: "Újdonságok",
         date: "2024.10.04",
         img: "../Blog képek/ruha5.jpg",
         description: "Kedves Vásárlóink!\nItt mindent megtalálsz, amire szükséged van, hogy egyszerűbbé tedd a vásárlást és friss híreket kapj legújabb termékeinkről. Akár divat, technológia, otthoni kiegészítők, vagy ajándékötletek – nálunk biztosan rátalálsz a tökéletes darabra. Ne hagyd ki heti akcióinkat és különleges ajánlatainkat sem! Tarts velünk és fedezd fel a legújabb trendeket, hogy mindig egy lépéssel előrébb járhass a vásárlásban.",
-        rating: 2.3
+        rating: 2.3,
+        trending: 83,
     },
     TorzsVasarlo = {
         title: "Törzsvásárlói kedvezmény",
@@ -33,13 +37,15 @@ let Blogok = [
         img: "../Blog képek/ruha6.jpg",
         description: "Kedves Vásárlóink!\nHa már törzsvásárlónk vagy, akkor jó híreink vannak számodra! Mostantól még nagyobb kedvezményekkel kedveskedünk neked, hogy még többet spórolhass a kedvenc termékeid vásárlásakor. Minden egyes vásárlással gyűjtött pontjaidat felhasználhatod, ráadásul exkluzív akcióink és VIP ajánlataink is elérhetők számodra. ",
         rating: 3.8,
+        trending: 42,
     },
     KandA = {
         title: "Kuponok és akciók",
         date: "2019.03.22",
         img: "../Blog képek/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.jpg",
         description: "Webáruházunkban mindig fontosnak tartjuk, hogy a legjobb ajánlatokat kínáljuk vásárlóinknak! Nézd meg legújabb kuponjainkat és akcióinkat, hogy még többet spórolhass a legnépszerűbb termékeken. Ne hagyd ki a szezonális leárazásokat, vagy a különleges kedvezményeket, amelyek csak korlátozott ideig érhetők el! Iratkozz fel hírlevelünkre, és mindig elsőként értesülhetsz a legújabb kuponkódokkal",
-        rating: 5
+        rating: 5,
+        trending: 68
     },
     Sapis = {
         title: "Bábúk ilyen sapkával rajtuk",
@@ -47,6 +53,7 @@ let Blogok = [
         img: "../Blog képek/ruha3.jpg",
         description: "Örömmel értesítünk, hogy legújabb sapkáink már elérhetők webáruházunkban! Különleges, trendi dizájnok és prémium minőség vár rád – legyen szó sportos, klasszikus vagy éppen egyedi stílusról, nálunk mindenki megtalálja a tökéletes darabot. Ne hagyd ki az új kollekciót, és frissítsd a tavaszi/nyári ruhatáradat egy stílusos sapkával! Vásárolj most, és élvezd az új dizájnok kényelmét és egyediségét!",
         rating: 4.9,
+        trending: 77
     },
     Koltozes = {
         title: "Elköltöztünk!",
@@ -54,6 +61,7 @@ let Blogok = [
         img: "../Blog képek/ruha4.jpg",
         description: "Örömmel értesítünk, hogy webáruházunk mostantól új, még gyorsabb és felhasználóbarátabb platformon érhető el! A költözés célja, hogy még jobb vásárlási élményt nyújthassunk nektek. Az új oldalunkon gyorsabban navigálhattok, könnyebben találhatjátok meg kedvenc termékeiteket, és az új designnak köszönhetően még egyszerűbbé válik a vásárlás. Ne aggódj, minden eddigi rendelésed és fiókadat megőriztük! Látogass el új weboldalunkra, és fedezd fel a frissített dizájnt és kényelmesebb vásárlást!",
         rating: 4.8,
+        trending: 2
     },
     LimitaltR = {
         title: "Limitált ruhák",
@@ -61,13 +69,15 @@ let Blogok = [
         img: "../Blog képek/ruha7.jpg",
         description: "Exkluzív ajánlat! Webáruházunkban most elérhetők a legkülönlegesebb, limitált kiadású ruhadarabok, amelyek soha többé nem kerülnek vissza a készletre! Csak pár darab áll rendelkezésre, és amikor elérik a készlet végét, vége – nincs több esély a beszerzésükre. Ha szeretnél igazán egyedi darabokat, amelyek nem találhatók meg bárhol, most van itt az idő! Ne maradj le, vásárolj most, és tedd egyedivé a ruhatáradat!",
         rating: 4.7,
+        trending: 50,
     },
     UjNadragok = {
         title: "Új nadrágok!",
         date: "2019.09.09",
         img: "../Blog képek/ruha8.jpg",
         description: "Friss, trendi és kényelmes – megérkeztek a legújabb nadrágjaink! A tavaszi és nyári szezonra tervezett modellek között biztosan megtalálod a tökéletes darabot, legyen szó sportos, elegáns vagy éppen laza hétköznapi stílusról. A prémium anyagok és a modern szabás minden mozdulatot kényelmessé tesznek, miközben a legújabb divatot képviselik. Ne hagyd ki az új kollekciót, és frissítsd a gardróbodat a legújabb nadrágokkal! Vásárolj most, és légy mindig stílusos!",
-        rating: 4.5
+        rating: 4.5,
+        trending: 98,
     }
 ]
 
@@ -204,7 +214,7 @@ function BlogKereses(){
     SortErtek = document.getElementById("BlogKeresesSelectID").value
     BlogRendezes(SortErtek)
     console.log("Valaszto--------------------------------------------------")
-    Blogok.sort((a,b) => b.rating - a.rating)
+
     for(let i = 0; i < Blogok.length; i++){
         console.log(Blogok[i])
     }
@@ -212,6 +222,7 @@ function BlogKereses(){
 function BlogRendezes(Tevekenyseg){
     let KeresettBlog = document.getElementById("BlogSearchBarId").value.split("")
     console.log(KeresettBlog)
+    SzortirozasBlog(Tevekenyseg)
     if(KeresettBlog == ""){
     }
     else{
@@ -220,12 +231,29 @@ function BlogRendezes(Tevekenyseg){
             for(let k = 0; k < KeresettBlog.length; i++){
                 if(Blogok[i].title.toLowerCase().includes(KeresettBlog[k])){
                     JobbKeresFeltolt(i);
+                    console.log(Blogok[i].rating)
                 }
                 else if(Blogok[i].title.toUpperCase().includes(KeresettBlog[k])){
                     JobbKeresFeltolt(i)
+                    console.log(Blogok[i].rating)
                 }
             }
         }
+    }
+}
+
+function SzortirozasBlog(SortHogyan){
+    if(SortHogyan == "UjOPT"){
+        Blogok.sort((a,b) => (a.date < b.date) ? 1 : ((b.date < a.date) ? -1 : 0))
+    }
+    else if (SortHogyan == "RegiOPT"){
+        Blogok.sort((a,b) => (a.date > b.date) ? 1 : ((b.date > a.date) ? -1 : 0))
+    }
+    else if (SortHogyan == "NepszeruOPT"){
+        Blogok.sort((a, b) => b.rating - a.rating)
+    }
+    else if (SortHogyan =="OlvasottakOPT"){
+        Blogok.sort((a,b) => b.trending - a.trending)
     }
 }
 
@@ -487,6 +515,9 @@ function Szures(Akcio){
             break;
         case trending:
             alert("trending");
+            break;
+        default:
+            alert("Semmi");
             break;
     }
     
