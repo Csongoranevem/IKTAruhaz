@@ -192,7 +192,7 @@ img.edit-icon{
   display: none;
   cursor: pointer;
   position: absolute;
-  top: 6.2em;
+  top:104px;
   z-index: 9;
   right: 0;
   background-color: #f7f7f7;;
@@ -251,14 +251,23 @@ img.edit-icon{
   top: 10px;
   transform: rotate(-135deg);
 }
-
+@media screen and (max-width: 360px){
+  .sidebar-hamburger{
+    top: 6em;
+  }
+}
+@media screen and (max-width: 600px){
+  .sidebar-hamburger{
+    top: 6em;
+  }
+}
 @media screen and (max-width: 865px) {
   .torzs {
     flex-direction: column;
   }
   
   .left {
-    width: 50%;
+    width: 60%;
     position: fixed;
     top: 0;
     left: 0;
