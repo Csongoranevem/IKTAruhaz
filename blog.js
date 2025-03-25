@@ -78,6 +78,94 @@ let Blogok = [
         description: "Friss, trendi és kényelmes – megérkeztek a legújabb nadrágjaink! A tavaszi és nyári szezonra tervezett modellek között biztosan megtalálod a tökéletes darabot, legyen szó sportos, elegáns vagy éppen laza hétköznapi stílusról. A prémium anyagok és a modern szabás minden mozdulatot kényelmessé tesznek, miközben a legújabb divatot képviselik. Ne hagyd ki az új kollekciót, és frissítsd a gardróbodat a legújabb nadrágokkal! Vásárolj most, és légy mindig stílusos!",
         rating: 4.5,
         trending: 98,
+    },
+    {
+        title: "Tavaszi Akciók!",
+        date: "2025.03.01",
+        img: "../Blog képek/ruha5.jpg", // Meglévő kép újrahasznosítva
+        description: "Itt a tavasz, és mi nem hagyjuk ki! Fedezd fel a legújabb tavaszi akcióinkat, és frissítsd fel a gardróbodat a szezon legújabb darabjaival! Akár sportos, akár elegáns, nálunk biztosan megtalálod a tökéletes ruhákat és kiegészítőket.",
+        rating: 4.2,
+        trending: 45,
+    },
+
+    {
+        title: "Új Tech Kütyük!",
+        date: "2025.02.15",
+        img: "../Blog képek/ruha6.jpg", // Meglévő kép újrahasznosítva
+        description: "A legújabb technológiai kütyük most már elérhetőek webáruházunkban! Frissítsd a mindennapjaidat okos eszközökkel, legyen szó telefonokról, okosórákról vagy kiegészítőkről. Ne hagyd ki a legújabb újdonságokat!",
+        rating: 4.8,
+        trending: 62,
+    },
+
+    {
+        title: "Tavaszi Újdonságok!",
+        date: "2025.03.10",
+        img: "../Blog képek/ruha7.jpg", // Meglévő kép újrahasznosítva
+        description: "Itt vannak a tavaszi újdonságok! Nézd meg a legújabb termékeinket, amelyek frissítik a tavaszi ruhatáradat! Különleges anyagok, trendi dizájnok és prémium minőség jellemzi az új kollekciót.",
+        rating: 4.5,
+        trending: 56,
+    },
+
+    {
+        title: "Tavaszi Meglepetés Ajánlatok",
+        date: "2025.03.18",
+        img: "../Blog képek/aaaaaaa2.jpg", // Meglévő kép újrahasznosítva
+        description: "Ne hagyd ki a tavaszi meglepetéseinket! Különleges ajánlatok, akciók és kuponok várnak rád. Vásárolj most és spórolj a legnépszerűbb termékeinkkel! Legyél te az első, aki megtudja az új kedvezményeket.",
+        rating: 4.3,
+        trending: 39,
+    },
+
+    {
+        title: "Tavaszi Kiegészítők",
+        date: "2025.03.22",
+        img: "../Blog képek/ruha8.jpg", // Meglévő kép újrahasznosítva
+        description: "A tavaszi szezonhoz elérkeztek a legújabb kiegészítőink! Válaszd ki a tökéletes tavaszi táskát, napszemüveget, vagy egyéb divatos kiegészítőket, hogy stílusos legyél a friss tavaszi napokon.",
+        rating: 4.7,
+        trending: 72,
+    },
+    {
+        title: "Tavaszi Kiegészítők Új Kollekciója",
+        date: "2025.03.25",
+        img: "../Blog képek/ruha3.jpg", // Meglévő kép újrahasznosítva
+        description: "Ne hagyd ki az új tavaszi kiegészítőinket! Táskáink, ékszereink és egyéb divatos kiegészítőink a legújabb trendeknek megfelelően érkeztek. Tökéletesen illeszkednek a tavaszi stílushoz, és garantáltan feldobják a megjelenésedet.",
+        rating: 4.6,
+        trending: 81,
+    },
+
+    {
+        title: "Exkluzív Őszi Kollekciók",
+        date: "2024.09.15",
+        img: "../Blog képek/ruha4.jpg", // Meglévő kép újrahasznosítva
+        description: "Ne hagyd ki az őszi kollekciónkat! Új ruhák, cipők és kiegészítők érkeztek, amelyek tökéletesek a hűvösebb napokra. Kényelmes és stílusos darabokat találhatsz, amelyek segítenek a hűvösebb időben is divatosnak maradni.",
+        rating: 4.4,
+        trending: 58,
+    },
+
+    {
+        title: "Újdonságok a Webshopunkban!",
+        date: "2025.02.05",
+        img: "../Blog képek/webshop.png", // Meglévő kép újrahasznosítva
+        description: "Webshopunk új termékekkel bővült! Böngéssz az új kedvezményes ajánlatok között, és szerezd meg a legújabb termékeket a legjobb árakon. A webáruházunkban most minden könnyebben elérhető, mint valaha!",
+        rating: 4.7,
+        trending: 90,
+    },
+
+    {
+        title: "Tavaszi Divat",
+        date: "2025.04.01",
+        img: "../Blog képek/ruha6.jpg", // Meglévő kép újrahasznosítva
+        description: "A tavaszi divat idén egyedülálló stílust képvisel. Fedezd fel az új szezon legjobb darabjait, a friss színek és divatos szabások mindenkit elvarázsolnak. Vásárolj most, és frissítsd fel a tavaszi gardróbodat!",
+        rating: 4.8,
+        trending: 65,
+    },
+
+    {
+        title: "Szezonális Akciók",
+        date: "2025.03.30",
+        img: "../Blog képek/ruha7.jpg", // Meglévő kép újrahasznosítva
+        description: "Ne hagyd ki szezonális akcióinkat! Csak most, korlátozott ideig fantasztikus kedvezményekkel vásárolhatsz a legnépszerűbb termékeinkből. Vásárolj most, és szerezd meg a legjobb ajánlatokat!",
+        rating: 4.9,
+        trending: 72,
     }
 ]
 
