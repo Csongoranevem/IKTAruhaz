@@ -253,7 +253,7 @@ function KartyaLetrehoz(termek, tipus, gender) {
     
         if (termek.onSale) {
             column.appendChild(akcios) 
-            //price.innerHTML+=old_price
+            price.innerHTML+=old_price
         }
         column.appendChild(card);
         akcios.appendChild(akciosP)
@@ -262,7 +262,7 @@ function KartyaLetrehoz(termek, tipus, gender) {
         
         nev.innerHTML=termek.name
             
-        kartyakep.src=termek.image    
+        kartyakep.src=termek.image
         price.innerHTML+=`$${termek.price-1}.99`
         //console.log(termek.name)
     
@@ -336,27 +336,25 @@ const container = document.querySelector('.row');
 const sortSelect = document.querySelector('#default-sorting');
 
 // Rendezési függvény
-function sortCards(order) {
 
-    for (let i = 0; i < cardElements.length; i++) {
-        let a = cardElements[i]
-        let b = cardElements[i+1]
-        const priceA = parseFloat(a.querySelector('.price').innerHTML.slice(1));
-        const priceB = parseFloat(b.querySelector('.price').innerHTML.slice(1));
+function sortCards() {
+    const sortingMethod = document.querySelector('#default-sorting').value;
+    const cards = Array.from(document.querySelectorAll('.kartyak'));
+    
+    cards.sort((a, b) => {
+        const priceA = parseFloat(a.querySelector('.price').textContent.split('$').pop());
+        const priceB = parseFloat(b.querySelector('.price').textContent.split('$').pop());
 
-        if (priceA>priceB) {
-            cardElements.splice(cardElements[i], 1)
-            cardElements.unshift(a)
+        if (sortingMethod === 'novekvo') {
+            return priceA - priceB;
+        } else if (sortingMethod === 'csokkeno') {
+            return priceB - priceA;
         }
-        else{
-            cardElements.splice(cardElements[i+1], 1)
-            cardElements.unshift(b)
-        }
-
-    }
-
-    cardElements.forEach(a => console.log(a.querySelector('.price').innerHTML.slice(1)))
-    // Az eredeti konténerbe visszahelyezzük a rendezett elemeket
-    container.innerHTML = '';
-    cardElements.forEach(card => container.appendChild(card));
+        return 0;
+    });
+    
+    const container = document.querySelector('.row');
+    cards.forEach(card => container.appendChild(card));
 }
+
+document.querySelector('#default-sorting').addEventListener('change', sortProducts);

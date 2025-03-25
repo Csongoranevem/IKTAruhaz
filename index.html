@@ -127,10 +127,9 @@
             <div class="alatta">
                 <p id="result"></p>
                 <div class="select">
-                    <select onchange="SortingFuggveny()" name="sorting" id="default-sorting">
-                        <option value="">Default sorting</option>
-                        <option value="low">Price: Low to High</option>
-                        <option value="high">Price: High to Low</option>
+                    <select  name="sorting" id="default-sorting" onchange="sortCards(this.value)">
+                        <option value="novekvo">Low to High</option>
+                        <option value="csokkeno">High to Low</option>
                     </select>
                 </div>
             </div>
