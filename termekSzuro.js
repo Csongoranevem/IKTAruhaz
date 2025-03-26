@@ -280,8 +280,8 @@ resultKiir.innerHTML = `Showing all ${shows.length} results`
 
 
 
-let minValue;
-let maxValue;
+let minValue = 0;
+let maxValue = 1000;
 
 let MinErtekId = document.querySelector("#MinErtekId")
 let MaxErtekId = document.querySelector("#MaxErtekId")
@@ -327,6 +327,14 @@ function sliderSzures() {
 
     let shows = document.getElementsByClassName("kartyak")
     resultKiir.innerHTML = `Showing all ${shows.length} results`
+    
+    console.log("min: "+minValue, "max: "+maxValue)
+
+    if (main.innerHTML=='') {
+        let nincs = document.createElement('p')
+        nincs.innerHTML="Nincs találat"
+        main.appendChild(nincs)
+    }
 
 }
 

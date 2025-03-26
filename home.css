@@ -52,6 +52,11 @@ body {
   color: white;
   padding: 10%;
   font-size:x-large;
+  transition: all 0.5s ease-in-out;
+}
+.banner-btn:hover{
+  background-color: rgb(255, 174, 174);
+  opacity: 0.9;
 }
 .slider-banner {
     top: 50%;  
@@ -182,7 +187,6 @@ a{
   .slider-banner {
     align-items: center;
       transform: translateY(0%);
-      font-size: large;
   }
   .banner-btn{
     font-size: large;
@@ -202,18 +206,19 @@ a{
   .slider-banner {
       align-items: center;
     width: 80%;
-    max-width: 250px;
-    padding: 10px;
-    font-size: smaller;
+    height: 350px;
+    padding-bottom:100px;
+    font-size: x-large;
     margin-left: auto;
+
     margin-right: auto;
-}
-.banner-btn {
-  font-size: smaller;
-  padding: 3%;
 }
   .announcement p {
       animation-duration: 15s;
+  }
+  .banner-btn{
+    font-size: larger;
+
   }
   .categories {
       flex-direction: column;
