@@ -1,5 +1,6 @@
 let Blogok = [
     UjAjanlatok = {
+        id: 1,
         title: "Új ajánlatok!",
         date: "2025.01.22",
         img: "../Blog képek/aaaaaaa2.jpg",
@@ -8,6 +9,7 @@ let Blogok = [
         trending: 81
     },
     Webshop = {
+        id: 2,
         title: "WEBSHOP",
         date: "2024.12.08",
         img: "../Blog képek/webshop.png",
@@ -16,6 +18,7 @@ let Blogok = [
         trending: 55,
     },
     KAkcio = {
+        id: 3,
         title: "Hatalmas Karácsonyi Akciók!",
         date: "2024.11.11",
         img: "../Blog képek/aaa3.jfif",
@@ -24,6 +27,7 @@ let Blogok = [
         trending: 12,
     },
     Ujdonsag = {
+        id: 4,
         title: "Újdonságok",
         date: "2024.10.04",
         img: "../Blog képek/ruha5.jpg",
@@ -32,6 +36,7 @@ let Blogok = [
         trending: 83,
     },
     TorzsVasarlo = {
+        id: 5,
         title: "Törzsvásárlói kedvezmény",
         date: "2024.10.04",
         img: "../Blog képek/ruha6.jpg",
@@ -40,6 +45,7 @@ let Blogok = [
         trending: 42,
     },
     KandA = {
+        id: 6,
         title: "Kuponok és akciók",
         date: "2019.03.22",
         img: "../Blog képek/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.jpg",
@@ -48,6 +54,7 @@ let Blogok = [
         trending: 68
     },
     Sapis = {
+        id: 7,
         title: "Bábúk ilyen sapkával rajtuk",
         date: "2021.08.11",
         img: "../Blog képek/ruha3.jpg",
@@ -56,6 +63,7 @@ let Blogok = [
         trending: 77
     },
     Koltozes = {
+        id: 8,
         title: "Elköltöztünk!",
         date: "2021.07.02",
         img: "../Blog képek/ruha4.jpg",
@@ -64,6 +72,7 @@ let Blogok = [
         trending: 2
     },
     LimitaltR = {
+        id: 9,
         title: "Limitált ruhák",
         date: "2020.10.28",
         img: "../Blog képek/ruha7.jpg",
@@ -72,6 +81,7 @@ let Blogok = [
         trending: 50,
     },
     UjNadragok = {
+        id: 10,
         title: "Új nadrágok!",
         date: "2019.09.09",
         img: "../Blog képek/ruha8.jpg",
@@ -80,6 +90,7 @@ let Blogok = [
         trending: 98,
     },
     {
+        id: 11,
         title: "Tavaszi Akciók!",
         date: "2025.03.01",
         img: "../Blog képek/ruha5.jpg", // Meglévő kép újrahasznosítva
@@ -89,6 +100,7 @@ let Blogok = [
     },
 
     {
+        id: 12,
         title: "Új Tech Kütyük!",
         date: "2025.02.15",
         img: "../Blog képek/ruha6.jpg", // Meglévő kép újrahasznosítva
@@ -98,6 +110,7 @@ let Blogok = [
     },
 
     {
+        id: 13,
         title: "Tavaszi Újdonságok!",
         date: "2025.03.10",
         img: "../Blog képek/ruha7.jpg", // Meglévő kép újrahasznosítva
@@ -107,6 +120,7 @@ let Blogok = [
     },
 
     {
+        id: 14,
         title: "Tavaszi Meglepetés Ajánlatok",
         date: "2025.03.18",
         img: "../Blog képek/aaaaaaa2.jpg", // Meglévő kép újrahasznosítva
@@ -116,6 +130,7 @@ let Blogok = [
     },
 
     {
+        id: 15,
         title: "Tavaszi Kiegészítők",
         date: "2025.03.22",
         img: "../Blog képek/ruha8.jpg", // Meglévő kép újrahasznosítva
@@ -124,6 +139,7 @@ let Blogok = [
         trending: 72,
     },
     {
+        id: 16,
         title: "Tavaszi Kiegészítők Új Kollekciója",
         date: "2025.03.25",
         img: "../Blog képek/ruha3.jpg", // Meglévő kép újrahasznosítva
@@ -133,6 +149,7 @@ let Blogok = [
     },
 
     {
+        id: 17,
         title: "Exkluzív Őszi Kollekciók",
         date: "2024.09.15",
         img: "../Blog képek/ruha4.jpg", // Meglévő kép újrahasznosítva
@@ -142,6 +159,7 @@ let Blogok = [
     },
 
     {
+        id: 18,
         title: "Újdonságok a Webshopunkban!",
         date: "2025.02.05",
         img: "../Blog képek/webshop.png", // Meglévő kép újrahasznosítva
@@ -151,6 +169,7 @@ let Blogok = [
     },
 
     {
+        id: 19,
         title: "Tavaszi Divat",
         date: "2025.04.01",
         img: "../Blog képek/ruha6.jpg", // Meglévő kép újrahasznosítva
@@ -160,6 +179,7 @@ let Blogok = [
     },
 
     {
+        id: 20,
         title: "Szezonális Akciók",
         date: "2025.03.30",
         img: "../Blog képek/ruha7.jpg", // Meglévő kép újrahasznosítva
@@ -168,6 +188,9 @@ let Blogok = [
         trending: 72,
     }
 ]
+
+let BalBlogok = []
+let JobbBlogok = []
 
 let csillagok = document.getElementById("BlogRateCsillagokDiv")
 let bloggomb = document.getElementById("BlogRateGomb").addEventListener('mouseover',() => {
@@ -198,14 +221,33 @@ BlogRateCsillag1.addEventListener('mouseover',()=>{
         BlogCsillagKepTomb[i].src="../Blog képek/star-602148_1280.png"
     }
     BlogRateCsillag1.src="../Blog képek/CsillagNarancs.png"
-
+    BlogRateCsillag2.style.transform = "translate(0px,0px)"
+    BlogRateCsillag2.style.transform = "rotate(0deg)"
+    BlogRateCsillag3.style.transform = "translate(0px,0px)"
+    BlogRateCsillag3.style.transform = "rotate(0deg)"
+    BlogRateCsillag4.style.transform = "translate(0px,0px)"
+    BlogRateCsillag4.style.transform = "rotate(0deg)"
+    BlogRateCsillag5.style.transform = "translate(0px,0px)"
+    BlogRateCsillag5.style.transform = "rotate(0deg)"
+    BlogRateCsillag1.style.transform = "translate(0px,-3px)"
+    BlogRateCsillag1.style.transform = "rotate(11deg)"
 })
 BlogRateCsillag2.addEventListener('mouseover',()=>{
     for(let i = 0; i < BlogCsillagKepTomb.length; i++){
         BlogCsillagKepTomb[i].src="../Blog képek/star-602148_1280.png"
     }
     BlogRateCsillag1.src="../Blog képek/CsillagNarancs.png"
+    BlogRateCsillag1.style.transform = "translate(0px,0px)"
+    BlogRateCsillag1.style.transform = "rotate(0deg)"
+    BlogRateCsillag3.style.transform = "translate(0px,0px)"
+    BlogRateCsillag3.style.transform = "rotate(0deg)"
+    BlogRateCsillag4.style.transform = "translate(0px,0px)"
+    BlogRateCsillag4.style.transform = "rotate(0deg)"
+    BlogRateCsillag5.style.transform = "translate(0px,0px)"
+    BlogRateCsillag5.style.transform = "rotate(0deg)"
     BlogRateCsillag2.src="../Blog képek/CsillagNarancs.png"
+    BlogRateCsillag2.style.transform = "translate(0px,-2px)"
+    BlogRateCsillag2.style.transform = "rotate(11deg)"
 
 })
 BlogRateCsillag3.addEventListener('mouseover',()=>{
@@ -213,8 +255,18 @@ BlogRateCsillag3.addEventListener('mouseover',()=>{
         BlogCsillagKepTomb[i].src="../Blog képek/star-602148_1280.png"
     }
     BlogRateCsillag1.src="../Blog képek/CsillagNarancs.png"
+    BlogRateCsillag1.style.transform = "translate(0px,0px)"
+    BlogRateCsillag1.style.transform = "rotate(0deg)"
+    BlogRateCsillag2.style.transform = "translate(0px,0px)"
+    BlogRateCsillag2.style.transform = "rotate(0deg)"
+    BlogRateCsillag4.style.transform = "translate(0px,0px)"
+    BlogRateCsillag4.style.transform = "rotate(0deg)"
+    BlogRateCsillag5.style.transform = "translate(0px,0px)"
+    BlogRateCsillag5.style.transform = "rotate(0deg)"
     BlogRateCsillag2.src="../Blog képek/CsillagNarancs.png"
     BlogRateCsillag3.src="../Blog képek/CsillagNarancs.png"
+    BlogRateCsillag3.style.transform = "translate(0px,-2px)"
+    BlogRateCsillag3.style.transform = "rotate(11deg)"
 
 })
 BlogRateCsillag4.addEventListener('mouseover',()=>{
@@ -222,9 +274,19 @@ BlogRateCsillag4.addEventListener('mouseover',()=>{
         BlogCsillagKepTomb[i].src="../Blog képek/star-602148_1280.png"
     }
     BlogRateCsillag1.src="../Blog képek/CsillagNarancs.png"
+    BlogRateCsillag1.style.transform = "translate(0px,0px)"
+    BlogRateCsillag1.style.transform = "rotate(0deg)"
+    BlogRateCsillag2.style.transform = "translate(0px,0px)"
+    BlogRateCsillag2.style.transform = "rotate(0deg)"
+    BlogRateCsillag3.style.transform = "translate(0px,0px)"
+    BlogRateCsillag3.style.transform = "rotate(0deg)"
+    BlogRateCsillag5.style.transform = "translate(0px,0px)"
+    BlogRateCsillag5.style.transform = "rotate(0deg)"
     BlogRateCsillag2.src="../Blog képek/CsillagNarancs.png"
     BlogRateCsillag3.src="../Blog képek/CsillagNarancs.png"
     BlogRateCsillag4.src="../Blog képek/CsillagNarancs.png"
+    BlogRateCsillag4.style.transform = "translate(0px,-2px)"
+    BlogRateCsillag4.style.transform = "rotate(11deg)"
 
 })
 BlogRateCsillag5.addEventListener('mouseover',()=>{
@@ -232,16 +294,28 @@ BlogRateCsillag5.addEventListener('mouseover',()=>{
         BlogCsillagKepTomb[i].src="../Blog képek/star-602148_1280.png"
     }
     BlogRateCsillag1.src="../Blog képek/CsillagNarancs.png"
+    BlogRateCsillag1.style.transform = "translate(0px,0px)"
+    BlogRateCsillag1.style.transform = "rotate(0deg)"
+    BlogRateCsillag2.style.transform = "translate(0px,0px)"
+    BlogRateCsillag2.style.transform = "rotate(0deg)"
+    BlogRateCsillag3.style.transform = "translate(0px,0px)"
+    BlogRateCsillag3.style.transform = "rotate(0deg)"
+    BlogRateCsillag4.style.transform = "translate(0px,0px)"
+    BlogRateCsillag4.style.transform = "rotate(0deg)"
     BlogRateCsillag2.src="../Blog képek/CsillagNarancs.png"
     BlogRateCsillag3.src="../Blog képek/CsillagNarancs.png"
     BlogRateCsillag4.src="../Blog képek/CsillagNarancs.png"
     BlogRateCsillag5.src="../Blog képek/CsillagNarancs.png"
+    BlogRateCsillag5.style.transform = "translate(0px,-2px)"
+    BlogRateCsillag5.style.transform = "rotate(11deg)"
 
 })
 
 function CsillagRateF(Pont){
     for(let i = 0; i < BlogCsillagKepTomb.length; i++){
         BlogCsillagKepTomb[i].src="../Blog képek/star-602148_1280.png"
+        BlogCsillagKepTomb[i].style.transform = "translate(0px,0px)"
+        BlogCsillagKepTomb[i].style.transform = "rotate(0deg)"
     }
     document.getElementById("BlogRateCsillagokDiv").style.display = "none"
     if(Pont >= 3){
@@ -311,6 +385,8 @@ function BlogRendezes(Tevekenyseg){
     let KeresettBlog = document.getElementById("BlogSearchBarId").value.split("")
     console.log(KeresettBlog)
     SzortirozasBlog(Tevekenyseg)
+    console.log(BalBlogok.length)
+    console.log(JobbBlogok.length)
     if(KeresettBlog == ""){
     }
     else{
@@ -353,7 +429,7 @@ let BalDiv = document.getElementById("BalBlogDiv")
 function StartFel(){
     for (let i = 0; i < Blogok.length; i++){
         let jobbvagybal = Math.floor(Math.random()*2)
-        Letrehozas(jobbvagybal,i)
+            Letrehozas(jobbvagybal,i)
     }
 }
 
@@ -527,6 +603,8 @@ function Letrehozas(hol,hanyas){
 
         let BalEgeszDiv = document.getElementById("BalFoDiv")
         BalEgeszDiv.appendChild(balBlogAnchor)
+
+        BalBlogok.push(Blogok[hanyas])
     }
     else{
         let jobbBlogCim = document.createElement('h3');
@@ -583,6 +661,8 @@ function Letrehozas(hol,hanyas){
 
         let JobbEgeszDiv = document.getElementById("JobbEgeszDiv")
         JobbEgeszDiv.appendChild(jobbEgesz)
+
+        JobbBlogok.push(Blogok[hanyas])
     }
 }
 
