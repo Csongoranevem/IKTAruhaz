@@ -229,3 +229,7 @@ a{
         display: flex;
     }
 }
+
+.oldalnev:visited{
+    color: black;
+}
