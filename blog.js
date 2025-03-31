@@ -357,7 +357,34 @@ function CommentBar(){
 function CommentBarDis(){
     document.getElementById("CommentUzi").style.display = "block"
     document.getElementById("CommentFulDiv").style.display = "none"
+    let comment = document.getElementById("uzenet").value
     setTimeout(() => {document.getElementById("CommentUzi").style.display = "none"}, 1500)
+    ujComment(comment)
+}
+function ujComment(comment){
+    let commentSz = document.createElement("p")
+    let commentKD = document.createElement("div")
+    let commentK = document.createElement("img")
+    let commentI = document.createElement("div")
+    let commentS = document.createElement("div")
+
+    commentSz.className = "commentSzoveg"
+    commentKD.className = "commentKicsiDiv"
+    commentK.className = "commentKep"
+    commentI.className = "commentIkon"
+    commentS.className = "commentSection"
+
+    commentK.src = "/Blog képek/commentikon.png"
+    commentSz.innerHTML = comment
+
+
+    commentKD.appendChild(commentSz)
+    commentI.appendChild(commentK)
+    commentS.appendChild(commentKD)
+    commentS.appendChild(commentKD)
+
+    commentDiv = document.getElementById("CommentNagyDiv")
+    commentDiv.appendChild(commentS)
 }
 
 function BlogSClickF(){
