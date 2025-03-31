@@ -180,7 +180,7 @@ function KartyaLetrehoz(termek, tipus, gender) {
     if (tipus == "casual" || tipus=="clothing" || tipus == "all") {
         termek.gender=null
     }
-    console.log(tipus)
+    //console.log(tipus)
     if (tipus == "all" || tipus == termek.type || gender == termek.gender || termek.gender=="U") {
         let kartyak = document.createElement('div');
         kartyak.className = "kartyak";
