@@ -667,7 +667,7 @@ h2::after {
   width: 100%;
   text-decoration: none;
   text-transform: uppercase;
-  color: white;
+  color: white !important;
   font-size: 20px;
   font-weight: 600;
   padding-left: 5%;
