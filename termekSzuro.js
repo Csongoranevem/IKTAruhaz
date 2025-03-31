@@ -181,7 +181,7 @@ function KartyaLetrehoz(termek, tipus, gender) {
         termek.gender=null
     }
     if (tipus=="all") {
-        termek.image.slice(1)
+        termek.image.split('.').pop();
     }
     //console.log(tipus)
     if (tipus == "all" || tipus == termek.type || gender == termek.gender || termek.gender=="U") {
