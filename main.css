@@ -63,6 +63,8 @@ a:link{
 .oldalnev{
     font-size: 35px;
     font-weight: 600;
+    text-decoration: none;
+    color: black;
 }
 
 .motto {
