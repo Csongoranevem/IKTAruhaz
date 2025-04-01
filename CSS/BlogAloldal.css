@@ -157,6 +157,21 @@ footer{
     padding: 0px;
 }
 
+#BlogShare1:hover{
+    transform: translate(0px,-5px);
+    transition: 0.4s ease-in-out 0s;
+}
+
+#BlogShare2:hover{
+    transform: translate(0px,-5px);
+    transition: 0.4s ease-in-out 0s;
+}
+
+#BlogShare3:hover{
+    transform: translate(0px,-5px);
+    transition: 0.4s ease-in-out 0s;
+}
+
 @keyframes HoverEffect{
     from{
         background-color: rgb(235, 73, 73);

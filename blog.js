@@ -195,6 +195,7 @@ let JobbBlogok = []
 let csillagok = document.getElementById("BlogRateCsillagokDiv")
 let bloggomb = document.getElementById("BlogRateGomb").addEventListener('mouseover',() => {
     csillagok.style.display = "block";
+    document.getElementById("CommentNagyDiv").style.marginTop = "0px";
 })
 let bloggomb2 = document.getElementById("BlogRateGomb").addEventListener('mouseout',() => {
     csillagok.style.display = "none";
@@ -331,6 +332,7 @@ function CsillagRateF(Pont){
 let shareIcon = document.getElementById("BlogShareDiv")
 let blogSgomb = document.getElementById("BlogShareGomb").addEventListener('mouseover',() => {
     BlogShareDiv.style.display = "flex"
+    document.getElementById("CommentNagyDiv").style.marginTop = "0px";
 })
 let blogSgomb2 = document.getElementById("BlogShareGomb").addEventListener('mouseout',() => {
     BlogShareDiv.style.display = "none"
