@@ -177,8 +177,13 @@ for (const termek of termekek) {
 //Függvény létrehozása
 function KartyaLetrehoz(termek, tipus, gender) {
     let genderBackup = termek.gender
+    let imagebackup = termek.image
     if (tipus == "casual" || tipus=="clothing" || tipus == "all") {
         termek.gender=null
+    }
+
+    if (tipus == "all") {
+        termek.image = termek.image.substr(1)
     }
     //console.log(tipus)
     if (tipus == "all" || tipus == termek.type || gender == termek.gender || termek.gender=="U") {
@@ -267,6 +272,7 @@ function KartyaLetrehoz(termek, tipus, gender) {
         //console.log(termek.name)
     
         termek.gender = genderBackup
+        termek.image = imagebackup
         return kartyak
     }
 
