@@ -208,14 +208,17 @@
                             Your account has been deactivated for the inactivity, please contact us for further help!
                         </p>
                     </div>
+                    <div id="commentList" class="comment-container">
+                        <!-- Itt fognak megjelenni a kommentek -->
+                      </div>
                 </div>
 
                 <div class="text-box">
                     <div class="box-container">
-                        <textarea placeholder="Reply"></textarea>
+                        <textarea id="commentInput"  placeholder="Reply"></textarea>
                         <div>
                             <div class="formatting">
-                                <button type="button">
+                                <button type="button" >
                                     <svg fill="none" viewBox="0 0 24 24" height="16" width="16"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5"
@@ -228,7 +231,7 @@
                                         </path>
                                     </svg>
                                 </button>
-                                <button type="button">
+                                <button type="button" onclick="formatText('italic')">
                                     <svg fill="none" viewBox="0 0 24 24" height="16" width="16"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path stroke-linecap="round" stroke-width="2.5" stroke="#707277" d="M12 4H19">
@@ -239,7 +242,7 @@
                                         </path>
                                     </svg>
                                 </button>
-                                <button type="button">
+                                <button type="button"  onclick="formatText('underline')" >
                                     <svg fill="none" viewBox="0 0 24 24" height="16" width="16"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5"
@@ -250,7 +253,7 @@
                                         </path>
                                     </svg>
                                 </button>
-                                <button type="button">
+                                <button type="button" onclick="formatText('line-through')">
                                     <svg fill="none" viewBox="0 0 24 24" height="16" width="16"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5"
@@ -260,7 +263,7 @@
                                         </path>
                                     </svg>
                                 </button>
-                                <button type="button">
+                                <button type="button" onclick="openEmojiPicker()">
                                     <svg fill="none" viewBox="0 0 24 24" height="16" width="16"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <circle stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5"
@@ -273,7 +276,7 @@
                                             stroke="#707277" d="M8.00897 9L8 9M16 9L15.991 9"></path>
                                     </svg>
                                 </button>
-                                <button type="submit" class="send" title="Send">
+                                <button onclick="submitComment()" type="submit" class="send" title="Send">
                                     <svg fill="none" viewBox="0 0 24 24" height="18" width="18"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5"
@@ -444,6 +447,7 @@
     </footer>
     <script src="../hambi.js"></script>
     <script src="../sidebar-toggle.js"></script>
+    <script src="..//textarea.js"></script>
 </body>
 
 </html>
