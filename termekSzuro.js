@@ -171,7 +171,6 @@ for (const termek of termekek) {
     if (hozzadadott!=false) {
         main.appendChild(hozzadadott)
     }
-
 }
 
 //Függvény létrehozása
@@ -213,10 +212,12 @@ function KartyaLetrehoz(termek, tipus, gender) {
     
         let szemIC = document.createElement('div');
         szemIC.className = "szemikon";
+        szemIC.id="szemDiv"
+
+        szemIC.addEventListener('click', () => {
+            Popup(termek)});
 
         ///console.log(termek)
-
-        szemIC.onclick = () => Popup(termek);
     
         let szemIMG = document.createElement('img')
         szemIMG.src = "../TermekKartyak/szem.png"
@@ -379,10 +380,10 @@ document.querySelector('#default-sorting').addEventListener('change', sortProduc
 
 
 function Popup(termekAdatok) {
-    console.log("Popup triggered for", termek.name);
 
     let popUpMain = document.createElement('div')
     popUpMain.className = "modal"
+    popUpMain.id = "popUpMain"
 
     let popUpCont = document.createElement('div')
     popUpCont.className = "modal-content"
@@ -391,6 +392,7 @@ function Popup(termekAdatok) {
 
     let popUpClose = document.createElement('div')
     popUpClose.className = "close"
+    popUpClose.innerHTML = "X"
 
 
     popUpCont.innerHTML = `<h2>${termekAdatok.name}</h2><p>Price: $${termekAdatok.price}</p>`;   
@@ -400,11 +402,13 @@ function Popup(termekAdatok) {
     popUpMain.appendChild(popUpIMG)
     popUpMain.appendChild(popUpCont)
 
-    popUpClose.onclick(ClosePopUp())
+    popUpClose.addEventListener('click', () => {
+        ClosePopUp()});
+
 
     document.body.appendChild(popUpMain);
 
-    document.getElementById('popUpMain').style.display = 'flex';
+    document.getElementById('popUpMain').style.display = "flex";
 }
 
 function ClosePopUp() {
