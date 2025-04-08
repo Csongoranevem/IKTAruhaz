@@ -537,6 +537,49 @@ h2::after {
   filter: none;
   transition: none;
 }
+
+
+  /*Popup ablak*/
+  .modal {
+    display: none;
+    position: fixed;
+    top: 40%;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    box-shadow: black 0px 0px 5px;
+}
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    height: 260px;
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    width: 25px;
+    color: wheat;
+}
+.modal img {
+    width: 300px;
+    height: auto;
+}
+
+#popUpMain{
+  display: none;
+  width: 100%;
+  height: max-content;
+}
  
 /* asztal */
 @media only screen and (min-width: 1024px) {

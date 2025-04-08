@@ -171,7 +171,6 @@ for (const termek of termekek) {
     if (hozzadadott!=false) {
         main.appendChild(hozzadadott)
     }
-
 }
 
 //Függvény létrehozása
@@ -213,6 +212,12 @@ function KartyaLetrehoz(termek, tipus, gender) {
     
         let szemIC = document.createElement('div');
         szemIC.className = "szemikon";
+        szemIC.id="szemDiv"
+
+        szemIC.addEventListener('click', () => {
+            Popup(termek)});
+
+        ///console.log(termek)
     
         let szemIMG = document.createElement('img')
         szemIMG.src = "../TermekKartyak/szem.png"
@@ -372,3 +377,40 @@ function sortCards() {
 }
 
 document.querySelector('#default-sorting').addEventListener('change', sortProducts);
+
+
+function Popup(termekAdatok) {
+
+    let popUpMain = document.createElement('div')
+    popUpMain.className = "modal"
+    popUpMain.id = "popUpMain"
+
+    let popUpCont = document.createElement('div')
+    popUpCont.className = "modal-content"
+    let popUpIMG = document.createElement('img')
+    popUpIMG.className = "modal-img"
+
+    let popUpClose = document.createElement('div')
+    popUpClose.className = "close"
+    popUpClose.innerHTML = "X"
+
+
+    popUpCont.innerHTML = `<h2>${termekAdatok.name}</h2><p>Price: $${termekAdatok.price}</p>`;   
+    popUpIMG.src = termekAdatok.image
+
+    popUpMain.appendChild(popUpClose)
+    popUpMain.appendChild(popUpIMG)
+    popUpMain.appendChild(popUpCont)
+
+    popUpClose.addEventListener('click', () => {
+        ClosePopUp()});
+
+
+    document.body.appendChild(popUpMain);
+
+    document.getElementById('popUpMain').style.display = "flex";
+}
+
+function ClosePopUp() {
+    document.getElementById('popUpMain').style.display = 'none';
+}
