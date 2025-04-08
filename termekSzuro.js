@@ -214,9 +214,6 @@ function KartyaLetrehoz(termek, tipus, gender) {
         szemIC.className = "szemikon";
         szemIC.id="szemDiv"
 
-        szemIC.addEventListener('click', () => {
-            Popup(termek)});
-
         ///console.log(termek)
     
         let szemIMG = document.createElement('img')
@@ -275,9 +272,14 @@ function KartyaLetrehoz(termek, tipus, gender) {
         kartyakep.src=termek.image
         price.innerHTML+=`$${termek.price-1}.99`
         //console.log(termek.name)
+
+        szemIC.addEventListener('click', () => {
+            Popup(termek);
+        });
     
         termek.gender = genderBackup
         termek.image = imagebackup
+        
         return kartyak
     }
 
@@ -381,6 +383,9 @@ document.querySelector('#default-sorting').addEventListener('change', sortProduc
 
 function Popup(termekAdatok) {
 
+    console.log(termekAdatok.name)
+
+
     let popUpMain = document.createElement('div')
     popUpMain.className = "modal"
     popUpMain.id = "popUpMain"
@@ -395,22 +400,26 @@ function Popup(termekAdatok) {
     popUpClose.innerHTML = "X"
 
 
-    popUpCont.innerHTML = `<h2>${termekAdatok.name}</h2><p>Price: $${termekAdatok.price}</p>`;   
+    
+    popUpCont.innerHTML = `<h2>${termekAdatok.name}</h2><p>Price: $${termekAdatok.price}</p>`; 
     popUpIMG.src = termekAdatok.image
 
     popUpMain.appendChild(popUpClose)
     popUpMain.appendChild(popUpIMG)
     popUpMain.appendChild(popUpCont)
 
+    document.body.appendChild(popUpMain);
+
     popUpClose.addEventListener('click', () => {
         ClosePopUp()});
 
 
-    document.body.appendChild(popUpMain);
+    
 
     document.getElementById('popUpMain').style.display = "flex";
 }
 
 function ClosePopUp() {
-    document.getElementById('popUpMain').style.display = 'none';
+    document.getElementById('popUpMain').innerHTML = ""
+    document.getElementById('popUpMain').style.display = 'none'
 }
