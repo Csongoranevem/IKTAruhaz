@@ -195,7 +195,6 @@ let JobbBlogok = []
 let csillagok = document.getElementById("BlogRateCsillagokDiv")
 let bloggomb = document.getElementById("BlogRateGomb").addEventListener('mouseover',() => {
     csillagok.style.display = "block";
-    document.getElementById("CommentNagyDiv").style.marginTop = "0px";
 })
 let bloggomb2 = document.getElementById("BlogRateGomb").addEventListener('mouseout',() => {
     csillagok.style.display = "none";
@@ -332,7 +331,6 @@ function CsillagRateF(Pont){
 let shareIcon = document.getElementById("BlogShareDiv")
 let blogSgomb = document.getElementById("BlogShareGomb").addEventListener('mouseover',() => {
     BlogShareDiv.style.display = "flex"
-    document.getElementById("CommentNagyDiv").style.marginTop = "0px";
 })
 let blogSgomb2 = document.getElementById("BlogShareGomb").addEventListener('mouseout',() => {
     BlogShareDiv.style.display = "none"
@@ -375,18 +373,35 @@ function ujComment(comment){
     commentK.className = "commentKep"
     commentI.className = "commentIkon"
     commentS.className = "commentSection"
+    commentK.src = "/IKTAruhaz/Blog képek/commentikon.png"
 
-    commentK.src = "/Blog képek/commentikon.png"
-    commentSz.innerHTML = comment
+    /*
+    let splitc = comment.split('\n')
+    for(let i = 0; i < splitc.length; i++){
+        if(splitc[i].length >= 20){
+            for(let k = 0; k < splitc[i].length; k++){
+                commentSz.innerHTML += splitc[i][k]
+            }
+            commentSz.innerHTML += '<br>'
+        }
+        for(let k = 0; k < splitc[i].length; k++){
+            commentSz.innerHTML += splitc[i][k]
+        }
+        commentSz.innerHTML += '<br>'
+    }
+    */
 
+    commentSz.innerText = comment
 
     commentKD.appendChild(commentSz)
     commentI.appendChild(commentK)
-    commentS.appendChild(commentKD)
+    commentS.appendChild(commentI)
     commentS.appendChild(commentKD)
 
     commentDiv = document.getElementById("CommentNagyDiv")
     commentDiv.appendChild(commentS)
+
+    commentS.style.overflow = "hidden"
 }
 
 function BlogSClickF(){
@@ -612,6 +627,7 @@ function Letrehozas(hol,hanyas){
 
         let balBlogAnchor = document.createElement('a');
         balBlogAnchor.setAttribute("href","blogAloldal.html")
+        balBlogAnchor.className = "BalBlogAnimacioClass"
 
 
         balBlogLeiras.innerHTML = Blogok[hanyas].description
@@ -693,29 +709,4 @@ function Letrehozas(hol,hanyas){
 
         JobbBlogok.push(Blogok[hanyas])
     }
-}
-
-
-
-
-function Szures(Akcio){
-    alert("Lefutott")
-    switch(Akcio){
-        case newest:
-            alert("newest");
-            break;
-        case old:
-            alert("old");
-            break;
-        case rate:
-            alert("alert");
-            break;
-        case trending:
-            alert("trending");
-            break;
-        default:
-            alert("Semmi");
-            break;
-    }
-    
 }

@@ -86,6 +86,7 @@ a{
 }
 .JobbKicsiGomb:hover{
     animation-name: HoverEffect2;
+    transition: ease-in-out;
     animation-duration: 0.25s;
     animation-fill-mode: forwards;
 }
@@ -141,10 +142,32 @@ a{
     padding: 1%;
 }
 
+
+.BalBlogCimSpan{
+    z-index: 9;
+}
+.BlogP{
+    position: relative;
+    z-index: 9999999990;
+}
 .BalRendezesNagyDiv{
     display: none;
 }
-
+.BalKepClass{
+    margin-bottom: 1.5%;
+}
+.BalKepDivClass{
+    overflow: hidden;
+}
+.BalKepDivClass img{
+    z-index: -10;
+}
+.BalKepDivClass img{
+    transition: transform .5s ease;
+}
+.BalKepDivClass:hover img{
+    transform: scale(1.1);
+}
 
 @keyframes HoverEffect2{
     from{

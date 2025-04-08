@@ -126,23 +126,41 @@ footer{
 
 .commentDiv{
     margin-top: 12%;
+    transition: ease;
+    display: inline-block;
+}
+
+.commentDiv:hover .commentSection{
+    transition: 0.2s ease;
 }
 
 .commentSection{
     display: flex;
+    flex-wrap: wrap;
+    flex-flow: row;
     margin-top: 2%;
     margin-left: 3%;
     margin-right: 3%;
     background-color: rgb(0, 5, 46);
     padding: 2%;
-    color: white;
+    color: rgb(204, 204, 204);
     border-radius: 4px;
     box-shadow: 0px 12px 23px -10px rgba(107,106,107,1);
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+.commentSection:hover{
+    background-color: rgb(2, 9, 61);
+    transform: translate(1%,0%);
+    box-shadow: -2px 51px 77px -26px rgba(0,0,0,0.57);
+    transition: 0.2s ease;
+    color: white;
+}
 .commentIkon{
     width: 10%;
     padding: 0px;
+}
+.commentIkon:hover{
+    transform: rotate(5deg);
 }
 .commentKicsiDiv{
     width: 90%;
@@ -151,6 +169,8 @@ footer{
 }
 .commentSzoveg{
     padding: 0px;
+    display: flex;
+    position: relative;
 }
 .commentKep{
     width: 90%;
@@ -251,5 +271,49 @@ span{
 @media screen and (max-width: 395px) {
     .BlogFoGomb{
         font-size: xx-small;
+    }
+}
+
+.kepModal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0, 0.9);
+}
+.ModalKep{
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    animation-name: zoomAnim;
+    animation-duration: 0.5s;
+}
+.BezaroGomb{
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    transform: 0.3s;
+}
+.BezaroGomb:hover,
+.BezaroGomb:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+@keyframes zoomAnim{
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
     }
 }
