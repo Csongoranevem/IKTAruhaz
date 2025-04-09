@@ -4,14 +4,16 @@ let termekek = [
                         price: 450, 
                         gender: "M",
                         type: "accessories",
-                        onSale: false},
+                        onSale: false,
+                        leiras: "A legújabb luxustermékünk, melyhez fogható órát még nem láttál. tökéletes bármilyen alkalomra, legyen az hivatalos, vagy baráti."},
     
     nyaklancEzust =     {image: "../TermekKartyak/silverNecklace.jpg", 
                         name: "Silver necklace", 
                         price: 79, 
                         gender: "U", 
                         type: "accessories", 
-                        onSale: true},
+                        onSale: true,
+                        leiras: "Ilyen nyakláncot még tuti nem láttál! bármilyen méretben kapható, hiszen egy ilyen ékszer bárkinek jól áll."},
 
     vastagKarkotoArany ={image: "../TermekKartyak/goldenBraceletThick.jpg", 
                         name: "Golden Bracelet", 
@@ -208,7 +210,6 @@ function KartyaLetrehoz(termek, tipus, gender) {
         szivIC.className = "szivikon";
     
         let szivIMG = document.createElement('img')
-        szivIMG.src = "../TermekKartyak/sziv.png"
     
         let szemIC = document.createElement('div');
         szemIC.className = "szemikon";
@@ -217,8 +218,18 @@ function KartyaLetrehoz(termek, tipus, gender) {
         ///console.log(termek)
     
         let szemIMG = document.createElement('img')
-        szemIMG.src = "../TermekKartyak/szem.png"
-    
+
+        if (tipus == "all") {
+            szivIMG.src = "./TermekKartyak/sziv.png"
+            szemIMG.src = "./TermekKartyak/szem.png"
+        }
+        else
+        {
+            szivIMG.src = "../TermekKartyak/sziv.png"
+            szemIMG.src = "../TermekKartyak/szem.png"
+
+        }
+
         let add_to_cart = document.createElement('a');
         add_to_cart.className = "add-to-cart";
         add_to_cart.innerHTML="Add to cart"
@@ -383,8 +394,13 @@ document.querySelector('#default-sorting').addEventListener('change', sortProduc
 
 function Popup(termekAdatok) {
 
-    console.log(termekAdatok.name)
+    //console.log(termekAdatok.name)
 
+    //ez itt egy ellenőrzés
+    const existingPopup = document.getElementById('popUpMain');
+    if (existingPopup) {
+        existingPopup.remove();
+    }
 
     let popUpMain = document.createElement('div')
     popUpMain.className = "modal"
@@ -395,14 +411,20 @@ function Popup(termekAdatok) {
     let popUpIMG = document.createElement('img')
     popUpIMG.className = "modal-img"
 
+
     let popUpClose = document.createElement('div')
     popUpClose.className = "close"
     popUpClose.innerHTML = "X"
 
 
-    
-    popUpCont.innerHTML = `<h2>${termekAdatok.name}</h2><p>Price: $${termekAdatok.price}</p>`; 
-    popUpIMG.src = termekAdatok.image
+
+    popUpCont.innerHTML = `<h2>${termekAdatok.name}</h2><p class="price">Price: $${termekAdatok.price}</p><p class="popUpLeiras">${termekAdatok.leiras}</p>`; 
+    if (oldalTipus == "all") {
+        popUpIMG.src = termekAdatok.image.substr(1)
+    }
+    else{
+        popUpIMG.src = termekAdatok.image
+    }
 
     popUpMain.appendChild(popUpClose)
     popUpMain.appendChild(popUpIMG)
@@ -411,15 +433,11 @@ function Popup(termekAdatok) {
     document.body.appendChild(popUpMain);
 
     popUpClose.addEventListener('click', () => {
-        ClosePopUp()});
-
-
-    
+        ClosePopUp()});  
 
     document.getElementById('popUpMain').style.display = "flex";
 }
 
 function ClosePopUp() {
-    document.getElementById('popUpMain').innerHTML = ""
     document.getElementById('popUpMain').style.display = 'none'
 }
