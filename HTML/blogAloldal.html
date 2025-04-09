@@ -14,7 +14,7 @@
 
     <title>Blog</title>
 </head>
-<body onload="StartFel2()">
+<body onload="StartFel2()" >
     <!--Menü és felsőléc-->
     <a href="" id="top"></a>
     <div class="stickyteto">
@@ -123,12 +123,12 @@
         <div class="BalBlogDiv">
             <h2>Új ajánlatok</h2>
             <div class="FoKepDiv">
-                <img class="FoKep" src="../Blog képek/aaaaaaa2.jpg" alt="">
-                <div class="kepModal">
-                    <span class="BezaroGomb">
+                <img class="FoKep" src="../Blog képek/loading-icon-1.png" alt="" id="EredetiFokep" onclick="ModalMegnyit()">
+                <div class="kepModal" id="KepModal_">
+                    <span class="BezaroGomb" id="BezarasGomb_" onclick="ModalBezar()">
                         &times;
                     </span>
-                    <img src="../Blog képek/aaaaaaa2.jpg" class="ModalKep" alt="">
+                    <img src="../Blog képek/aaaaaaa2.jpg" class="ModalKep" alt="" id="ModalKep_">
                 </div>
                 <hr>
                 <h3 class="FoDatum">2025.01.22</h3>

@@ -710,3 +710,23 @@ function Letrehozas(hol,hanyas){
         JobbBlogok.push(Blogok[hanyas])
     }
 }
+let modal = document.getElementById("KepModal_")
+let modalKep = document.getElementById("ModalKep_")
+let modalKepOG = document.getElementById("EredetiFokep")
+function RandomKep(){
+    modalKepOG.style.transform = "scale(1)"
+    modalKepOG.style.transition = "0.2s"
+    modalKepOG.src = ""
+    let randomSzam = Math.floor(Math.random()*Blogok.length)
+    modalKepOG.src = Blogok[randomSzam].img
+    modalKep.src = Blogok[randomSzam].img
+}
+function ModalMegnyit(){
+    modal.style.display="block";
+}
+let BezarGomb = document.getElementById("BezarasGomb_")
+function ModalBezar(){
+    modal.style.display = "none" 
+}
+
+RandomKep()
