@@ -1,64 +1,191 @@
-// Format text based on selected style
-function formatText(style) {
+document.addEventListener('DOMContentLoaded', function() {
   const textarea = document.getElementById("commentInput");
-  const start = textarea.selectionStart;
-  const end = textarea.selectionEnd;
-  const selected = textarea.value.substring(start, end);
-  
-  // If no text is selected, place formatting tags with cursor in between
-  let wrapped = selected;
-  let cursorPosition;
-  
-  switch(style) {
-    case "bold":
-      wrapped = `<b>${selected}</b>`;
-      cursorPosition = selected ? start + wrapped.length : start + 3;
-      break;
-    case "italic":
-      wrapped = `<i>${selected}</i>`;
-      cursorPosition = selected ? start + wrapped.length : start + 3;
-      break;
-    case "underline":
-      wrapped = `<u>${selected}</u>`;
-      cursorPosition = selected ? start + wrapped.length : start + 3;
-      break;
-    case "line-through":
-      wrapped = `<s>${selected}</s>`;
-      cursorPosition = selected ? start + wrapped.length : start + 3;
-      break;
+  if (textarea) {
+    const editableDiv = document.createElement("div");
+    editableDiv.setAttribute("contenteditable", "true");
+    editableDiv.setAttribute("id", "commentInput");
+    editableDiv.classList.add("editable-comment");
+    editableDiv.setAttribute("placeholder", "Reply");
+    
+    textarea.parentNode.replaceChild(editableDiv, textarea);
+    
+    const style = document.createElement("style");
+    style.textContent = `
+      .editable-comment {
+        min-height: 60px;
+        border: none;
+        outline: none;
+        width: 100%;
+        padding: 8px;
+        font-family: inherit;
+        font-size: inherit;
+        line-height: 1.5;
+        resize: none;
+        overflow: auto;
+      }
+      
+      .editable-comment[placeholder]:empty:before {
+        content: attr(placeholder);
+        color: #aaa;
+        pointer-events: none;
+      }
+      
+      .editable-comment:focus {
+        outline: none;
+      }
+      
+      .moderation-alert {
+        color: #fff;
+        background-color: #d9534f;
+        padding: 15px;
+        margin: 15px 0;
+        border-radius: 4px;
+        text-align: center;
+        animation: fadeOut 5s forwards;
+      }
+      
+      @keyframes fadeOut {
+        0% { opacity: 1; }
+        70% { opacity: 1; }
+        100% { opacity: 0; display: none; }
+      }
+    `;
+    document.head.appendChild(style);
+    
+    editableDiv.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        submitComment();
+      }
+    });
   }
+});
+
+// Offensive words filter
+function containsOffensiveWords(text) {
+  const offensiveWords = [
+    "nigger", 
+    "cigany", 
+    "cigány",
+    "nick grr",
+    "nigga",
+    "fasz",
+    "c1gany"
+
+  ];
   
-  textarea.value = textarea.value.substring(0, start) + wrapped + textarea.value.substring(end);
-  textarea.focus();
+
+  const lowerText = text.toLowerCase();
   
-  // If text was selected, place cursor after the formatted text
-  // If no text was selected, place cursor between tags
-  textarea.selectionStart = selected ? cursorPosition : start + 3;
-  textarea.selectionEnd = selected ? cursorPosition : start + 3;
+
+  return offensiveWords.some(word => lowerText.includes(word));
 }
 
-// Handle emoji picker
+function formatText(style) {
+  const editableDiv = document.getElementById('commentInput');
+  editableDiv.focus();
+  
+  const selection = window.getSelection();
+  
+  if (selection.rangeCount > 0 && selection.toString().length > 0) {
+    document.execCommand('styleWithCSS', false, true);
+    
+    switch(style) {
+      case "bold":
+        document.execCommand('bold', false, null);
+        break;
+      case "italic":
+        document.execCommand('italic', false, null);
+        break;
+      case "underline":
+        document.execCommand('underline', false, null);
+        break;
+      case "line-through":
+        document.execCommand('strikeThrough', false, null);
+        break;
+    }
+  } else {
+    const range = document.createRange();
+    range.selectNodeContents(editableDiv);
+    selection.removeAllRanges();
+    selection.addRange(range);
+    
+    document.execCommand('styleWithCSS', false, true);
+    
+    switch(style) {
+      case "bold":
+        document.execCommand('bold', false, null);
+        break;
+      case "italic":
+        document.execCommand('italic', false, null);
+        break;
+      case "underline":
+        document.execCommand('underline', false, null);
+        break;
+      case "line-through":
+        document.execCommand('strikeThrough', false, null);
+        break;
+    }
+    
+    selection.removeAllRanges();
+
+    const newRange = document.createRange();
+    newRange.selectNodeContents(editableDiv);
+    newRange.collapse(false);
+    selection.addRange(newRange);
+  }
+}
+
 function openEmojiPicker() {
   alert("Nyomd meg: Win + . (pont) az emoji panel előhívásához 😊");
 }
 
-// Submit comment function
+function showModerationAlert() {
+
+  if (document.querySelector('.moderation-alert')) {
+    return;
+  }
+  
+  const textBox = document.querySelector('.text-box');
+  const alertDiv = document.createElement('div');
+  alertDiv.classList.add('moderation-alert');
+  alertDiv.textContent = 'A hozzászólás nem engedélyezett tartalom miatt blokkolva lett. Kérjük, tartsd be a közösségi irányelveket.';
+  
+  textBox.insertBefore(alertDiv, textBox.firstChild);
+  
+
+  setTimeout(() => {
+    alertDiv.remove();
+  }, 5000);
+}
+
 function submitComment() {
-  const textarea = document.getElementById("commentInput");
-  const text = textarea.value.trim();
-  if (!text) return;
+  const editableDiv = document.getElementById("commentInput");
+  const html = editableDiv.innerHTML.trim();
+  
+  if (!html || html === "<br>") return;
+  
+
+  const tempDiv = document.createElement('div');
+  tempDiv.innerHTML = html;
+  const plainText = tempDiv.textContent || tempDiv.innerText;
+  
+
+  if (containsOffensiveWords(plainText)) {
+    showModerationAlert();
+
+    editableDiv.innerHTML = "";
+    return;
+  }
   
   const commentList = document.getElementById("commentList");
   
-  // Create comment container
   const commentContainer = document.createElement("div");
   commentContainer.classList.add("comment");
   
-  // Get current date and time
   const now = new Date();
   const timeString = now.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
   
-  // Create HTML for the comment
   commentContainer.innerHTML = `
     <div class="user">
       <div class="user-pic">
@@ -72,74 +199,9 @@ function submitComment() {
         <p>ma, ${timeString}</p>
       </div>
     </div>
-    <p class="comment-content">${text}</p>
+    <p class="comment-content">${html}</p>
   `;
   
   commentList.appendChild(commentContainer);
-  textarea.value = "";
+  editableDiv.innerHTML = "";
 }
-
-// Add event listener for Enter key press
-document.addEventListener('DOMContentLoaded', function() {
-  const textarea = document.getElementById("commentInput");
-  
-  // Add event listener for Enter key
-  textarea.addEventListener('keydown', function(e) {
-    // Check if Enter was pressed without Shift (Shift+Enter creates a new line)
-    if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault(); // Prevent default behavior (new line)
-      submitComment();
-    }
-  });
-  
-  // Add button for bold formatting
-  const formattingDiv = document.querySelector('.formatting');
-  const firstButton = formattingDiv.querySelector('button');
-  
-  // Create bold button
-  const boldButton = document.createElement('button');
-  boldButton.type = 'button';
-  boldButton.innerHTML = `
-    <svg fill="none" viewBox="0 0 24 24" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
-      <path stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" stroke="#707277" d="M6 12h8c2.2091 0 4-1.7909 4-4 0-2.20914-1.7909-4-4-4H6v8z"></path>
-      <path stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" stroke="#707277" d="M6 12h9c2.2091 0 4 1.7909 4 4 0 2.2091-1.7909 4-4 4H6V12z"></path>
-    </svg>
-  `;
-  boldButton.onclick = function() { formatText('bold'); };
-  
-  // Insert bold button after the first button
-  if (firstButton && firstButton.parentNode) {
-    firstButton.parentNode.insertBefore(boldButton, firstButton.nextSibling);
-  }
-});
-
-// Function to make the existing buttons work
-window.onload = function() {
-  // Add click event to bold button
-  const boldButton = document.querySelector('.formatting button:nth-child(2)');
-  if (boldButton) {
-    boldButton.onclick = function() { formatText('bold'); };
-  }
-  
-  // Make sure the other formatting buttons work too
-  const italicButton = document.querySelector('.formatting button:nth-child(3)');
-  if (italicButton) {
-    italicButton.onclick = function() { formatText('italic'); };
-  }
-  
-  const underlineButton = document.querySelector('.formatting button:nth-child(4)');
-  if (underlineButton) {
-    underlineButton.onclick = function() { formatText('underline'); };
-  }
-  
-  const strikeButton = document.querySelector('.formatting button:nth-child(5)');
-  if (strikeButton) {
-    strikeButton.onclick = function() { formatText('line-through'); };
-  }
-  
-  // Make sure the send button works
-  const sendButton = document.querySelector('.formatting .send');
-  if (sendButton) {
-    sendButton.onclick = submitComment;
-  }
-};
