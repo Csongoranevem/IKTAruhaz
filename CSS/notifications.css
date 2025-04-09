@@ -290,3 +290,8 @@ body {
       margin-left: 0;
     }
   }
+  @media screen and (max-width: 400px){
+    body{
+      min-height: 180vh;
+    }
+  }
