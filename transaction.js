@@ -1,8 +1,7 @@
-let balance = 10000; // Kezdő egyenleg
-let transactions = []; // A tranzakciók listája
+let balance = 10000; 
+let transactions = []; 
 
 
-// Hozzáadjuk a tranzakciókat és az egyenleget csökkentjük, ha vásárolnak
 function KartyaLetrehoz(termek, tipus, gender) {
     let genderBackup = termek.gender
     let imagebackup = termek.image
@@ -18,43 +17,40 @@ function KartyaLetrehoz(termek, tipus, gender) {
         let kartyak = document.createElement('div');
         kartyak.className = "kartyak";
         
-        // ... (a többi kód itt marad)
 
-        // Hozzáadjuk a "Add to cart" gombot
         let add_to_cart = document.createElement('a');
         add_to_cart.className = "add-to-cart";
         add_to_cart.innerHTML = "Add to cart";
         add_to_cart.href = "";
 
-        // Amikor rákattintanak a "Add to cart" gombra
+
         add_to_cart.addEventListener('click', () => {
-            // Levonjuk az árat az egyenlegből
+
             balance -= termek.price;
 
-            // Hozzáadjuk a tranzakciót
+
             transactions.push({
                 name: termek.name,
                 date: new Date().toLocaleDateString(),
                 amount: -termek.price,
             });
 
-            // Frissítjük a tranzakciós listát
+
             updateTransactionList();
         });
 
-        // ... (a többi kód itt marad)
+
 
         return kartyak;
     }
     return false;
 }
 
-// Frissítjük a tranzakciós listát
+
 function updateTransactionList() {
     const transactionList = document.querySelector('.transaction-list');
-    transactionList.innerHTML = ''; // Töröljük az előző tranzakciókat
-
-    // Átmegyünk a tranzakciók listáján, és létrehozzuk az új elemeket
+    transactionList.innerHTML = ''; 
+    /
     transactions.forEach(transaction => {
         let transactionItem = document.createElement('div');
         transactionItem.classList.add('transaction-item');
@@ -64,7 +60,7 @@ function updateTransactionList() {
 
         let transactionIcon = document.createElement('div');
         transactionIcon.classList.add('transaction-icon');
-        transactionIcon.textContent = '🛒'; // Ikon a tranzakcióhoz
+        transactionIcon.textContent = '🛒';
 
         let transactionInfo = document.createElement('div');
         transactionInfo.classList.add('transaction-info');
@@ -81,7 +77,7 @@ function updateTransactionList() {
         transactionAmount.classList.add('transaction-amount');
         transactionAmount.textContent = `$${transaction.amount.toFixed(2)}`;
 
-        // Hozzáadjuk a tranzakció részleteit
+
         transactionInfo.appendChild(transactionName);
         transactionInfo.appendChild(transactionDate);
         transactionDetails.appendChild(transactionIcon);
@@ -89,7 +85,7 @@ function updateTransactionList() {
         transactionItem.appendChild(transactionDetails);
         transactionItem.appendChild(transactionAmount);
 
-        // Hozzáadjuk a tranzakciót a listához
+
         transactionList.appendChild(transactionItem);
     });
 }
