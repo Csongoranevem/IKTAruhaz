@@ -169,6 +169,35 @@ a{
     transform: scale(1.1);
 }
 
+
+.KeresesDiv2{
+    margin-left: 5%;
+    margin-right: 5%;
+    display: none;
+}
+
+
+.visszaBlogBTN{
+    width: 2em;
+    height: 2em;
+    font-size: larger;
+    background-color: transparent;
+    color: rgb(170, 170, 170);
+    border: 1px solid rgb(194, 194, 194) ;
+    align-self: center;
+    transition: 0.2s ease-out;
+    position: fixed;
+    bottom: 8vh;
+    left: 4vh;
+    padding-bottom: 3px;
+  }
+  
+  .visszaBlogBTN:hover{
+    background-color: rgb(235, 73, 73);
+    color: white;
+    border-color: rgb(235, 73, 73);
+  }
+
 @keyframes HoverEffect2{
     from{
         background-color: rgb(235, 73, 73);
@@ -198,6 +227,12 @@ a{
         flex-direction: column;
         align-items: center;
         margin-bottom: 5%;
+    }
+
+    .KeresesDiv2{
+        margin-left: 5%;
+        margin-right: 5%;
+        display: flex;
     }
     
     .BalBlogDiv{
