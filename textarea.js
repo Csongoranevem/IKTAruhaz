@@ -69,9 +69,32 @@ function containsOffensiveWords(text) {
     "cigány",
     "nick grr",
     "nigga",
+    "n1gga",
+    "n1gger",
+    "nigger",
     "fasz",
-    "c1gany"
-
+    "f4sz",
+    "c1gany",
+    "g*ci", 
+    "bunkó", 
+    "szarházi",
+    "b*zi",   
+    "p*cs",    
+    "kurva", 
+    "köcsög", 
+    "nyomorult",
+    "tökhülye", 
+    "barom", 
+    "kretén",
+    "buta", 
+    "szánalmas", 
+    "pöcsfej",
+    "faszfej", 
+    "faszkodó",
+    "hülye", 
+    "hülyeség", 
+    "gyökér",
+    "retardált"
   ];
   
 
