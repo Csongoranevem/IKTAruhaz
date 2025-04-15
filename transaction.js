@@ -50,7 +50,6 @@ function KartyaLetrehoz(termek, tipus, gender) {
 function updateTransactionList() {
     const transactionList = document.querySelector('.transaction-list');
     transactionList.innerHTML = ''; 
-    /
     transactions.forEach(transaction => {
         let transactionItem = document.createElement('div');
         transactionItem.classList.add('transaction-item');

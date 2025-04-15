@@ -713,6 +713,8 @@ function Letrehozas(hol,hanyas){
 let modal = document.getElementById("KepModal_")
 let modalKep = document.getElementById("ModalKep_")
 let modalKepOG = document.getElementById("EredetiFokep")
+let cim = document.getElementById("blogTart")
+let blogcim = document.getElementById("BlogCim")
 function RandomKep(){
     modalKepOG.style.transform = "scale(1)"
     modalKepOG.style.transition = "0.2s"
@@ -720,6 +722,8 @@ function RandomKep(){
     let randomSzam = Math.floor(Math.random()*Blogok.length)
     modalKepOG.src = Blogok[randomSzam].img
     modalKep.src = Blogok[randomSzam].img
+    cim.innerHTML = "Home/Blog/" + Blogok[randomSzam].title
+    blogcim.innerHTML = Blogok[randomSzam].title
 }
 function ModalMegnyit(){
     modal.style.display="block";
