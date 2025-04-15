@@ -329,6 +329,9 @@ function KartyaLetrehoz(termek, tipus, gender) {
 let shows = document.getElementsByClassName("kartyak")
 let resultKiir = document.getElementById("result")
 resultKiir.innerHTML = `Showing all ${shows.length} results`
+
+
+
 //Slider szűrő
 
 
@@ -469,4 +472,40 @@ function Popup(termekAdatok) {
 
 function ClosePopUp() {
     document.getElementById('popUpMain').style.display = 'none'
+}
+
+
+
+
+//Coupon feltöltés
+
+let couponok = [
+   {
+    cim: "Kari ari csak neked számodra!",
+    couponLeiras: "Lepj meg valakit egy csodálatos ajándékkal amit minden nap magán hordhat! Ezzel a kuponnal 15% kedvezményt biztosítunk bármely termék árából a webshopon. Felhasználható 2024. december 31-ig.",
+    percent: 15,
+    couponimage: "../kupon_kepek/karacsony.jpg"
+   },
+
+   {
+    cim: "Black friday!!!",
+    couponLeiras: "Rengeteg ajánlattal és hatalmas akciókkal készül a webshopunk! Szerezz be most pólót, kabátot, sapkát és még sok mást akár 40% kedvezménnyel!",
+    percent: 15,
+    couponimage: "../kupon_kepek/feketePentek.jpg"
+   },
+
+   {
+    cim: "Húsvéti dinom-dánom",
+    couponLeiras: "Meglepetéés! kerüljön a kosárba a legjobb pólóink valamelyike és 10% kedvezményt kapsz hozzá! Ez a kupon egy póló kategóriájú termékre érvényes. Nincs megszabva árminimum. Felhasználható 2025. április 31-ig.",
+    percent: 15,
+    couponimage: "../kupon_kepek/husvet.jpg"
+   } 
+]
+
+document.onload(CouponFeltolt())
+
+function CouponFeltolt() {
+    couponok.forEach(e => {
+        document.createElement
+    });
 }
