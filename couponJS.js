@@ -12,14 +12,14 @@ let couponok = [
     {
      cim: "Black friday!!!",
      couponLeiras: "Rengeteg ajánlattal és hatalmas akciókkal készül a webshopunk! Szerezz be most pólót, kabátot, sapkát és még sok mást akár 40% kedvezménnyel!",
-     percent: 15,
+     percent: 30,
      couponimage: "../kupon_kepek/feketePentek.jpg"
     },
  
     {
      cim: "Húsvéti dinom-dánom",
      couponLeiras: "Meglepetéés! kerüljön a kosárba a legjobb pólóink valamelyike és 10% kedvezményt kapsz hozzá! Ez a kupon egy póló kategóriájú termékre érvényes. Nincs megszabva árminimum. Felhasználható 2025. április 31-ig.",
-     percent: 15,
+     percent: 20,
      couponimage: "../kupon_kepek/husvet.jpg"
     } 
  ]
@@ -52,13 +52,17 @@ let couponok = [
          couponBevaltBTN = document.createElement("button")
          couponBevaltBTN.className = "couponBTN"
          couponBevaltBTN.innerHTML = "Beváltom"
+
+         couponszovegDiv = document.createElement("div")
+         couponszovegDiv.className = "couponSzovegDiv"
  
  
          couponIMGDiv.appendChild(couponBevaltBTN)
          couponIMGDiv.appendChild(couponLearazas)
  
-         couponMain.appendChild(couponCim)
-         couponMain.appendChild(couponLeiras)
+         couponszovegDiv.appendChild(couponCim)
+         couponszovegDiv.appendChild(couponLeiras)
+         couponMain.appendChild(couponszovegDiv)
          couponMain.appendChild(couponIMGDiv)
 
  
