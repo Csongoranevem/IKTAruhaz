@@ -1,0 +1,35 @@
+Fejlesztői dokumentáció
+
+Projekt neve: Csudajó áruház
+
+Project célja: egy online bolt létrehozása
+
+Nyelvek, Programok: HTML, CSS, JavaScript, Visual Studio Code, GIMP, Nightcafé(képekhez)
+
+*screenshot a shop.html-ről*
+
+
+
+Projekt struktúrája: 
+
+*screenshot a struktúráról*
+
+
+Futtatás:
+
+git clone https://github.com/Csongoranevem/IKTAruhaz
+
+
+Alapvető funkciók, használat
+
+
+A linkelési problémák miatt közvetlen a root mappába kerülő fájlokat kivéve minden .html, .css és képfájl a számára létrehozott és elnevezett mappában van. A "home" oldal képei a "Home képek"-ben, a termékek képe a "Termekkartyak" nevű mappában található. A weboldal designhoz és a beégetett tartalmakhoz a "Weboldal képek" mappában megtalálható képeket használtuk fel. A Dokumentumokban megtalálható a  fejlesztői útmutató illetve a használati utasítás. Valamennyi .js fájl a root mappában van.
+
+
+Funkciók
+
+
+
+Valamennyi oldal reszponzív három méretben (asztali, tablet, telefon). Az animációk CSS-ben, @keyframe és :hover módszerrel lettek megoldva. az adatok dinamikus feltöltésére JavaScriptet használtunk, ezek a termekSzuro.js és a blog.js.
+
+
