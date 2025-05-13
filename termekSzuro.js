@@ -262,7 +262,11 @@ function KartyaLetrehoz(termek, tipus, gender) {
         let add_to_cart = document.createElement('a');
         add_to_cart.className = "add-to-cart";
         add_to_cart.innerHTML="Add to cart"
-        add_to_cart.href=""
+        add_to_cart.href = "#";
+add_to_cart.addEventListener("click", function(e) {
+    e.preventDefault();
+    kosarhozAd(termek);
+});
     
         let alja = document.createElement('div');
         alja.className = "alja";
@@ -472,4 +476,40 @@ function Popup(termekAdatok) {
 
 function ClosePopUp() {
     document.getElementById('popUpMain').style.display = 'none'
+}
+
+let kosar = [];
+
+// Kosár ikon esemény
+document.addEventListener('DOMContentLoaded', () => {
+    const cartIcon = document.getElementById('cart-icon');
+    const cartPreview = document.getElementById('cart-preview');
+
+    cartIcon.addEventListener('click', () => {
+        cartPreview.classList.toggle('visible');
+        renderCartPreview();
+    });
+});
+
+// Kosárhoz adás funkció
+function kosarhozAd(termek) {
+    let megvane = kosar.find(item => item.name === termek.name);
+    if (megvane) {
+        megvane.qty += 1;
+    } else {
+        kosar.push({...termek, qty: 1});
+    }
+    document.getElementById("cart-count").textContent = kosar.reduce((acc, item) => acc + item.qty, 0);
+}
+
+// Kosár megjelenítés
+function renderCartPreview() {
+    const cartPreview = document.getElementById('cart-preview');
+    cartPreview.innerHTML = kosar.length === 0 ? "<p>A kosár üres.</p>" : "";
+    
+    kosar.forEach(item => {
+        const p = document.createElement("p");
+        p.textContent = `${item.name} x${item.qty} – $${item.price}`;
+        cartPreview.appendChild(p);
+    });
 }
