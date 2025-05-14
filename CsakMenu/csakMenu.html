@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <title>Shop</title>
+</head>
+<body>
+    <!--Menü és felsőléc-->
+    <div class="felsoLec">
+        <div class="webName">
+            <a href="./HTML/home.html"><p class="oldalnev">Csudajó Áruház</p></a>
+            <p class="motto">Fedezd fel a lehetetlent!</p>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+
+        <!--Mobil nézet-->
+        <div id="mobilMenu">
+            <ul class="egeszMobil">
+                    <li class="menuItem">
+                        <a href="./HTML/home.html" class="mobilMenuLinks">home</a>
+                    </li>
+                <li class="menuItem">
+                    <a href="./index.html" class="mobilMenuLinks">shop</a>
+                    <a class="lenyit"><i class="fa fa-plus"></i></a>
+                </li>
+                <li class="menuItemDropdown1">
+                    <a href="./HTML/accessories.html" class="MobilDropdown">accessories</a>
+                </li>
+                <li class="menuItemDropdown1">
+                    <a href="./HTML/shopCasual.html" class="MobilDropdown">casual</a>
+                </li>
+                <li class="menuItemDropdown1">
+                    <a href="./HTML/shopClothing.html" class="MobilDropdown">clothing</a>
+                </li>
+                <li class="menuItemDropdown1">
+                    <a href="./HTML/shopMen.html" class="MobilDropdown">men</a>
+                </li>
+                <li class="menuItemDropdown1">
+                    <a href="./HTML/shopWomen.html" class="MobilDropdown">women</a>
+                </li>
+                <li class="menuItem">
+                    <a href="./HTML/myaccount.html" class="mobilMenuLinks">my account</a>
+                    <a class="lenyit2"><i class="fa fa-plus"></i></a>
+                </li>
+                <li class="menuItemDropdown2">
+                    <a href="./HTML/myaccount.html" class="MobilDropdown">account details</a>
+                </li>
+                <li class="menuItemDropdown2">
+                    <a href="./HTML/logout.html" class="MobilDropdown">log out</a>
+                </li>
+                <li class="menuItemDropdown2">
+                    <a href="./HTML/coupons.html" class="MobilDropdown">coupons</a>
+                </li>
+                <li class="menuItem">
+                    <a href="./HTML/blog.html" class="mobilMenuLinks">blog</a>
+                </li>
+                <li class="menuItem">
+                    <a href="./HTML/contact.html" class="mobilMenuLinks">contact us</a>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="foMenu">
+            <!--Asztali nézet-->
+            <div class="asztaliNezet">
+                <a href="./HTML/home.html" class="menuLinks">home</a>                     
+                <div class="dropdown">
+                    <a href="./index.html" class="menuLinks" id="dropbtn">shop<span class="menuNyil">▾</span></a>
+                        <div class="dropdownMain">
+                            <a href="./HTML/accessories.html" class="dropdownLinks">accessories</a>
+                            <a href="./HTML/shopCasual.html" class="dropdownLinks">casual</a>
+                            <a href="./HTML/shopClothing.html" class="dropdownLinks">clothing</a>
+                            <a href="./HTML/shopMen.html" class="dropdownLinks">men</a>
+                            <a href="./HTML/shopWomen.html" class="dropdownLinks">women</a>  
+                        </div>
+                </div>  
+                <div class="dropdown">
+                <a href="./HTML/myaccount.html" class="menuLinks" id="dropbtn">my account<span class="menuNyil">▾</span></a>
+                    <div class="dropdownMain">
+                        <a href="./HTML/myaccount.html" class="dropdownLinks">Account details</a>
+                        <a href="./HTML/logout.html" class="dropdownLinks">Log out</a>
+                        <a href="./HTML/coupons.html" class="dropdownLinks">Coupons</a>
+                    </div>
+                </div>
+    
+    
+    
+                <a href="./HTML/blog.html" class="menuLinks">blog</a>
+                <a href="./HTML/contact.html" class="menuLinks">contact us</a>
+    
+
+            </div>    
+        </div>
+    </div>
+</body>
+</html>
