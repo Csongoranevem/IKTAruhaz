@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-    <title>Coupons</title>
+    <title>Checkout</title>
 
     <style>
         .main{
@@ -141,9 +141,44 @@
     </div>
     <div class="route">
         <p>Home/Cart</p>
+        <a href="./HTML/kosar.html"><div class="cart-icon-container">
+            <img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" alt="Cart" id="cart-icon">
+            <span id="cart-count">0</span>
+            <div id="cart-preview" class="hidden"></div>
+        </div></a>
     </div>
     <!--Baloldal, Jobboldal-->
-
+    <h1 style="margin-left: 5%;">Kosár tartalma</h1>
+    <div id="checkout-container" style="margin: 5%;">
+    </div>
+    <script>
+        const kosar = JSON.parse(localStorage.getItem('kosar')) || [];
+        const container = document.getElementById('checkout-container');
+    
+        if (kosar.length === 0) {
+            container.innerHTML = "<p>A kosár üres.</p>";
+        } else {
+            let osszesen = 0;
+            kosar.forEach(item => {
+                const div = document.createElement("div");
+                div.innerHTML = `<strong>${item.name}</strong> — ${item.qty} x $${item.price} = $${item.qty * item.price}`;
+                container.appendChild(div);
+                osszesen += item.qty * item.price;
+            });
+    
+            const totalDiv = document.createElement("h3");
+            totalDiv.innerHTML = `Összesen: $${osszesen}`;
+            container.appendChild(totalDiv);
+    
+            const clearBtn = document.createElement("button");
+            clearBtn.textContent = "Kosár törlése";
+            clearBtn.onclick = () => {
+                localStorage.removeItem('kosar');
+                location.reload();
+            };
+            container.appendChild(clearBtn);
+        }
+    </script>
     
     
     <footer>
