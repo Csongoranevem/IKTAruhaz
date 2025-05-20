@@ -41,8 +41,8 @@ A Contact us oldalon a felhasználó küldhet visszajelzést, melyet egy harmadi
 fájlok és mappák magyarázata
 
 Blog képek - a Blog oldalon megjelenő képeket tárolja
-CsakMenu - egy nem használt HTML fájl, melyből ki lehet másolni az oldal menüjét egyszerűen.
 
+CsakMenu - egy nem használt HTML fájl, melyből ki lehet másolni az oldal menüjét egyszerűen.
 
 CSS - ebben a mappában van az összes aloldal (a home oldalt kivéve) stílusa.
 
@@ -74,7 +74,14 @@ index.html - az alapértelmezett oldal, a shop főoldalát tartalmazza
 
 main.css - a weboldal fő css stíluslapja, itt találhatóak a fő animációk és effektek. Emellett a menüt és a footert formázza
 
+szurok.html - egy korábbi, már nem használt oldal melyből ki lehet másolni a shop oldalon található slider html kódját
 
+szurok.js - az előbb említett slider működéséért felelős
 
+szuroterv.css - a slider dizájnelemeit tartalmazza
+
+termekSzuro.js - a shopban található termékek szűréséért felelős
+
+textarea.js - kommentelési lehetőségeknél szűri a szavakat (és figyelmeztet ha nem megfelelő szavakat használat)
 
 
