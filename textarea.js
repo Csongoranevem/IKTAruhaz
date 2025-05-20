@@ -64,6 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Offensive words filter
 function containsOffensiveWords(text) {
   const offensiveWords = [
+    "lúzer",
     "nigger", 
     "cigany", 
     "cigány",
@@ -94,7 +95,7 @@ function containsOffensiveWords(text) {
     "hülye", 
     "hülyeség", 
     "gyökér",
-    "retardált"
+    "retardált",
   ];
   
 
