@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +9,15 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
- 
+
 
     <title>Shop - Men</title>
 </head>
+
 <body>
     <!--Menü és felsőléc-->
 
@@ -25,7 +29,9 @@
     <div class="stickyteto">
         <div class="felsoLec">
             <div class="webName">
-                <a href="./HTML/home.html"><p class="oldalnev">Csudajó Áruház</p></a>
+                <a href="./HTML/home.html">
+                    <p class="oldalnev">Csudajó Áruház</p>
+                </a>
                 <p class="motto">Fedezd fel a lehetetlent!</p>
             </div>
             <div class="hamburger">
@@ -86,45 +92,66 @@
             <div class="foMenu">
                 <!--Asztali nézet-->
                 <div class="asztaliNezet">
-                    <a href="./home.html" class="menuLinks">home</a>                     
+                    <a href="./home.html" class="menuLinks">home</a>
                     <div class="dropdown">
                         <a href="../index.html" class="menuLinks" id="dropbtn">shop<span class="menuNyil">▾</span></a>
-                            <div class="dropdownMain">
-                                <a href="./accessories.html" class="dropdownLinks">accessories</a>
-                                <a href="./shopCasual.html" class="dropdownLinks">casual</a>
-                                <a href="./shopClothing.html" class="dropdownLinks">clothing</a>
-                                <a href="./shopMen.html" class="dropdownLinks">men</a>
-                                <a href="./shopWomen.html" class="dropdownLinks">women</a>  
-                            </div>
-                    </div>  
+                        <div class="dropdownMain">
+                            <a href="./accessories.html" class="dropdownLinks">accessories</a>
+                            <a href="./shopCasual.html" class="dropdownLinks">casual</a>
+                            <a href="./shopClothing.html" class="dropdownLinks">clothing</a>
+                            <a href="./shopMen.html" class="dropdownLinks">men</a>
+                            <a href="./shopWomen.html" class="dropdownLinks">women</a>
+                        </div>
+                    </div>
                     <div class="dropdown">
-                    <a href="./myaccount.html" class="menuLinks" id="dropbtn">my account<span class="menuNyil">▾</span></a>
+                        <a href="./myaccount.html" class="menuLinks" id="dropbtn">my account<span
+                                class="menuNyil">▾</span></a>
                         <div class="dropdownMain">
                             <a href="./myaccount.html" class="dropdownLinks">Account details</a>
                             <a href="./logout.html" class="dropdownLinks">Log out</a>
                             <a href="./coupons.html" class="dropdownLinks">Coupons</a>
                         </div>
                     </div>
-        
-        
-        
+
+
+
                     <a href="./blog.html" class="menuLinks">blog</a>
                     <a href="./contact.html" class="menuLinks">contact us</a>
-        
-    
-                </div>    
+
+
+                </div>
             </div>
         </div>
     </div>
     <div class="route">
         <p>Home/Shop/Men</p>
-        <a href="./HTML/kosar.html"><div class="cart-icon-container">
-            <img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" alt="Cart" id="cart-icon">
-            <span id="cart-count">0</span>
-            <div id="cart-preview" class="hidden"></div>
-        </div></a>
+        <a href="./kosar.html">
+            <div class="cart-icon-container">
+                <img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" alt="Cart" id="cart-icon">
+                <span id="cart-count">0</span>
+                <div id="cart-preview" class="hidden"></div>
+            </div>
+        </a>
     </div>
     <!--Baloldal, Jobboldal-->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const kosar = JSON.parse(localStorage.getItem('kosar')) || [];
+
+            const cartCount = document.getElementById('cart-count');
+            if (cartCount) {
+                cartCount.textContent = kosar.reduce((sum, item) => sum + item.qty, 0);
+            }
+
+            const cartIcon = document.getElementById('cart-icon');
+            if (cartIcon) {
+                cartIcon.addEventListener('click', () => {
+                    window.location.href = "kosar.html";
+                });
+            }
+        });
+
+    </script>
     <div class="main">
         <div class="bal">
             <div class="cim">
@@ -133,7 +160,7 @@
             <div class="alatta">
                 <p id="result">Showing all 0 results</p>
                 <div class="select">
-                    <select  name="sorting" id="default-sorting" onchange="sortCards()">
+                    <select name="sorting" id="default-sorting" onchange="sortCards()">
                         <option value="---">---</option>
                         <option value="novekvo">Low to High</option>
                         <option value="csokkeno">High to Low</option>
@@ -154,19 +181,19 @@
                             <div class="range-slider-val-left"></div>
                             <div class="range-slider-val-right"></div>
                             <div class="range-slider-val-range"></div>
-                    
+
                             <span class="range-slider-handle range-slider-handle-left"></span>
                             <span class="range-slider-handle range-slider-handle-right"></span>
-                    
+
                             <div class="range-slider-tooltip range-slider-tooltip-left">
                                 <span class="range-slider-tooltip-text"></span>
                             </div>
-                    
+
                             <div class="range-slider-tooltip range-slider-tooltip-right">
                                 <span class="range-slider-tooltip-text"></span>
                             </div>
                         </div>
-                    
+
                         <input type="range" class="range-slider-input-left" tabindex="0" max="100" min="0" step="1">
                         <input type="range" class="range-slider-input-right" tabindex="0" max="100" min="0" step="1">
                     </div>
@@ -182,9 +209,12 @@
                     <div class="kategoriaSzuroDiv">
                         <h2>Product categories</h2>
                         <ul id="szuzoKategoriakOl">
-                            <li class="szuroLiClass"><a href="../HTML/accessories.html" class="SzuroAnchor">Accessories</a></li>
-                            <li class="szuroLiClass"><a href="../HTML/shopCasual.html" class="SzuroAnchor">Casual</a></li>
-                            <li class="szuroLiClass"><a href="../HTML/shopClothing.html" class="SzuroAnchor">Clothing</a></li>
+                            <li class="szuroLiClass"><a href="../HTML/accessories.html"
+                                    class="SzuroAnchor">Accessories</a></li>
+                            <li class="szuroLiClass"><a href="../HTML/shopCasual.html" class="SzuroAnchor">Casual</a>
+                            </li>
+                            <li class="szuroLiClass"><a href="../HTML/shopClothing.html"
+                                    class="SzuroAnchor">Clothing</a></li>
                             <li class="szuroLiClass"><a href="../HTML/shopMen.html" class="SzuroAnchor">Men</a></li>
                             <li><a href="../HTML/shopWomen.html" class="SzuroAnchor , NoBorder">Women</a></li>
                         </ul>
@@ -201,12 +231,13 @@
                         <p class="szuroLiClass">$25.00</p>
                         <img src="../TermekKartyak/LeatherJacket.jpg" class="TopKep" alt="" srcset="">
                         <li><a href="" class="TopAnchor" class="Jacket">Leather Jacket</a></li>
-                        <p class="szuroLiClass"><s id="athuzott" class="AkcioS">$100.00</s id="athuzott"><s id="athuzott" class="Akciozott">$50.00</s id="athuzott"></p>
+                        <p class="szuroLiClass"><s id="athuzott" class="AkcioS">$100.00</s id="athuzott"><s
+                                id="athuzott" class="Akciozott">$50.00</s id="athuzott"></p>
                         <img src="../TermekKartyak/feherPoloLatina.jpg" class="TopKep" alt="" srcset="">
                         <li><a href="" class="TopAnchor">Women Tops</a></li>
                         <p class="szuroLiClass">$45.00</p>
                         <img src="../TermekKartyak/collarshirt.jpg" class="TopKep" alt="" srcset="">
-                        <li ><a href="" class="TopAnchor">Collar T-Shirt</a></li>
+                        <li><a href="" class="TopAnchor">Collar T-Shirt</a></li>
                         <p>$35.00</p style="border-bottom:0px solid white">
                     </ul>
                 </div>
@@ -216,25 +247,31 @@
 
     </div>
 
-    
-    
+
+
     <footer>
         <div class="footDivBal">
             <p class="footDivTeto">About</p>
-            <p>Our shop was founded 10 years ago. We offer a curated collection of stylish, high-quality clothing that blends comfort with modern trends, making it easy for you to express your unique style. </p>
+            <p>Our shop was founded 10 years ago. We offer a curated collection of stylish, high-quality clothing that
+                blends comfort with modern trends, making it easy for you to express your unique style. </p>
         </div>
         <div class="footDivKoz">
             <p class="footDivTeto">Contact Us</p>
-            <p class="contact"> <img src="../Weboldal képek/hazikoIcon.webp" alt="szekhely" class="contactKepek">6500 Baja, Bácska tér 1.</p>
-            <p class="contact"> <img src="../Weboldal képek/emailIcon.png" alt="email" class="contactKepek"> info@csudajoshop.com</p>
-            <p class="contact"> <img src="../Weboldal képek/teloIcon.png" alt="telefon" class="contactKepek"> +36 30 116 123</p>
+            <p class="contact"> <img src="../Weboldal képek/hazikoIcon.webp" alt="szekhely" class="contactKepek">6500
+                Baja, Bácska tér 1.</p>
+            <p class="contact"> <img src="../Weboldal képek/emailIcon.png" alt="email" class="contactKepek">
+                info@csudajoshop.com</p>
+            <p class="contact"> <img src="../Weboldal képek/teloIcon.png" alt="telefon" class="contactKepek"> +36 30 116
+                123</p>
         </div>
         <div class="footDivJobb">
-            
-            <p class="footDivTeto"> <img src="../Weboldal képek/returnIcon.png" alt="email" class="contactKepek ">Free Shipping & Return</p>
+
+            <p class="footDivTeto"> <img src="../Weboldal képek/returnIcon.png" alt="email" class="contactKepek ">Free
+                Shipping & Return</p>
             <p class="contact jobbSzoveg">Free shipping on all orders above $99</p>
 
-            <p class="footDivTeto"> <img src="../Weboldal képek/walletIcon.webp" alt="email" class="contactKepek">Money Back Guarantee</p>
+            <p class="footDivTeto"> <img src="../Weboldal képek/walletIcon.webp" alt="email" class="contactKepek">Money
+                Back Guarantee</p>
             <p class="contact jobbSzoveg"> <img src="" alt="">100% money back guarantee</p>
 
 
@@ -244,8 +281,9 @@
 
     </footer>
 
-<script src="../hambi.js"></script>
-<script src="../main.js"></script>
-<script src="../termekSzuro.js"></script>
+    <script src="../hambi.js"></script>
+    <script src="../main.js"></script>
+    <script src="../termekSzuro.js"></script>
 </body>
+
 </html>
