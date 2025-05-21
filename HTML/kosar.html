@@ -35,8 +35,8 @@
         }
 
         footer {
-            position: absolute;
-            bottom: 0;
+
+            bottom: 10;
         }
 
         @media screen and (max-width: 870px) {
@@ -45,10 +45,13 @@
             }
         }
     </style>
+    <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"></script>
+
 
 </head>
 
 <body>
+
     <!--Menü és felsőléc-->
     <a href="" id="top"></a>
     <div class="stickyteto">
@@ -160,79 +163,125 @@
         </a>
     </div>
     <!--Baloldal, Jobboldal-->
-    <div class="main">
+    <div class="tartalom">
         <h1 style="margin-left: 5%;">Kosár tartalma</h1>
-    <div id="checkout-container" style="margin: 5%;">
-    </div>
-    <script>
-        let kosar = JSON.parse(localStorage.getItem('kosar')) || [];
+        <div id="checkout-container" style="margin: 5%;">
+        </div>
+        <script>
+            let kosar = JSON.parse(localStorage.getItem('kosar')) || [];
 
-        function updateCartCount() {
-            const cartCount = document.getElementById('cart-count');
-            if (cartCount) {
-                cartCount.textContent = kosar.reduce((sum, item) => sum + item.qty, 0);
+            function updateCartCount() {
+                const cartCount = document.getElementById('cart-count');
+                if (cartCount) {
+                    cartCount.textContent = kosar.reduce((sum, item) => sum + item.qty, 0);
+                }
             }
-        }
 
-        updateCartCount();
+            updateCartCount();
 
-        const container = document.getElementById('checkout-container');
+            const container = document.getElementById('checkout-container');
 
-        if (kosar.length === 0) {
-            container.innerHTML = "<p>A kosár üres.</p>";
-        } else {
-            let osszesen = 0;
-            kosar.forEach(item => {
-                const div = document.createElement("div");
-                div.className = "kosar-item";
-                div.innerHTML = `
+            if (kosar.length === 0) {
+                container.innerHTML = "<p>A kosár üres.</p>";
+            } else {
+                let osszesen = 0;
+                kosar.forEach(item => {
+                    const div = document.createElement("div");
+                    div.className = "kosar-item";
+                    div.innerHTML = `
       <img src="${item.image}" alt="${item.name}">
       <div>
         <strong>${item.name}</strong><br>
         ${item.qty} x $${item.price} = $${item.qty * item.price}
       </div>
     `;
-                container.appendChild(div);
-                osszesen += item.qty * item.price;
+                    container.appendChild(div);
+                    osszesen += item.qty * item.price;
+                });
+
+                const totalDiv = document.createElement("h3");
+                totalDiv.innerHTML = `Összesen: $${osszesen}`;
+                container.appendChild(totalDiv);
+
+                const checkoutBtn = document.createElement("button");
+                checkoutBtn.className = "checkout-gomb";
+                checkoutBtn.textContent = "Checkout";
+                checkoutBtn.onclick = () => {
+                    document.getElementById('paypal-button-container').style.display = 'block';
+                    checkoutBtn.style.display = 'none';
+                    clearBtn.style.display = 'none';
+                };
+                ;
+                container.appendChild(checkoutBtn);
+
+                const clearBtn = document.createElement("button");
+                clearBtn.textContent = "Clear";
+                clearBtn.style.marginLeft = "15px";
+                clearBtn.className = "checkout-gomb";
+
+                clearBtn.onclick = () => {
+                    localStorage.removeItem('kosar');
+                    location.reload();
+                };
+                container.appendChild(clearBtn);
+            }
+            document.addEventListener('DOMContentLoaded', () => {
+                const kosar = JSON.parse(localStorage.getItem('kosar')) || [];
+
+                const cartCount = document.getElementById('cart-count');
+                if (cartCount) {
+                    cartCount.textContent = kosar.reduce((sum, item) => sum + item.qty, 0);
+                }
+
+                const cartIcon = document.getElementById('cart-icon');
+                if (cartIcon) {
+                    cartIcon.addEventListener('click', () => {
+                        window.location.href = "kosar.html";
+                    });
+                }
             });
 
-            const totalDiv = document.createElement("h3");
-            totalDiv.innerHTML = `Összesen: $${osszesen}`;
-            container.appendChild(totalDiv);
+        </script>
+        <div id="paypal-button-container" style="display: none; margin-top: 20px;"></div>
+        <script>
+            let paypalRendered = false;
 
-            const checkoutBtn = document.createElement("button");
-            checkoutBtn.className = "checkout-gomb";
-            checkoutBtn.textContent = "Checkout";
-            checkoutBtn.onclick = () => alert("Paypal: thelogokiller12@gmail.com");
-            container.appendChild(checkoutBtn);
+            checkoutBtn.onclick = () => {
+                if (paypalRendered) return;
+                paypalRendered = true;
 
-            const clearBtn = document.createElement("button");
-            clearBtn.textContent = "Clear";
-            clearBtn.style.marginLeft = "15px";
-            clearBtn.className = "checkout-gomb";
-            clearBtn.onclick = () => {
-                localStorage.removeItem('kosar');
-                location.reload();
+                document.getElementById('paypal-button-container').style.display = 'block';
+                checkoutBtn.style.display = 'none';
+                clearBtn.style.display = 'none';
+
+                paypal.Buttons({
+                    createOrder: function (data, actions) {
+                        const totalAmount = JSON.parse(localStorage.getItem('kosar'))
+                            .reduce((sum, item) => sum + (item.price * item.qty), 0);
+                        return actions.order.create({
+                            purchase_units: [{
+                                amount: {
+                                    value: totalAmount.toFixed(2)
+                                }
+                            }]
+                        });
+                    },
+                    onApprove: function (data, actions) {
+                        return actions.order.capture().then(function (details) {
+                            alert("Fizetés sikeres, köszönjük " + details.payer.name.given_name + "!");
+                            localStorage.removeItem('kosar');
+                            window.location.href = "thankyou.html";
+                        });
+                    },
+                    onError: function (err) {
+                        console.error("PayPal hiba:", err);
+                        alert("Hiba történt a fizetés során.");
+                    }
+                }).render('#paypal-button-container');
             };
-            container.appendChild(clearBtn);
-        }
-        document.addEventListener('DOMContentLoaded', () => {
-            const kosar = JSON.parse(localStorage.getItem('kosar')) || [];
+        </script>
 
-            const cartCount = document.getElementById('cart-count');
-            if (cartCount) {
-                cartCount.textContent = kosar.reduce((sum, item) => sum + item.qty, 0);
-            }
 
-            const cartIcon = document.getElementById('cart-icon');
-            if (cartIcon) {
-                cartIcon.addEventListener('click', () => {
-                    window.location.href = "kosar.html";
-                });
-            }
-        });
-
-    </script>
     </div>
 
 
@@ -269,6 +318,35 @@
     </footer>
 
     <script src="../hambi.js"></script>
+    <script>
+        // PayPal gomb konfigurálása
+        paypal.Buttons({
+            createOrder: function (data, actions) {
+                const totalAmount = JSON.parse(localStorage.getItem('kosar'))
+                    .reduce((sum, item) => sum + (item.price * item.qty), 0);
+
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: totalAmount.toFixed(2), // Az összes fizetendő összeg
+                        },
+                    }],
+                });
+            },
+            onApprove: function (data, actions) {
+                return actions.order.capture().then(function (details) {
+                    alert("Fizetés sikeres, köszönjük! " + details.payer.name.given_name);
+                    // Itt például átirányíthatsz egy köszönő oldalra
+                    localStorage.removeItem('kosar'); // Kosár ürítése
+                    window.location.href = "thankyou.html"; // Köszönő oldal (ha van)
+                });
+            },
+            onError: function (err) {
+                console.error("PayPal hiba:", err);
+            },
+        }).render('#paypal-button-container'); // Ide fogja renderelni a PayPal gombot
+    </script>
+
 </body>
 
 </html>
