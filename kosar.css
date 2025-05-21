@@ -1,3 +1,4 @@
+
 .cart-icon-container {
     position: relative;
     margin-right: 0%;
@@ -6,12 +7,6 @@
     justify-content: flex-end;
     align-items: center;
 }
-#buttons-container.button-container{
-    display: none;
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-}
 .kosar-item {
     display: flex;
   align-items: center;
@@ -19,11 +14,15 @@
   border: 1px solid #ccc;
   padding: 10px;
   border-radius: 8px;
+  margin-top: 2%;
 }
-
+.tartalom{
+    margin: 0;
+    min-height:58vh;
+}
 .kosar-item img {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     border-radius: 5px;
 }
@@ -42,8 +41,6 @@
     background-color: rgb(200, 50, 50);
 }
 #checkout-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
     gap: 20px;
   }
 .cart-icon-container {
@@ -52,4 +49,9 @@
 
 #cart-icon {
     width: 35px;
+}
+#paypal-button-container{
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 2%;
 }

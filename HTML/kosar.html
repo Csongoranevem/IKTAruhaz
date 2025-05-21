@@ -177,30 +177,53 @@
                 }
             }
 
-            updateCartCount();
+            function changeQty(itemName, delta) {
+                const index = kosar.findIndex(item => item.name === itemName);
+                if (index > -1) {
+                    kosar[index].qty += delta;
+                    if (kosar[index].qty < 1) kosar[index].qty = 1;
+                    localStorage.setItem('kosar', JSON.stringify(kosar));
+                    renderCart();
+                }
+            }
 
-            const container = document.getElementById('checkout-container');
+            function clearCart() {
+                localStorage.removeItem('kosar');
+                kosar = [];
+                renderCart();
+            }
 
-            if (kosar.length === 0) {
-                container.innerHTML = "<p>A kosár üres.</p>";
-            } else {
+            function renderCart() {
+                kosar = JSON.parse(localStorage.getItem('kosar')) || [];
+                updateCartCount();
+                const container = document.getElementById('checkout-container');
+                container.innerHTML = "";
+
+                if (kosar.length === 0) {
+                    container.innerHTML = "<p>A kosár üres.</p>";
+                    return;
+                }
+
                 let osszesen = 0;
+
                 kosar.forEach(item => {
                     const div = document.createElement("div");
                     div.className = "kosar-item";
                     div.innerHTML = `
-      <img src="${item.image}" alt="${item.name}">
-      <div>
-        <strong>${item.name}</strong><br>
-        ${item.qty} x $${item.price} = $${item.qty * item.price}
-      </div>
-    `;
+                        <img src="${item.image}" alt="${item.name}">
+                        <div>
+                            <strong>${item.name}</strong><br>
+                            <span>${item.qty}</span> x $${item.price} = $${item.qty * item.price}<br>
+                            <button onclick="changeQty('${item.name}', -1)" style="background:#EB4949;color:white;">-1</button>
+                            <button onclick="changeQty('${item.name}', 1)" style="background:#EB4949;color:white;">+1</button>
+                        </div>
+                    `;
                     container.appendChild(div);
                     osszesen += item.qty * item.price;
                 });
 
                 const totalDiv = document.createElement("h3");
-                totalDiv.innerHTML = `Összesen: $${osszesen}`;
+                totalDiv.innerHTML = `Összesen: $${osszesen.toFixed(2)}`;
                 container.appendChild(totalDiv);
 
                 const checkoutBtn = document.createElement("button");
@@ -211,27 +234,19 @@
                     checkoutBtn.style.display = 'none';
                     clearBtn.style.display = 'none';
                 };
-                ;
                 container.appendChild(checkoutBtn);
 
                 const clearBtn = document.createElement("button");
                 clearBtn.textContent = "Clear";
                 clearBtn.style.marginLeft = "15px";
                 clearBtn.className = "checkout-gomb";
-
-                clearBtn.onclick = () => {
-                    localStorage.removeItem('kosar');
-                    location.reload();
-                };
+                clearBtn.onclick = clearCart;
                 container.appendChild(clearBtn);
             }
-            document.addEventListener('DOMContentLoaded', () => {
-                const kosar = JSON.parse(localStorage.getItem('kosar')) || [];
 
-                const cartCount = document.getElementById('cart-count');
-                if (cartCount) {
-                    cartCount.textContent = kosar.reduce((sum, item) => sum + item.qty, 0);
-                }
+
+            document.addEventListener('DOMContentLoaded', () => {
+                renderCart();
 
                 const cartIcon = document.getElementById('cart-icon');
                 if (cartIcon) {
@@ -240,8 +255,8 @@
                     });
                 }
             });
-
         </script>
+
         <div id="paypal-button-container" style="display: none; margin-top: 20px;"></div>
         <script>
             let paypalRendered = false;
@@ -264,13 +279,6 @@
                                     value: totalAmount.toFixed(2)
                                 }
                             }]
-                        });
-                    },
-                    onApprove: function (data, actions) {
-                        return actions.order.capture().then(function (details) {
-                            alert("Fizetés sikeres, köszönjük " + details.payer.name.given_name + "!");
-                            localStorage.removeItem('kosar');
-                            window.location.href = "thankyou.html";
                         });
                     },
                     onError: function (err) {
